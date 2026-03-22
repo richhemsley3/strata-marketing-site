@@ -1,0 +1,214 @@
+/* ============================================================
+   Use Cases Page — Simplified, scannable, light
+   One headline + one sentence + one metric per problem.
+   ============================================================ */
+
+/* ── Inner Page Hero ─────────────────────────────────────────── */
+.hero--inner {
+  padding: calc(80px + var(--sds-space-1200)) var(--sds-space-600) var(--sds-space-1000);
+}
+
+.hero__headline--inner {
+  font-size: clamp(36px, 4vw, 48px) !important;
+}
+
+/* ── Stat Row — Light inline credibility strip ────────────────── */
+.uc-stat-row {
+  padding: var(--sds-space-600) 0 var(--sds-space-400);
+}
+
+.uc-stat-row__inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--sds-space-800);
+  flex-wrap: wrap;
+}
+
+.uc-stat {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.uc-stat strong {
+  font-family: var(--mkt-font-display);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 400;
+  color: var(--mkt-heading-color);
+  line-height: 1.2;
+}
+
+.uc-stat span {
+  font-size: 11px;
+  color: var(--sds-color-warm-gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: var(--sds-weight-medium);
+}
+
+/* ── Use Case Cards — Minimal, scannable ─────────────────────── */
+.uc-cards-section.section {
+  padding: var(--sds-space-800) 0 var(--sds-space-600);
+}
+
+.uc-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sds-space-600);
+}
+
+.uc-card {
+  padding: var(--sds-space-600) var(--sds-space-600) var(--sds-space-500);
+  border: 1px solid var(--sds-color-warm-gray-100);
+  border-radius: 14px;
+  background: var(--sds-color-white);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.uc-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 19, 43, 0.06);
+  transform: translateY(-2px);
+}
+
+.uc-card .section__overline {
+  text-align: left;
+  margin-bottom: var(--sds-space-300);
+}
+
+.uc-card__title {
+  font-family: var(--mkt-font-display);
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 400;
+  color: var(--mkt-heading-color);
+  line-height: 1.3;
+  margin-bottom: var(--sds-space-300);
+  letter-spacing: 0.005em;
+}
+
+.uc-card__desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--sds-color-warm-gray-500);
+  margin-bottom: var(--sds-space-500);
+}
+
+/* ── Before/After Metric ──────────────────────────────────────── */
+.uc-card__metric {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--sds-space-300);
+  margin-bottom: var(--sds-space-500);
+  padding: var(--sds-space-400) var(--sds-space-400);
+  background: var(--sds-color-warm-gray-025);
+  border-radius: 10px;
+  border: 1px solid var(--sds-color-warm-gray-075);
+}
+
+.uc-card__metric-before {
+  font-family: var(--mkt-font-display);
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 400;
+  color: var(--sds-color-warm-gray-300);
+  line-height: 1;
+  text-decoration: line-through;
+  text-decoration-color: var(--sds-color-warm-gray-200);
+  text-decoration-thickness: 1.5px;
+}
+
+.uc-card__metric-after {
+  font-family: var(--mkt-font-display);
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 400;
+  color: var(--mkt-heading-color);
+  line-height: 1;
+}
+
+.uc-card__arrow {
+  color: var(--sds-color-brand-atlantic);
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.uc-card__metric--solo {
+  justify-content: center;
+}
+
+/* Ghost button at card bottom */
+.uc-card .btn--ghost {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ── Overline accent variants ────────────────────────────────── */
+.uc-overline--amber { color: #c07830 !important; }
+.uc-overline--blue { color: #5a9cbf !important; }
+.uc-overline--sage { color: #6a8a01 !important; }
+
+/* ── Single Testimonial ──────────────────────────────────────── */
+.uc-testimonial-section.section {
+  padding: clamp(48px, 6vw, 80px) 0;
+}
+
+.uc-testimonial {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.uc-testimonial__quote {
+  font-family: var(--mkt-font-display);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--mkt-heading-color);
+  line-height: 1.5;
+  margin-bottom: var(--sds-space-300);
+}
+
+.uc-testimonial__cite {
+  font-size: 13px;
+  font-style: normal;
+  color: var(--sds-color-warm-gray-400);
+  font-weight: var(--sds-weight-medium);
+  display: block;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .hero--inner {
+    padding: calc(80px + var(--sds-space-800)) var(--sds-space-400) var(--sds-space-800);
+  }
+
+  .uc-stat-row__inner {
+    gap: var(--sds-space-500);
+  }
+
+  .uc-cards {
+    grid-template-columns: 1fr;
+    gap: var(--sds-space-400);
+  }
+
+  .uc-card {
+    padding: var(--sds-space-500) var(--sds-space-500) var(--sds-space-400);
+  }
+
+  .uc-card__metric {
+    gap: var(--sds-space-200);
+  }
+}
+
+/* ── Reduced Motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .uc-card {
+    transition: none;
+  }
+
+  .uc-card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Exchange — Strata Data Management Platform</title>
+  <link rel="stylesheet" href="../design-system-labs/tokens/colors.css">
+  <link rel="stylesheet" href="../design-system-labs/tokens/spacing.css">
+  <link rel="stylesheet" href="../design-system-labs/tokens/typography.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/marketing.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/dev-exchange.css">
+</head>
+<body class="exchange-page">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+        </div>
+        Strata
+      </a>
+      <nav class="site-nav">
+        <a href="../index.html">Home</a>
+        <a href="../features.html">Features</a>
+        <a href="../solutions.html">Solutions</a>
+        <a href="../use-cases.html">Use Cases</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../developers.html" class="is-active">Developers</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <a href="../contact.html" class="btn btn--primary header-cta">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../features.html">Features</a>
+    <a href="../solutions.html">Solutions</a>
+    <a href="../use-cases.html">Use Cases</a>
+    <a href="../resources.html">Resources</a>
+    <a href="../developers.html" class="is-active">Developers</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../contact.html" class="btn btn--primary" style="margin-top: var(--sds-space-400);">Get Started</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero hero--short">
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__content">
+      <p class="section__overline" style="margin-bottom: var(--sds-space-400);">DATA EXCHANGE</p>
+      <h1 class="hero__headline reveal--fade">Connect anything, export everywhere.</h1>
+      <p class="hero__subheadline reveal--fade stagger-1">One universal exchange layer for all your data. Ingest from 50+ sources, transform with built-in governance, and export to any format — with sub-millisecond latency and zero translation layers.</p>
+      <div class="hero__actions reveal--fade stagger-2">
+        <a href="#" class="btn btn--primary btn--lg">View docs</a>
+        <a href="#protocols" class="btn btn--ghost btn--lg">Explore protocols <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 1: SUPPORTED PROTOCOLS ═══ -->
+  <section class="section" id="protocols">
+    <div class="container">
+      <div class="ex-two-col reveal">
+        <div class="ex-two-col__text">
+          <p class="section__overline" style="text-align: left;">PROTOCOLS</p>
+          <h2 class="section__title">Every protocol your team uses.</h2>
+          <p>Strata speaks every protocol in your stack. Whether your services communicate over REST, GraphQL, gRPC, or event-driven webhooks, Strata ingests and emits data natively with zero translation layers.</p>
+          <p style="margin-top: var(--sds-space-400);">Automatic serialization handles the mapping between wire formats, while built-in schema validation catches structural issues before they reach your pipeline.</p>
+        </div>
+        <div class="ex-two-col__visual">
+          <div class="protocol-grid">
+            <div class="protocol-item">
+              <div class="protocol-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              </div>
+              <div class="protocol-item__info">
+                <div class="protocol-item__name">REST API</div>
+                <p class="protocol-item__desc">Standard HTTP endpoints with JSON payloads and OpenAPI specs.</p>
+                <a href="#" class="protocol-item__link">Learn more &rarr;</a>
+              </div>
+              <span class="protocol-badge protocol-badge--ga">GA</span>
+            </div>
+            <div class="protocol-item">
+              <div class="protocol-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              </div>
+              <div class="protocol-item__info">
+                <div class="protocol-item__name">GraphQL</div>
+                <p class="protocol-item__desc">Query exactly the fields you need with typed schemas.</p>
+                <a href="#" class="protocol-item__link">Learn more &rarr;</a>
+              </div>
+              <span class="protocol-badge protocol-badge--ga">GA</span>
+            </div>
+            <div class="protocol-item">
+              <div class="protocol-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              </div>
+              <div class="protocol-item__info">
+                <div class="protocol-item__name">Webhooks</div>
+                <p class="protocol-item__desc">Real-time event delivery with retry logic and signatures.</p>
+                <a href="#" class="protocol-item__link">Learn more &rarr;</a>
+              </div>
+              <span class="protocol-badge protocol-badge--ga">GA</span>
+            </div>
+            <div class="protocol-item">
+              <div class="protocol-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <div class="protocol-item__info">
+                <div class="protocol-item__name">gRPC</div>
+                <p class="protocol-item__desc">High-performance binary protocol for low-latency services.</p>
+                <a href="#" class="protocol-item__link">Learn more &rarr;</a>
+              </div>
+              <span class="protocol-badge protocol-badge--beta">Beta</span>
+            </div>
+            <div class="protocol-item">
+              <div class="protocol-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div class="protocol-item__info">
+                <div class="protocol-item__name">Streaming / SSE</div>
+                <p class="protocol-item__desc">Server-sent events for continuous data streams.</p>
+                <a href="#" class="protocol-item__link">Learn more &rarr;</a>
+              </div>
+              <span class="protocol-badge protocol-badge--beta">Beta</span>
+            </div>
+            <div class="protocol-item">
+              <div class="protocol-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+              </div>
+              <div class="protocol-item__info">
+                <div class="protocol-item__name">MQTT</div>
+                <p class="protocol-item__desc">Lightweight messaging for IoT and edge devices.</p>
+                <a href="#" class="protocol-item__link">Learn more &rarr;</a>
+              </div>
+              <span class="protocol-badge protocol-badge--coming">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ SECTION 2: DATA FORMATS ═══ -->
+  <section class="section" id="formats">
+    <div class="container">
+      <div class="ex-section-header reveal">
+        <p class="section__overline">FORMATS</p>
+        <h2 class="section__title">Native support for every format.</h2>
+      </div>
+
+      <!-- Format pills — grouped by type -->
+      <div class="ex-format-pills reveal">
+        <div class="ex-format-group">
+          <span class="ex-format-group__label">Structured</span>
+          <div class="ex-format-group__items">
+            <span class="ex-format-pill" data-tooltip="Key-value pairs, nested objects, arrays">JSON</span>
+            <span class="ex-format-pill" data-tooltip="Tabular data with headers and delimiters">CSV</span>
+            <span class="ex-format-pill" data-tooltip="Hierarchical markup with schemas (XSD)">XML</span>
+            <span class="ex-format-pill" data-tooltip="Human-readable config and data serialization">YAML</span>
+          </div>
+        </div>
+        <div class="ex-format-group">
+          <span class="ex-format-group__label">Binary / Columnar</span>
+          <div class="ex-format-group__items">
+            <span class="ex-format-pill" data-tooltip="Columnar storage, great for analytics workloads">Parquet</span>
+            <span class="ex-format-pill" data-tooltip="Row-based binary with schema evolution support">Avro</span>
+            <span class="ex-format-pill" data-tooltip="In-memory columnar for zero-copy reads">Arrow</span>
+            <span class="ex-format-pill" data-tooltip="Compact binary serialization with strict typing">Protocol Buffers</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabbed code examples -->
+      <div class="ex-code-tabs reveal">
+        <div class="ex-code-tabs__bar" role="tablist">
+          <button class="ex-code-tabs__tab is-active" role="tab" aria-selected="true" data-tab="json">JSON</button>
+          <button class="ex-code-tabs__tab" role="tab" aria-selected="false" data-tab="csv">CSV</button>
+          <button class="ex-code-tabs__tab" role="tab" aria-selected="false" data-tab="parquet">Parquet Schema</button>
+        </div>
+
+        <!-- JSON panel -->
+        <div class="ex-code-tabs__panel is-active" data-panel="json">
+          <div class="ex-code-block">
+            <div class="ex-code-block__header">
+              <span class="ex-code-block__lang">JSON</span>
+              <button class="ex-code-block__copy" onclick="copyExCode(this)" aria-label="Copy code">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy
+              </button>
+            </div>
+            <pre><code>{
+  <span class="hl-key">"records"</span>: [
+    {
+      <span class="hl-key">"id"</span>: <span class="hl-str">"rec_8f2a1b3c"</span>,
+      <span class="hl-key">"email"</span>: <span class="hl-str">"j.chen@acme.io"</span>,
+      <span class="hl-key">"department"</span>: <span class="hl-str">"engineering"</span>,
+      <span class="hl-key">"risk_score"</span>: <span class="hl-num">0.12</span>,
+      <span class="hl-key">"classification"</span>: <span class="hl-str">"internal"</span>
+    }
+  ],
+  <span class="hl-key">"total"</span>: <span class="hl-num">2481</span>,
+  <span class="hl-key">"format"</span>: <span class="hl-str">"application/json"</span>
+}</code></pre>
+          </div>
+        </div>
+
+        <!-- CSV panel -->
+        <div class="ex-code-tabs__panel" data-panel="csv">
+          <div class="ex-code-block">
+            <div class="ex-code-block__header">
+              <span class="ex-code-block__lang">CSV</span>
+              <button class="ex-code-block__copy" onclick="copyExCode(this)" aria-label="Copy code">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy
+              </button>
+            </div>
+            <pre><code>id,email,department,risk_score,classification
+rec_8f2a1b3c,j.chen@acme.io,engineering,0.12,internal
+rec_4d7e9f1a,m.torres@acme.io,marketing,0.34,confidential
+rec_2b5c8d6e,s.patel@acme.io,finance,0.67,restricted</code></pre>
+          </div>
+        </div>
+
+        <!-- Parquet panel -->
+        <div class="ex-code-tabs__panel" data-panel="parquet">
+          <div class="ex-code-block">
+            <div class="ex-code-block__header">
+              <span class="ex-code-block__lang">Parquet Schema</span>
+              <button class="ex-code-block__copy" onclick="copyExCode(this)" aria-label="Copy code">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy
+              </button>
+            </div>
+            <pre><code><span class="hl-key">message</span> Record {
+  <span class="hl-key">required</span> binary id (<span class="hl-str">UTF8</span>);
+  <span class="hl-key">required</span> binary email (<span class="hl-str">UTF8</span>);
+  <span class="hl-key">required</span> binary department (<span class="hl-str">UTF8</span>);
+  <span class="hl-key">required</span> double risk_score;
+  <span class="hl-key">required</span> binary classification (<span class="hl-str">UTF8</span>);
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ SECTION 3: INTEGRATION FLOW ═══ -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="ex-section-header reveal">
+        <p class="section__overline">HOW IT WORKS</p>
+        <h2 class="section__title">Three steps to connected data.</h2>
+      </div>
+
+      <div class="ex-flow reveal">
+        <!-- Step 1: Ingest -->
+        <div class="ex-flow__step">
+          <div class="ex-flow__number">1</div>
+          <h3 class="ex-flow__title">Ingest</h3>
+          <p class="ex-flow__desc">Connect external systems via REST, webhooks, or streaming.</p>
+          <div class="ex-flow__snippet">
+            <div class="ex-code-block">
+              <div class="ex-code-block__header">
+                <span class="ex-code-block__lang">cURL</span>
+                <button class="ex-code-block__copy" onclick="copyExCode(this)" aria-label="Copy code">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                  Copy
+                </button>
+              </div>
+              <pre><code><span class="hl-cmd">curl</span> <span class="hl-flag">-X POST</span> \
+  https://api.strata.io/v1/webhooks \
+  <span class="hl-flag">-H</span> <span class="hl-str">"Authorization: Bearer sk_..."</span> \
+  <span class="hl-flag">-d</span> '{
+    <span class="hl-key">"url"</span>: <span class="hl-str">"https://app.co/ingest"</span>,
+    <span class="hl-key">"events"</span>: [<span class="hl-str">"record.*"</span>]
+  }'</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrow 1 with animated dot -->
+        <div class="ex-flow__arrow">
+          <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
+            <path d="M0 8h32" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M28 3l6 5-6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle class="flow-dot" cx="0" cy="8" r="2.5"/>
+          </svg>
+        </div>
+
+        <!-- Step 2: Transform — pipeline visual -->
+        <div class="ex-flow__step">
+          <div class="ex-flow__number">2</div>
+          <h3 class="ex-flow__title">Transform</h3>
+          <p class="ex-flow__desc">Strata normalizes, classifies, and applies policies automatically.</p>
+          <div class="ex-flow__snippet">
+            <div class="ex-transform-pipeline">
+              <div class="ex-transform-pipeline__stage">
+                <div class="ex-transform-pipeline__icon ex-transform-pipeline__icon--normalize">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14h6v6H4z"/><path d="M14 4h6v6h-6z"/><path d="M7 4v6"/><path d="M17 14v6"/><path d="M7 10l10-6"/></svg>
+                </div>
+                <span class="ex-transform-pipeline__label">Normalize</span>
+                <div class="ex-transform-pipeline__status">
+                  <span class="ex-transform-pipeline__status-dot"></span>
+                  <span class="ex-transform-pipeline__status-text">Schema mapping</span>
+                </div>
+              </div>
+              <div class="ex-transform-pipeline__connector">
+                <svg width="8" height="18" viewBox="0 0 8 18" fill="none">
+                  <path d="M4 0v14" stroke="currentColor" stroke-width="1"/>
+                  <path d="M1 12l3 4 3-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle class="pipeline-dot" cx="4" cy="0" r="2"/>
+                </svg>
+              </div>
+              <div class="ex-transform-pipeline__stage">
+                <div class="ex-transform-pipeline__icon ex-transform-pipeline__icon--classify">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></svg>
+                </div>
+                <span class="ex-transform-pipeline__label">Classify</span>
+                <div class="ex-transform-pipeline__status">
+                  <span class="ex-transform-pipeline__status-dot"></span>
+                  <span class="ex-transform-pipeline__status-text">PII detection</span>
+                </div>
+              </div>
+              <div class="ex-transform-pipeline__connector">
+                <svg width="8" height="18" viewBox="0 0 8 18" fill="none">
+                  <path d="M4 0v14" stroke="currentColor" stroke-width="1"/>
+                  <path d="M1 12l3 4 3-4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle class="pipeline-dot" cx="4" cy="0" r="2"/>
+                </svg>
+              </div>
+              <div class="ex-transform-pipeline__stage">
+                <div class="ex-transform-pipeline__icon ex-transform-pipeline__icon--policy">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <span class="ex-transform-pipeline__label">Apply Policies</span>
+                <div class="ex-transform-pipeline__status">
+                  <span class="ex-transform-pipeline__status-dot"></span>
+                  <span class="ex-transform-pipeline__status-text">GDPR, CCPA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrow 2 with animated dot -->
+        <div class="ex-flow__arrow">
+          <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
+            <path d="M0 8h32" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M28 3l6 5-6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle class="flow-dot" cx="0" cy="8" r="2.5" style="animation-delay: 0.5s"/>
+          </svg>
+        </div>
+
+        <!-- Step 3: Export -->
+        <div class="ex-flow__step">
+          <div class="ex-flow__number">3</div>
+          <h3 class="ex-flow__title">Export</h3>
+          <p class="ex-flow__desc">Push clean, governed data to any destination in any format.</p>
+          <div class="ex-flow__snippet">
+            <div class="ex-code-block">
+              <div class="ex-code-block__header">
+                <span class="ex-code-block__lang">cURL</span>
+                <button class="ex-code-block__copy" onclick="copyExCode(this)" aria-label="Copy code">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                  Copy
+                </button>
+              </div>
+              <pre><code><span class="hl-cmd">curl</span> <span class="hl-flag">-X POST</span> \
+  https://api.strata.io/v1/export \
+  <span class="hl-flag">-H</span> <span class="hl-str">"Authorization: Bearer sk_..."</span> \
+  <span class="hl-flag">-d</span> '{
+    <span class="hl-key">"source"</span>: <span class="hl-str">"src_pg_01"</span>,
+    <span class="hl-key">"format"</span>: <span class="hl-str">"parquet"</span>,
+    <span class="hl-key">"dest"</span>: <span class="hl-str">"s3://bucket/out"</span>
+  }'</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ SECTION 4: CONNECTORS ═══ -->
+  <section class="section" id="connectors">
+    <div class="container">
+      <div class="ex-section-header reveal">
+        <p class="section__overline">PRE-BUILT CONNECTORS</p>
+        <h2 class="section__title">50+ native connectors.</h2>
+      </div>
+
+      <div class="connector-list reveal">
+        <div class="connector-row">
+          <span class="connector-row__category">Databases</span>
+          <div class="connector-row__items">
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" />PostgreSQL</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="" />MySQL</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="" />MongoDB</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/oracle/F80000" alt="" />Oracle</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/microsoftsqlserver/CC2927" alt="" />SQL Server</span>
+          </div>
+        </div>
+        <div class="connector-row">
+          <span class="connector-row__category">Warehouses</span>
+          <div class="connector-row__items">
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="" />Snowflake</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/googlebigquery/669DF6" alt="" />BigQuery</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="" />Redshift</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/databricks/FF3621" alt="" />Databricks</span>
+          </div>
+        </div>
+        <div class="connector-row">
+          <span class="connector-row__category">Cloud</span>
+          <div class="connector-row__items">
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/amazons3/569A31" alt="" />AWS S3</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="" />Azure Blob</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="" />GCS</span>
+          </div>
+        </div>
+        <div class="connector-row">
+          <span class="connector-row__category">SaaS</span>
+          <div class="connector-row__items">
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/salesforce/00A1E0" alt="" />Salesforce</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="" />HubSpot</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/zendesk/03363D" alt="" />Zendesk</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/slack/4A154B" alt="" />Slack</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/jira/0052CC" alt="" />Jira</span>
+          </div>
+        </div>
+        <div class="connector-row">
+          <span class="connector-row__category">Streaming</span>
+          <div class="connector-row__items">
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/apachekafka/231F20" alt="" />Kafka</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/rabbitmq/FF6600" alt="" />RabbitMQ</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="" />Kinesis</span>
+            <span class="connector-row__name"><img src="https://cdn.simpleicons.org/googlepubsub/4285F4" alt="" />Pub/Sub</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="connector-view-all">
+        <a href="#">View all connectors &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ SECTION 5: PERFORMANCE ═══ -->
+  <section class="section" id="performance">
+    <div class="container">
+      <div class="ex-section-header reveal">
+        <p class="section__overline">PERFORMANCE</p>
+        <h2 class="section__title">Built for throughput at scale.</h2>
+      </div>
+
+      <div class="ex-perf-grid reveal">
+        <div class="ex-perf-stat">
+          <div class="ex-perf-stat__value">1.2M</div>
+          <div class="ex-perf-stat__label">Records / second</div>
+          <div class="ex-perf-stat__detail">Sustained throughput per node</div>
+        </div>
+        <div class="ex-perf-stat">
+          <div class="ex-perf-stat__value">&lt;3ms</div>
+          <div class="ex-perf-stat__label">p99 Latency</div>
+          <div class="ex-perf-stat__detail">End-to-end processing time</div>
+        </div>
+        <div class="ex-perf-stat">
+          <div class="ex-perf-stat__value">10K</div>
+          <div class="ex-perf-stat__label">Concurrent connections</div>
+          <div class="ex-perf-stat__detail">Per exchange instance</div>
+        </div>
+        <div class="ex-perf-stat">
+          <div class="ex-perf-stat__value">99.99%</div>
+          <div class="ex-perf-stat__label">Uptime SLA</div>
+          <div class="ex-perf-stat__detail">Enterprise tier guarantee</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ SECTION 6: COMPARISON ═══ -->
+  <section class="section" id="comparison">
+    <div class="container">
+      <div class="ex-section-header reveal">
+        <p class="section__overline">WHY STRATA</p>
+        <h2 class="section__title">Strata vs. manual integration.</h2>
+      </div>
+
+      <div class="ex-comparison reveal">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Strata Exchange</th>
+              <th>Manual / Custom</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Time to first integration</td>
+              <td class="ex-comp-highlight">15 minutes</td>
+              <td class="ex-comp-dim">2 - 4 weeks</td>
+            </tr>
+            <tr>
+              <td>Data error rate</td>
+              <td class="ex-comp-highlight">&lt; 0.01%</td>
+              <td class="ex-comp-dim">3 - 5%</td>
+            </tr>
+            <tr>
+              <td>Maintenance burden</td>
+              <td class="ex-comp-highlight">Zero (managed)</td>
+              <td class="ex-comp-dim">1 - 2 FTEs</td>
+            </tr>
+            <tr>
+              <td>Schema changes</td>
+              <td class="ex-comp-highlight">Auto-detected</td>
+              <td class="ex-comp-dim">Manual updates</td>
+            </tr>
+            <tr>
+              <td>Format conversion</td>
+              <td class="ex-comp-highlight">8 formats native</td>
+              <td class="ex-comp-dim">Build per format</td>
+            </tr>
+            <tr>
+              <td>Governance built-in</td>
+              <td class="ex-comp-highlight">Yes</td>
+              <td class="ex-comp-dim">Separate tooling</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ SECTION 7: AUTHENTICATION ═══ -->
+  <section class="section" id="authentication">
+    <div class="container">
+      <div class="ex-section-header reveal">
+        <p class="section__overline">SECURITY</p>
+        <h2 class="section__title">Supported authentication methods.</h2>
+      </div>
+
+      <div class="ex-auth-grid reveal">
+        <div class="ex-auth-card">
+          <div class="ex-auth-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <div>
+            <div class="ex-auth-card__name">OAuth 2.0</div>
+            <p class="ex-auth-card__desc">Authorization code, client credentials, and PKCE flows with automatic token refresh.</p>
+          </div>
+        </div>
+        <div class="ex-auth-card">
+          <div class="ex-auth-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+          </div>
+          <div>
+            <div class="ex-auth-card__name">API Keys</div>
+            <p class="ex-auth-card__desc">Scoped API keys with rate limiting, IP allowlisting, and automatic rotation support.</p>
+          </div>
+        </div>
+        <div class="ex-auth-card">
+          <div class="ex-auth-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="ex-auth-card__name">mTLS</div>
+            <p class="ex-auth-card__desc">Mutual TLS with certificate pinning for zero-trust service-to-service auth.</p>
+          </div>
+        </div>
+        <div class="ex-auth-card">
+          <div class="ex-auth-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+          </div>
+          <div>
+            <div class="ex-auth-card__name">SAML 2.0</div>
+            <p class="ex-auth-card__desc">Enterprise SSO with IdP-initiated and SP-initiated flows for identity federation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="ex-cta">
+    <h2 class="ex-cta__title">Ready to connect your data?</h2>
+    <div class="ex-cta__actions">
+      <a href="#" class="btn btn--primary btn--lg">Get API keys</a>
+      <a href="#" class="ex-cta__link">View docs &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="../index.html" class="site-logo footer-logo" style="margin-bottom: var(--sds-space-400);">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+            </div>
+            Strata
+          </a>
+          <p style="font-size: 13px; color: var(--sds-color-warm-gray-500); max-width: 280px; line-height: 1.6;">Enterprise-grade data management platform. Discover, classify, and govern your most sensitive data.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="../features.html">Features</a>
+          <a href="../solutions.html">Solutions</a>
+          <a href="../use-cases.html">Use Cases</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="../resources.html">Resources</a>
+          <a href="#">Careers</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strata. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/animations.js"></script>
+  <script>
+    // Tab switching for format code examples — with crossfade
+    (function () {
+      var tabBar = document.querySelector('.ex-code-tabs__bar');
+      if (!tabBar) return;
+
+      var tabs = tabBar.querySelectorAll('.ex-code-tabs__tab');
+      var panels = document.querySelectorAll('.ex-code-tabs__panel');
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var target = tab.dataset.tab;
+
+          tabs.forEach(function (t) {
+            t.classList.remove('is-active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('is-active');
+          tab.setAttribute('aria-selected', 'true');
+
+          panels.forEach(function (p) {
+            var isTarget = p.dataset.panel === target;
+            if (isTarget) {
+              p.style.animation = 'none';
+              p.offsetHeight; // trigger reflow
+              p.style.animation = '';
+            }
+            p.classList.toggle('is-active', isTarget);
+          });
+        });
+      });
+
+      // Keyboard navigation
+      tabBar.addEventListener('keydown', function (e) {
+        var tabArr = Array.from(tabs);
+        var idx = tabArr.indexOf(document.activeElement);
+        if (idx < 0) return;
+        var next = -1;
+        if (e.key === 'ArrowRight') next = (idx + 1) % tabArr.length;
+        if (e.key === 'ArrowLeft') next = (idx - 1 + tabArr.length) % tabArr.length;
+        if (next >= 0) {
+          e.preventDefault();
+          tabArr[next].focus();
+          tabArr[next].click();
+        }
+      });
+    })();
+
+    // Copy code button
+    function copyExCode(button) {
+      var block = button.closest('.ex-code-block');
+      var pre = block.querySelector('pre');
+      var text = pre.textContent || pre.innerText;
+      navigator.clipboard.writeText(text.trim()).then(function () {
+        var original = button.innerHTML;
+        button.textContent = 'Copied!';
+        setTimeout(function () {
+          button.innerHTML = original;
+        }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>

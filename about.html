@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Strata</title>
+  <link rel="stylesheet" href="design-system-labs/tokens/colors.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/spacing.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/typography.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/marketing.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+        </div>
+        Strata
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="use-cases.html">Use Cases</a>
+        <a href="resources.html">Resources</a>
+        <a href="developers.html">Developers</a>
+        <a href="about.html" class="is-active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary header-cta">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="use-cases.html">Use Cases</a>
+    <a href="resources.html">Resources</a>
+    <a href="developers.html">Developers</a>
+    <a href="about.html" class="is-active">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary" style="margin-top: var(--sds-space-400);">Get Started</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero hero--short">
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__content">
+      <p class="section__overline" style="margin-bottom: var(--sds-space-400);">OUR STORY</p>
+      <h1 class="hero__headline">Built for the teams who <span class="text-underline">manage data</span>.</h1>
+      <p class="hero__subheadline reveal--fade">We started Strata because we believed data management should be powerful, intuitive, and accessible to every organization.</p>
+    </div>
+  </section>
+
+  <!-- ═══ COMPANY METRICS ═══ -->
+  <section class="about-metrics">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-block reveal stagger-1">
+          <div class="stat-block__number">500+</div>
+          <div class="stat-block__label">Customers</div>
+        </div>
+        <div class="stat-block reveal stagger-2">
+          <div class="stat-block__number">50B</div>
+          <div class="stat-block__label">Records Managed</div>
+        </div>
+        <div class="stat-block reveal stagger-3">
+          <div class="stat-block__number">120</div>
+          <div class="stat-block__label">Team Members</div>
+        </div>
+        <div class="stat-block reveal stagger-4">
+          <div class="stat-block__number">$28M</div>
+          <div class="stat-block__label">Funding Raised</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ MISSION — Editorial Narrative ═══ -->
+  <section class="section about-mission">
+    <div class="container">
+      <div class="about-narrative reveal">
+        <div class="about-narrative__lead">
+          <p class="section__overline">Our Mission</p>
+          <h2 class="about-narrative__headline">We exist to make data management effortless &mdash; so teams can focus on building, not worrying.</h2>
+        </div>
+        <div class="about-narrative__body">
+          <p class="about-narrative__text">Every organization deserves enterprise-grade data management. But for too long, data tools have been built for specialists &mdash; complex to deploy, difficult to maintain, and impossible to scale without a dedicated team of experts.</p>
+          <p class="about-narrative__text">We're changing that. Strata gives every team the same capabilities that Fortune 500 data operations use &mdash; automated discovery, intelligent classification, real-time monitoring &mdash; wrapped in an interface anyone can operate. Great data management shouldn't be a privilege. It should be a given.</p>
+          <a href="features.html" class="btn btn--ghost">See how it works <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ VALUES — Flowing Narrative Blocks ═══ -->
+  <section class="section about-values">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__overline">Our Values</p>
+        <h2 class="section__title">What drives us</h2>
+      </div>
+
+      <div class="about-values__list">
+        <div class="about-value-block reveal stagger-1">
+          <div class="about-value-block__number">01</div>
+          <div class="about-value-block__content">
+            <h3 class="about-value-block__title">Data first, always</h3>
+            <p class="about-value-block__desc">Data management isn't a feature we bolt on &mdash; it's the foundation everything else is built upon. We hold ourselves to the same standards we set for our customers. Every line of code, every deployment, every decision starts with one question: does this make data better governed?</p>
+          </div>
+        </div>
+
+        <div class="about-value-block about-value-block--right reveal stagger-2">
+          <div class="about-value-block__number">02</div>
+          <div class="about-value-block__content">
+            <h3 class="about-value-block__title">Customer obsessed</h3>
+            <p class="about-value-block__desc">Our customers' success is our success. We listen deeply, respond quickly, and build what matters most to the teams who rely on us every day. We don't ship features for press releases. We ship solutions for real problems.</p>
+          </div>
+        </div>
+
+        <div class="about-value-block reveal stagger-3">
+          <div class="about-value-block__number">03</div>
+          <div class="about-value-block__content">
+            <h3 class="about-value-block__title">Relentlessly simple</h3>
+            <p class="about-value-block__desc">Complexity is the enemy of good data management. We obsess over making powerful capabilities feel effortless, so teams adopt better practices without friction. If it takes a manual to explain, we haven't finished designing it.</p>
+          </div>
+        </div>
+
+        <div class="about-value-block about-value-block--right reveal stagger-4">
+          <div class="about-value-block__number">04</div>
+          <div class="about-value-block__content">
+            <h3 class="about-value-block__title">Transparent by default</h3>
+            <p class="about-value-block__desc">We believe trust is earned through transparency. Our pricing, our security practices, our incident response &mdash; everything is open. Because the companies that manage data should be the most trustworthy of all.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ TEAM — Editorial Layout ═══ -->
+  <section class="section about-team">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__overline">Leadership</p>
+        <h2 class="section__title">The people behind Strata</h2>
+        <p class="section__subtitle">Experienced leaders from the world's top data, infrastructure, and enterprise software companies.</p>
+      </div>
+
+      <!-- Featured Founders -->
+      <div class="about-founders reveal">
+        <div class="about-founder">
+          <div class="about-founder__avatar">JC</div>
+          <div class="about-founder__info">
+            <h3 class="about-founder__name">James Chen</h3>
+            <p class="about-founder__role">Co-Founder &amp; CEO</p>
+            <p class="about-founder__bio">Previously led data platform engineering at a major cloud provider. Built and scaled data products managing billions of records. Founded Strata to make enterprise data management accessible to every organization.</p>
+          </div>
+        </div>
+        <div class="about-founder">
+          <div class="about-founder__avatar">AP</div>
+          <div class="about-founder__info">
+            <h3 class="about-founder__name">Amara Patel</h3>
+            <p class="about-founder__role">Co-Founder &amp; CTO</p>
+            <p class="about-founder__bio">Former principal engineer at a leading data infrastructure company. Architected classification systems processing petabytes of data. Obsessed with making complex systems feel simple.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Grid -->
+      <div class="about-team-grid">
+        <div class="about-team-member reveal stagger-1">
+          <div class="about-team-member__avatar">MR</div>
+          <div class="about-team-member__name">Marcus Rivera</div>
+          <div class="about-team-member__role">VP of Engineering</div>
+        </div>
+        <div class="about-team-member reveal stagger-2">
+          <div class="about-team-member__avatar">SK</div>
+          <div class="about-team-member__name">Sofia Kowalski</div>
+          <div class="about-team-member__role">VP of Product</div>
+        </div>
+        <div class="about-team-member reveal stagger-3">
+          <div class="about-team-member__avatar">DT</div>
+          <div class="about-team-member__name">David Tanaka</div>
+          <div class="about-team-member__role">Chief Revenue Officer</div>
+        </div>
+        <div class="about-team-member reveal stagger-4">
+          <div class="about-team-member__avatar">LN</div>
+          <div class="about-team-member__name">Lauren Nguyen</div>
+          <div class="about-team-member__role">VP of Customer Success</div>
+        </div>
+        <div class="about-team-member reveal stagger-5">
+          <div class="about-team-member__avatar">RH</div>
+          <div class="about-team-member__name">Rachel Hayes</div>
+          <div class="about-team-member__role">Chief Information Security Officer</div>
+        </div>
+        <div class="about-team-member reveal stagger-6">
+          <div class="about-team-member__avatar">OB</div>
+          <div class="about-team-member__name">Omar Benali</div>
+          <div class="about-team-member__role">VP of Design</div>
+        </div>
+      </div>
+
+      <div class="about-team-cta reveal">
+        <p class="about-team-cta__text">We're hiring across engineering, product, and go-to-market.</p>
+        <a href="#" class="btn btn--ghost">View open roles <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TIMELINE — Journey ═══ -->
+  <section class="section about-journey">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__overline">Our Journey</p>
+        <h2 class="section__title">From idea to industry standard</h2>
+      </div>
+
+      <div class="about-timeline">
+        <div class="about-timeline__line"></div>
+
+        <div class="about-timeline__item about-timeline__item--left reveal--slide-left">
+          <div class="about-timeline__marker">
+            <span class="about-timeline__year">2020</span>
+          </div>
+          <div class="about-timeline__card">
+            <h4 class="about-timeline__title">The beginning</h4>
+            <p class="about-timeline__desc">James and Amara founded Strata in San Francisco with a conviction: enterprise-grade data management shouldn't require an enterprise-sized team to operate. They wrote the first classifier in a garage office with two laptops and a whiteboard full of architecture diagrams.</p>
+          </div>
+        </div>
+
+        <div class="about-timeline__item about-timeline__item--right reveal--slide-right">
+          <div class="about-timeline__marker">
+            <span class="about-timeline__year">2021</span>
+          </div>
+          <div class="about-timeline__card">
+            <h4 class="about-timeline__title">First enterprise customer</h4>
+            <p class="about-timeline__desc">A Fortune 500 financial services company became our first enterprise customer, validating that Strata could handle complex, multi-cloud data environments at scale. Within 90 days, they classified 8 billion records across 14 data sources.</p>
+          </div>
+        </div>
+
+        <div class="about-timeline__item about-timeline__item--left reveal--slide-left">
+          <div class="about-timeline__marker">
+            <span class="about-timeline__year">2023</span>
+          </div>
+          <div class="about-timeline__card">
+            <h4 class="about-timeline__title">Series A funding</h4>
+            <p class="about-timeline__desc">Raised $28M in Series A led by Meridian Ventures to accelerate product development and go-to-market expansion. The round attracted investors who had seen firsthand the gap between legacy data tools and what modern data teams actually need.</p>
+          </div>
+        </div>
+
+        <div class="about-timeline__item about-timeline__item--right reveal--slide-right">
+          <div class="about-timeline__marker">
+            <span class="about-timeline__year">2024</span>
+          </div>
+          <div class="about-timeline__card">
+            <h4 class="about-timeline__title">SOC 2 Type II certified</h4>
+            <p class="about-timeline__desc">Achieved SOC 2 Type II certification, reinforcing our commitment to the highest standards of security and compliance. We don't just sell data management &mdash; we live it. Every process, every system, every vendor relationship is held to the same bar.</p>
+          </div>
+        </div>
+
+        <div class="about-timeline__item about-timeline__item--left reveal--slide-left">
+          <div class="about-timeline__marker">
+            <span class="about-timeline__year">2026</span>
+          </div>
+          <div class="about-timeline__card">
+            <h4 class="about-timeline__title">500+ customers</h4>
+            <p class="about-timeline__desc">Surpassed 500 customers across financial services, healthcare, technology, and government &mdash; managing over 50 billion records. What started as a conviction in a garage is now a platform trusted by some of the world's most data-conscious organizations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Option A: Split Panel -->
+  <section class="cta-split reveal">
+    <div class="cta-split__left">
+      <div class="cta-grain"></div>
+      <div class="cta-split__left-content">
+        <p class="cta-split__overline">GET STARTED</p>
+        <h2 class="cta-split__title">See what Strata can do for your data team.</h2>
+        <p class="cta-split__desc">Get a personalized walkthrough of the platform and learn how teams like yours manage data at scale.</p>
+      </div>
+    </div>
+    <div class="cta-split__right">
+      <form class="cta-split__form" onsubmit="return false;">
+        <input type="email" class="cta-split__input" placeholder="Work email" />
+        <input type="text" class="cta-split__input" placeholder="Company name" />
+        <button type="submit" class="cta-split__btn">Get started</button>
+      </form>
+      <p class="cta-split__privacy">By signing up you agree to our Terms of Service</p>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="site-logo footer-logo" style="margin-bottom: var(--sds-space-400);">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+            </div>
+            Strata
+          </a>
+          <p style="font-size: 13px; color: var(--sds-color-warm-gray-500); max-width: 280px; line-height: 1.6;">Enterprise-grade data management platform. Discover, classify, and govern your most sensitive data.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="use-cases.html">Use Cases</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="resources.html">Resources</a>
+          <a href="#">Careers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strata. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

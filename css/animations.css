@@ -1,0 +1,166 @@
+/* ============================================================
+   Animations — Data Security Marketing Site
+   Scroll reveals, keyframes, stagger, reduced-motion
+   ============================================================ */
+
+/* ── Scroll Reveal Base ────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variants */
+.reveal--scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal--scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.reveal--fade {
+  opacity: 0;
+  transform: none;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal--fade.is-visible {
+  opacity: 1;
+}
+
+.reveal--slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal--slide-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal--slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal--slide-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Stagger Delays ────────────────────────────────────────── */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* ── Keyframe Animations ───────────────────────────────────── */
+
+/* Gradient background shift */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Pulse glow on CTAs */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(166, 203, 214, 0.2); }
+  50%      { box-shadow: 0 0 40px rgba(166, 203, 214, 0.4); }
+}
+
+/* Floating motion for decorative elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* Typing cursor blink */
+@keyframes blink-cursor {
+  0%, 100% { border-right-color: var(--sds-color-brand-pacific); }
+  50%      { border-right-color: transparent; }
+}
+
+/* Grid background pulse */
+@keyframes grid-pulse {
+  0%, 100% { opacity: 0.03; }
+  50%      { opacity: 0.08; }
+}
+
+/* Slide in from left for logo bar */
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Counter tick up */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Rotate icon on hover */
+@keyframes icon-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Subtle shimmer for borders */
+@keyframes border-shimmer {
+  0%   { border-color: rgba(166, 203, 214, 0.1); }
+  50%  { border-color: rgba(166, 203, 214, 0.3); }
+  100% { border-color: rgba(166, 203, 214, 0.1); }
+}
+
+/* Hero grid lines animation */
+@keyframes grid-line-draw {
+  from { stroke-dashoffset: 1000; }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* Scroll indicator bounce */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%      { transform: translateY(8px); opacity: 0.5; }
+}
+
+/* ── Reduced Motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal--scale,
+  .reveal--fade,
+  .reveal--slide-left,
+  .reveal--slide-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .stagger-1, .stagger-2, .stagger-3,
+  .stagger-4, .stagger-5, .stagger-6 {
+    transition-delay: 0s;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

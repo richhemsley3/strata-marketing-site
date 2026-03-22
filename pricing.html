@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — Strata</title>
+  <link rel="stylesheet" href="design-system-labs/tokens/colors.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/spacing.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/typography.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/marketing.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/pricing.css">
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+        </div>
+        Strata
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="use-cases.html">Use Cases</a>
+        <a href="resources.html">Resources</a>
+        <a href="developers.html">Developers</a>
+        <a href="pricing.html" class="is-active">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary header-cta">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="use-cases.html">Use Cases</a>
+    <a href="resources.html">Resources</a>
+    <a href="developers.html">Developers</a>
+    <a href="pricing.html" class="is-active">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary" style="margin-top: var(--sds-space-400);">Get Started</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero hero--short">
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__content">
+      <p class="section__overline" style="margin-bottom: var(--sds-space-400);">PRICING</p>
+      <h1 class="hero__headline">Simple, transparent pricing</h1>
+      <p class="hero__subheadline reveal--fade">No hidden fees. No surprises. Choose the plan that fits your team and scale as you grow.</p>
+
+      <!-- Billing toggle -->
+      <div class="pricing-toggle reveal--fade" style="transition-delay: 0.15s;">
+        <span class="pricing-toggle__label pricing-toggle__label--active" data-period="monthly">Monthly</span>
+        <button class="pricing-toggle__switch" id="pricing-toggle" aria-label="Toggle annual pricing">
+          <span class="pricing-toggle__knob"></span>
+        </button>
+        <span class="pricing-toggle__label" data-period="annual">Annual <span class="pricing-toggle__save">Save 20%</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRICING TIERS ═══ -->
+  <section class="section pricing-section">
+    <div class="container">
+
+      <!-- Trust badges above cards -->
+      <div class="pricing-trust reveal--fade">
+        <div class="pricing-trust__item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/></svg>
+          SOC 2 certified
+        </div>
+        <div class="pricing-trust__item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          No credit card required
+        </div>
+        <div class="pricing-trust__item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Cancel anytime
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Starter -->
+        <div class="pricing-card reveal stagger-1">
+          <div class="pricing-card__header">
+            <h3 class="pricing-card__name">Starter</h3>
+            <p class="pricing-card__desc">For small teams getting started with data management.</p>
+          </div>
+          <div class="pricing-card__price-wrap">
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">$</span><span class="pricing-card__amount" data-monthly="49" data-annual="39">49</span>
+            </div>
+            <span class="pricing-card__period">per user / month</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              5 data sources
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Basic classification
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Email alerts
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              30-day audit log
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Community support
+            </li>
+          </ul>
+          <a href="contact.html" class="btn btn--ghost btn--lg pricing-card__cta">Get started <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Professional (Featured) -->
+        <div class="pricing-card pricing-card--featured reveal stagger-2">
+          <div class="pricing-card__badge">Recommended</div>
+          <div class="pricing-card__header">
+            <h3 class="pricing-card__name">Professional</h3>
+            <p class="pricing-card__desc">For growing teams that need advanced data management and compliance.</p>
+          </div>
+          <div class="pricing-card__price-wrap">
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">$</span><span class="pricing-card__amount" data-monthly="149" data-annual="119">149</span>
+            </div>
+            <span class="pricing-card__period">per user / month</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Unlimited data sources
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Advanced ML classification
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Real-time alerts + Slack / Teams
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              1-year audit log
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Priority support
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Compliance templates (GDPR, HIPAA, SOC 2)
+            </li>
+          </ul>
+          <a href="contact.html" class="btn btn--accent btn--lg pricing-card__cta">Start free trial <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card pricing-card--enterprise reveal stagger-3">
+          <div class="pricing-card__header">
+            <h3 class="pricing-card__name">Enterprise</h3>
+            <p class="pricing-card__desc">For organizations with advanced data management and compliance needs.</p>
+          </div>
+          <div class="pricing-card__price-wrap">
+            <div class="pricing-card__price pricing-card__price--custom">
+              <span class="pricing-card__amount-text">Custom</span>
+            </div>
+            <span class="pricing-card__period">tailored to your organization</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Everything in Professional
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Custom integrations
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Dedicated customer success manager
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              SSO / SAML
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              99.99% SLA
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              On-premise deployment option
+            </li>
+          </ul>
+          <div class="pricing-card__enterprise-cta">
+            <a href="contact.html" class="btn btn--ghost btn--lg pricing-card__cta">Talk to sales <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+            <p class="pricing-card__enterprise-note">We'll build a plan around your infrastructure and compliance requirements.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ COMPARISON TABLE ═══ -->
+  <section class="section section--surface">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__overline">PLAN DETAILS</p>
+        <h2 class="section__title">Compare plans</h2>
+        <p class="section__subtitle">See exactly what's included in each tier.</p>
+      </div>
+
+      <div class="comparison-table-wrap reveal--fade stagger-1">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="comparison-table__feature-col">Feature</th>
+              <th>Starter</th>
+              <th class="comparison-table__featured-col">Professional</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="comparison-table__group-header">
+              <td colspan="4">Data Management</td>
+            </tr>
+            <tr>
+              <td>Data Sources</td>
+              <td>5</td>
+              <td class="comparison-table__featured-cell">Unlimited</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>Data Classification</td>
+              <td>Basic</td>
+              <td class="comparison-table__featured-cell">Advanced ML</td>
+              <td>Advanced ML + Custom</td>
+            </tr>
+            <tr>
+              <td>Audit Log Retention</td>
+              <td>30 days</td>
+              <td class="comparison-table__featured-cell">1 year</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr class="comparison-table__group-header">
+              <td colspan="4">Alerts & Integrations</td>
+            </tr>
+            <tr>
+              <td>Real-Time Alerts</td>
+              <td><span class="comparison-dash">&mdash;</span></td>
+              <td class="comparison-table__featured-cell"><span class="comparison-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+              <td><span class="comparison-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+            </tr>
+            <tr>
+              <td>Slack / Teams Integration</td>
+              <td><span class="comparison-dash">&mdash;</span></td>
+              <td class="comparison-table__featured-cell"><span class="comparison-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+              <td><span class="comparison-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+            </tr>
+            <tr>
+              <td>Custom Integrations</td>
+              <td><span class="comparison-dash">&mdash;</span></td>
+              <td class="comparison-table__featured-cell"><span class="comparison-dash">&mdash;</span></td>
+              <td><span class="comparison-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+            </tr>
+            <tr class="comparison-table__group-header">
+              <td colspan="4">Compliance & Security</td>
+            </tr>
+            <tr>
+              <td>Compliance Templates</td>
+              <td><span class="comparison-dash">&mdash;</span></td>
+              <td class="comparison-table__featured-cell"><span class="comparison-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+              <td><span class="comparison-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+            </tr>
+            <tr>
+              <td>SSO / SAML</td>
+              <td><span class="comparison-dash">&mdash;</span></td>
+              <td class="comparison-table__featured-cell"><span class="comparison-dash">&mdash;</span></td>
+              <td><span class="comparison-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+            </tr>
+            <tr>
+              <td>Dedicated CSM</td>
+              <td><span class="comparison-dash">&mdash;</span></td>
+              <td class="comparison-table__featured-cell"><span class="comparison-dash">&mdash;</span></td>
+              <td><span class="comparison-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+            </tr>
+            <tr class="comparison-table__group-header">
+              <td colspan="4">Support & SLA</td>
+            </tr>
+            <tr>
+              <td>Support Level</td>
+              <td>Community</td>
+              <td class="comparison-table__featured-cell">Priority</td>
+              <td>24/7 Dedicated</td>
+            </tr>
+            <tr>
+              <td>SLA</td>
+              <td>99.9%</td>
+              <td class="comparison-table__featured-cell">99.95%</td>
+              <td>99.99%</td>
+            </tr>
+            <tr>
+              <td>On-Premise Option</td>
+              <td><span class="comparison-dash">&mdash;</span></td>
+              <td class="comparison-table__featured-cell"><span class="comparison-dash">&mdash;</span></td>
+              <td><span class="comparison-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__overline">FAQ</p>
+        <h2 class="section__title">Frequently asked questions</h2>
+        <p class="section__subtitle">Everything you need to know about pricing, plans, and getting started.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item reveal stagger-1">
+          <button class="faq-item__trigger" aria-expanded="false">
+            <span class="faq-item__question">Do you offer a free trial?</span>
+            <span class="faq-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-item__content">
+            <div class="faq-item__content-inner">
+              <p>Yes! Every plan comes with a 14-day free trial with full platform access. No credit card required to start. You can explore all features and invite your team before committing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal stagger-2">
+          <button class="faq-item__trigger" aria-expanded="false">
+            <span class="faq-item__question">Can I switch plans later?</span>
+            <span class="faq-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-item__content">
+            <div class="faq-item__content-inner">
+              <p>Absolutely. You can upgrade or downgrade your plan at any time. When upgrading, you'll get immediate access to new features. Downgrades take effect at the start of your next billing cycle.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal stagger-3">
+          <button class="faq-item__trigger" aria-expanded="false">
+            <span class="faq-item__question">How does Enterprise pricing work?</span>
+            <span class="faq-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-item__content">
+            <div class="faq-item__content-inner">
+              <p>Enterprise pricing is customized based on your organization's size, data volume, and specific requirements. Contact our sales team for a tailored quote and to discuss volume discounts for larger deployments.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal stagger-4">
+          <button class="faq-item__trigger" aria-expanded="false">
+            <span class="faq-item__question">Do you support specific data residency requirements?</span>
+            <span class="faq-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-item__content">
+            <div class="faq-item__content-inner">
+              <p>Yes. We offer data residency options across North America, Europe, and Asia-Pacific regions. Enterprise customers can also deploy Strata on-premise for full control over data locality and sovereignty.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal stagger-5">
+          <button class="faq-item__trigger" aria-expanded="false">
+            <span class="faq-item__question">What happens if I cancel my subscription?</span>
+            <span class="faq-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-item__content">
+            <div class="faq-item__content-inner">
+              <p>You can cancel anytime with no penalties. Your account will remain active until the end of your current billing period. After cancellation, you'll have 30 days to export your data and audit logs before your account is deactivated.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal stagger-6">
+          <button class="faq-item__trigger" aria-expanded="false">
+            <span class="faq-item__question">What security certifications do you hold?</span>
+            <span class="faq-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-item__content">
+            <div class="faq-item__content-inner">
+              <p>Strata is SOC 2 Type II certified and maintains HIPAA compliance. We undergo annual third-party penetration testing and maintain ISO 27001 certification. All data is encrypted at rest and in transit.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Option A: Split Panel -->
+  <section class="cta-split reveal">
+    <div class="cta-split__left">
+      <div class="cta-grain"></div>
+      <div class="cta-split__left-content">
+        <p class="cta-split__overline">GET STARTED</p>
+        <h2 class="cta-split__title">See what Strata can do for your data team.</h2>
+        <p class="cta-split__desc">Get a personalized walkthrough of the platform and learn how teams like yours manage data at scale.</p>
+      </div>
+    </div>
+    <div class="cta-split__right">
+      <form class="cta-split__form" onsubmit="return false;">
+        <input type="email" class="cta-split__input" placeholder="Work email" />
+        <input type="text" class="cta-split__input" placeholder="Company name" />
+        <button type="submit" class="cta-split__btn">Get started</button>
+      </form>
+      <p class="cta-split__privacy">By signing up you agree to our Terms of Service</p>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="site-logo footer-logo" style="margin-bottom: var(--sds-space-400);">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+            </div>
+            Strata
+          </a>
+          <p style="font-size: 13px; color: var(--sds-color-warm-gray-500); max-width: 280px; line-height: 1.6;">Enterprise-grade data management platform. Discover, classify, and govern your most sensitive data.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="use-cases.html">Use Cases</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="resources.html">Resources</a>
+          <a href="#">Careers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strata. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    // ── Billing Toggle ──
+    const toggle = document.getElementById('pricing-toggle');
+    const labels = document.querySelectorAll('.pricing-toggle__label');
+    const amounts = document.querySelectorAll('.pricing-card__amount');
+    let isAnnual = false;
+
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        isAnnual = !isAnnual;
+        toggle.classList.toggle('is-active', isAnnual);
+        labels.forEach(l => {
+          l.classList.toggle('pricing-toggle__label--active',
+            (isAnnual && l.dataset.period === 'annual') ||
+            (!isAnnual && l.dataset.period === 'monthly')
+          );
+        });
+        amounts.forEach(el => {
+          const val = isAnnual ? el.dataset.annual : el.dataset.monthly;
+          if (val) {
+            el.classList.remove('is-changing');
+            void el.offsetWidth; // trigger reflow
+            el.classList.add('is-changing');
+            el.textContent = val;
+          }
+        });
+      });
+    }
+
+    // ── FAQ Accordion ──
+    document.querySelectorAll('.faq-item__trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('is-open');
+
+        // Close all
+        document.querySelectorAll('.faq-item.is-open').forEach(openItem => {
+          openItem.classList.remove('is-open');
+          openItem.querySelector('.faq-item__trigger').setAttribute('aria-expanded', 'false');
+        });
+
+        // Open clicked (if it was closed)
+        if (!isOpen) {
+          item.classList.add('is-open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

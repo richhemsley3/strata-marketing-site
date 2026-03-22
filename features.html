@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features — Strata Data Management Platform</title>
+  <link rel="stylesheet" href="design-system-labs/tokens/colors.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/spacing.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/typography.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/marketing.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/features.css">
+</head>
+<body class="features-page">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+        </div>
+        Strata
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="features.html" class="is-active">Features</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="use-cases.html">Use Cases</a>
+        <a href="resources.html">Resources</a>
+        <a href="developers.html">Developers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary header-cta">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="features.html" class="is-active">Features</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="use-cases.html">Use Cases</a>
+    <a href="resources.html">Resources</a>
+    <a href="developers.html">Developers</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary" style="margin-top: var(--sds-space-400);">Get Started</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero hero--short">
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__content">
+      <p class="section__overline" style="margin-bottom: var(--sds-space-400);">PLATFORM CAPABILITIES</p>
+      <h1 class="hero__headline reveal--fade">The complete toolkit for data management at scale.</h1>
+      <p class="hero__subheadline reveal--fade stagger-1">From discovery to governance, everything you need in one platform.</p>
+      <div class="hero__actions reveal--fade stagger-2">
+        <a href="contact.html" class="btn btn--primary btn--lg">Start free trial</a>
+        <a href="#discover" class="btn btn--ghost btn--lg">Explore capabilities <svg class="btn__arrow btn__arrow--down" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PLATFORM OVERVIEW — Narrative Section ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="platform-narrative reveal">
+        <p class="section__overline" style="text-align: left;">HOW IT WORKS</p>
+        <h2 class="platform-narrative__heading">
+          Strata <a href="#discover" class="solutions-inline-link">discovers every record</a>, <a href="#monitor" class="solutions-inline-link">monitors every query</a> in real time, <a href="#govern" class="solutions-inline-link">automates compliance</a> across GDPR, HIPAA, and SOC 2, and <a href="#respond" class="solutions-inline-link">responds to threats</a> before they become breaches.
+        </h2>
+        <div class="platform-narrative__footer">
+          <a href="contact.html" class="btn btn--ghost">See it in action <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          <div class="platform-narrative__stats">
+            <span><strong>14</strong> data sources</span>
+            <span><strong>3.2B</strong> records scanned</span>
+            <span><strong>&lt; 2s</strong> threat detection</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ FEATURE 1: Discover & Classify ═══ -->
+  <section class="section" id="discover">
+    <div class="container">
+      <div class="feature-deep">
+        <div class="feature-deep__text reveal--slide-left">
+          <p class="section__overline">DISCOVER & CLASSIFY</p>
+          <h2 class="section__title">Know every piece of data you own</h2>
+          <p class="feature-deep__lead">Strata connects to every data source, scans every table, and builds a living map of your sensitive data landscape.</p>
+          <div class="feature-deep__capabilities">
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">Automated Discovery</h4>
+                <p class="feature-deep__cap-desc">Connects to databases, warehouses, data lakes, and SaaS apps. No agents required.</p>
+              </div>
+            </div>
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">ML-Powered Classification</h4>
+                <p class="feature-deep__cap-desc">99.5% accuracy for PII, PHI, and PCI data. Every column tagged automatically with confidence scores.</p>
+              </div>
+            </div>
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">Interactive Data Map</h4>
+                <p class="feature-deep__cap-desc">Full lineage tracking with dependency visualization. See how data flows across your entire organization.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-deep__visual reveal--slide-right">
+          <!-- Product UI: Classification Results -->
+          <div class="feat-ui">
+            <div class="feat-ui__header">
+              <span class="feat-ui__title">Classification Results</span>
+              <span class="feat-ui__live">847 columns scanned</span>
+            </div>
+            <div class="feat-ui__body">
+              <div class="feat-ui__toolbar">
+                <span class="feat-toolbar__search">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                  Filter columns...
+                </span>
+                <span class="feat-toolbar__filter">All types</span>
+              </div>
+              <div class="feat-classify-row">
+                <span class="feat-badge feat-badge--pii">PII</span>
+                <code class="feat-code">users.email_address</code>
+                <span class="feat-conf">99.2%</span>
+              </div>
+              <div class="feat-classify-row">
+                <span class="feat-badge feat-badge--pii">PII</span>
+                <code class="feat-code">users.phone_number</code>
+                <span class="feat-conf">98.7%</span>
+              </div>
+              <div class="feat-classify-row">
+                <span class="feat-badge feat-badge--phi">PHI</span>
+                <code class="feat-code">patients.diagnosis_code</code>
+                <span class="feat-conf">97.1%</span>
+              </div>
+              <div class="feat-classify-row">
+                <span class="feat-badge feat-badge--fin">FIN</span>
+                <code class="feat-code">payments.card_last_four</code>
+                <span class="feat-conf">99.8%</span>
+              </div>
+              <div class="feat-classify-row">
+                <span class="feat-badge feat-badge--safe">SAFE</span>
+                <code class="feat-code">events.session_id</code>
+                <span class="feat-conf feat-conf--verified">verified</span>
+              </div>
+              <div class="feat-classify-row">
+                <span class="feat-badge feat-badge--pii">PII</span>
+                <code class="feat-code">customers.home_address</code>
+                <span class="feat-conf">96.4%</span>
+              </div>
+              <div class="feat-classify-row">
+                <span class="feat-badge feat-badge--fin">FIN</span>
+                <code class="feat-code">invoices.bank_account</code>
+                <span class="feat-conf">99.1%</span>
+              </div>
+            </div>
+            <!-- Data landscape summary bar -->
+            <div class="feat-ui__footer">
+              <div class="feat-landscape-bar">
+                <div class="feat-landscape-segment" style="flex: 412; background: #e05050;" title="PII"></div>
+                <div class="feat-landscape-segment" style="flex: 186; background: #e09040;" title="PHI"></div>
+                <div class="feat-landscape-segment" style="flex: 94; background: #7bb3d4;" title="Financial"></div>
+                <div class="feat-landscape-segment" style="flex: 2500; background: #7ec850;" title="Non-sensitive"></div>
+              </div>
+              <div class="feat-landscape-legend">
+                <span><span class="feat-dot" style="background:#e05050;"></span>PII 412K</span>
+                <span><span class="feat-dot" style="background:#e09040;"></span>PHI 186K</span>
+                <span><span class="feat-dot" style="background:#7bb3d4;"></span>Financial 94K</span>
+                <span><span class="feat-dot" style="background:#7ec850;"></span>Safe 2.5B</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ FEATURE 2: Monitor & Detect ═══ -->
+  <section class="section section--surface" id="monitor">
+    <div class="container">
+      <div class="feature-deep feature-deep--reverse">
+        <div class="feature-deep__text reveal--slide-right">
+          <p class="section__overline">MONITOR & DETECT</p>
+          <h2 class="section__title">See threats before they become breaches</h2>
+          <p class="feature-deep__lead">Behavioral analytics detect anomalies and alert your team the instant something looks wrong across every data interaction.</p>
+          <div class="feature-deep__capabilities">
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon feature-deep__cap-icon--monitor">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">Real-Time Monitoring</h4>
+                <p class="feature-deep__cap-desc">Every access, query, and transfer tracked continuously. Sub-second updates across all sources.</p>
+              </div>
+            </div>
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon feature-deep__cap-icon--monitor">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">AI-Driven Anomaly Detection</h4>
+                <p class="feature-deep__cap-desc">Contextual risk scoring with auto-learned baselines. Anomalies flagged in under 2 seconds.</p>
+              </div>
+            </div>
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon feature-deep__cap-icon--monitor">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">Instant Multi-Channel Alerting</h4>
+                <p class="feature-deep__cap-desc">Slack, PagerDuty, email, or webhooks. Full context included with recommended actions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-deep__visual reveal--slide-left">
+          <!-- Product UI: Query Monitor with Alert -->
+          <div class="feat-ui feat-ui--dark">
+            <div class="feat-ui__header feat-ui__header--alert">
+              <span class="feat-ui__title">Query Monitor</span>
+              <span class="feat-ui__live feat-ui__live--alert">
+                <span class="feat-alert-pulse"></span>
+                3 Active Alerts
+              </span>
+            </div>
+            <div class="feat-ui__body">
+              <div class="feat-query-row">
+                <span class="feat-badge feat-badge--ok">READ</span>
+                <code class="feat-code">SELECT * FROM users WHERE id = 4821</code>
+                <span class="feat-query-meta">sarah.chen &middot; 2s ago</span>
+              </div>
+              <div class="feat-query-row">
+                <span class="feat-badge feat-badge--ok">JOIN</span>
+                <code class="feat-code">SELECT u.*, o.total FROM users u JOIN orders o</code>
+                <span class="feat-query-meta">analytics-etl &middot; 5s ago</span>
+              </div>
+              <div class="feat-query-row feat-query-row--alert">
+                <span class="feat-badge feat-badge--warn">EXPORT</span>
+                <code class="feat-code">COPY customers TO '/tmp/full_dump.csv'</code>
+                <span class="feat-query-meta">john.smith &middot; 8s ago</span>
+              </div>
+              <!-- Alert banner -->
+              <div class="feat-alert-banner">
+                <span class="feat-alert-dot"></span>
+                <div class="feat-alert-content">
+                  <strong>Unusual bulk export detected</strong>
+                  <span>847K records by john.smith@company.com. Normal baseline: 2K/day.</span>
+                </div>
+              </div>
+              <div class="feat-query-row">
+                <span class="feat-badge feat-badge--ok">READ</span>
+                <code class="feat-code">SELECT count(*) FROM transactions</code>
+                <span class="feat-query-meta">dashboard-svc &middot; 12s ago</span>
+              </div>
+              <div class="feat-query-row">
+                <span class="feat-badge feat-badge--ok">WRITE</span>
+                <code class="feat-code">UPDATE preferences SET theme = 'dark'</code>
+                <span class="feat-query-meta">web-app &middot; 15s ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ FEATURE 3: Govern & Comply ═══ -->
+  <section class="section" id="govern">
+    <div class="container">
+      <div class="feature-deep">
+        <div class="feature-deep__text reveal--slide-left">
+          <p class="section__overline">GOVERN & COMPLY</p>
+          <h2 class="section__title">Automate compliance, eliminate guesswork</h2>
+          <p class="feature-deep__lead">A complete governance engine for GDPR, HIPAA, SOC 2, and PCI-DSS — from policy creation to audit-ready reports.</p>
+          <div class="feature-deep__capabilities">
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon feature-deep__cap-icon--govern">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">Pre-Built Policy Templates</h4>
+                <p class="feature-deep__cap-desc">Hundreds of policies for major regulatory frameworks. Toggle on a framework, policies auto-apply.</p>
+              </div>
+            </div>
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon feature-deep__cap-icon--govern">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">Continuous Compliance Monitoring</h4>
+                <p class="feature-deep__cap-desc">Real-time scoring. Know your posture at every moment, not just at audit time.</p>
+              </div>
+            </div>
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon feature-deep__cap-icon--govern">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">One-Click Audit Reports</h4>
+                <p class="feature-deep__cap-desc">Generate audit-ready reports in 8 seconds, not 8 weeks. Full evidence trails included.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-deep__visual reveal--slide-right">
+          <!-- Product UI: Compliance Dashboard -->
+          <div class="feat-ui">
+            <div class="feat-ui__header">
+              <span class="feat-ui__title">Compliance Dashboard</span>
+              <span class="feat-ui__live feat-ui__live--ok">Audit Ready</span>
+            </div>
+            <div class="feat-ui__body">
+              <!-- Compliance score bars -->
+              <div class="feat-compliance-row">
+                <span class="feat-compliance-name">GDPR</span>
+                <div class="feat-compliance-bar">
+                  <div class="feat-compliance-fill" style="width: 96%; background: #7ec850;"></div>
+                </div>
+                <span class="feat-compliance-pct" style="color:#7ec850;">96%</span>
+              </div>
+              <div class="feat-compliance-row">
+                <span class="feat-compliance-name">HIPAA</span>
+                <div class="feat-compliance-bar">
+                  <div class="feat-compliance-fill" style="width: 91%; background: #7ec850;"></div>
+                </div>
+                <span class="feat-compliance-pct" style="color:#7ec850;">91%</span>
+              </div>
+              <div class="feat-compliance-row">
+                <span class="feat-compliance-name">SOC 2</span>
+                <div class="feat-compliance-bar">
+                  <div class="feat-compliance-fill" style="width: 88%; background: #e09040;"></div>
+                </div>
+                <span class="feat-compliance-pct" style="color:#e09040;">88%</span>
+              </div>
+              <div class="feat-compliance-note">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                2 controls need attention in CC6.1
+              </div>
+              <div class="feat-compliance-row">
+                <span class="feat-compliance-name">PCI-DSS</span>
+                <div class="feat-compliance-bar">
+                  <div class="feat-compliance-fill" style="width: 94%; background: #7ec850;"></div>
+                </div>
+                <span class="feat-compliance-pct" style="color:#7ec850;">94%</span>
+              </div>
+              <div class="feat-compliance-row">
+                <span class="feat-compliance-name">CCPA</span>
+                <div class="feat-compliance-bar">
+                  <div class="feat-compliance-fill" style="width: 92%; background: #7ec850;"></div>
+                </div>
+                <span class="feat-compliance-pct" style="color:#7ec850;">92%</span>
+              </div>
+            </div>
+            <!-- Policy mapping footer -->
+            <div class="feat-ui__footer feat-ui__footer--policies">
+              <div class="feat-policy-mapping">
+                <span class="feat-policy-tag">GDPR Art. 17</span>
+                <span class="feat-policy-arrow">&rarr;</span>
+                <span class="feat-policy-target">user-profiles-db</span>
+              </div>
+              <div class="feat-policy-mapping">
+                <span class="feat-policy-tag">HIPAA &sect;164.312</span>
+                <span class="feat-policy-arrow">&rarr;</span>
+                <span class="feat-policy-target">patients-db</span>
+              </div>
+              <div class="feat-policy-mapping">
+                <span class="feat-policy-tag">SOC 2 CC6.1</span>
+                <span class="feat-policy-arrow">&rarr;</span>
+                <span class="feat-policy-target">all sources</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ FEATURE 4: Respond & Remediate ═══ -->
+  <section class="section section--surface" id="respond">
+    <div class="container">
+      <div class="feature-deep feature-deep--reverse">
+        <div class="feature-deep__text reveal--slide-right">
+          <p class="section__overline">RESPOND & REMEDIATE</p>
+          <h2 class="section__title">Act on threats in seconds, not days</h2>
+          <p class="feature-deep__lead">Full context and one-click response options — block, investigate, or approve from a single interface.</p>
+          <div class="feature-deep__capabilities">
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon feature-deep__cap-icon--respond">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">Automated Response Playbooks</h4>
+                <p class="feature-deep__cap-desc">Block, quarantine, or escalate automatically based on severity and context.</p>
+              </div>
+            </div>
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon feature-deep__cap-icon--respond">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">Investigation Workflows</h4>
+                <p class="feature-deep__cap-desc">Full audit trail with timeline and user context. Collaborate with your team in-platform.</p>
+              </div>
+            </div>
+            <div class="feature-deep__cap">
+              <div class="feature-deep__cap-icon feature-deep__cap-icon--respond">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h4 class="feature-deep__cap-title">Continuous Remediation</h4>
+                <p class="feature-deep__cap-desc">Track remediation progress with automated follow-ups. Nothing falls through the cracks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-deep__visual reveal--slide-left">
+          <!-- Product UI: Threat Response -->
+          <div class="feat-ui feat-ui--dark">
+            <div class="feat-ui__header feat-ui__header--critical">
+              <span class="feat-alert-dot"></span>
+              <span class="feat-ui__title">Critical Alert — Unusual Bulk Export</span>
+              <span class="feat-ui__time">2 min ago</span>
+            </div>
+            <div class="feat-ui__body">
+              <div class="feat-alert-severity">
+                <span class="feat-severity-badge feat-severity-badge--critical">CRITICAL</span>
+                <span class="feat-severity-score">Risk score: 94/100</span>
+              </div>
+              <div class="feat-alert-details">
+                <div class="feat-alert-detail">
+                  <span class="feat-alert-label">User</span>
+                  <span class="feat-alert-value">john.smith@company.com</span>
+                </div>
+                <div class="feat-alert-detail">
+                  <span class="feat-alert-label">Source</span>
+                  <span class="feat-alert-value">prod-warehouse (Snowflake)</span>
+                </div>
+                <div class="feat-alert-detail">
+                  <span class="feat-alert-label">Records exported</span>
+                  <span class="feat-alert-value feat-alert-value--critical">847,291</span>
+                </div>
+                <div class="feat-alert-detail">
+                  <span class="feat-alert-label">Normal baseline</span>
+                  <span class="feat-alert-value">~2,000 records/day</span>
+                </div>
+              </div>
+              <div class="feat-alert-actions">
+                <button class="feat-action-btn feat-action-btn--block">Block Access</button>
+                <button class="feat-action-btn feat-action-btn--investigate">Investigate</button>
+                <button class="feat-action-btn feat-action-btn--approve">Approve</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ CAPABILITIES AT A GLANCE — Interactive Explorer ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__overline">CAPABILITIES AT A GLANCE</p>
+        <h2 class="section__title">Everything built in, nothing bolted on</h2>
+        <p class="section__subtitle">Seven capabilities. Zero bolt-ons. One platform.</p>
+      </div>
+
+      <!-- Hero capabilities — the big 3 -->
+      <div class="cap-heroes reveal--fade">
+        <div class="cap-hero" style="--accent: #7ec850;">
+
+          <div class="cap-hero__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3 class="cap-hero__title">Data Lineage Tracking</h3>
+          <p class="cap-hero__desc">Trace every record from origin to consumption. Automatic dependency mapping across your entire infrastructure.</p>
+          <div class="cap-hero__stat">
+            <span class="cap-hero__stat-value">3.2B</span>
+            <span class="cap-hero__stat-label">records traced daily</span>
+          </div>
+        </div>
+
+        <div class="cap-hero" style="--accent: #e05050;">
+
+          <div class="cap-hero__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <h3 class="cap-hero__title">Audit Logging</h3>
+          <p class="cap-hero__desc">Tamper-proof, immutable logs with 7-year retention. Every query, every access, every change — recorded with full replay capability.</p>
+          <div class="cap-hero__stat">
+            <span class="cap-hero__stat-value">7yr</span>
+            <span class="cap-hero__stat-label">retention guarantee</span>
+          </div>
+        </div>
+
+        <div class="cap-hero" style="--accent: #7bb3d4;">
+
+          <div class="cap-hero__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="cap-hero__title">Risk Scoring</h3>
+          <p class="cap-hero__desc">ML-powered risk assessment across every source. Prioritize by real-world impact, not alert volume.</p>
+          <div class="cap-hero__stat">
+            <span class="cap-hero__stat-value">&lt; 2s</span>
+            <span class="cap-hero__stat-label">score refresh time</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary capabilities — staggered flow -->
+      <div class="cap-secondary reveal--fade stagger-2">
+        <div class="cap-secondary__item">
+          <div class="cap-secondary__icon" style="--accent: #e09040;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <h3 class="cap-secondary__title">Access Controls</h3>
+          <p class="cap-secondary__desc">Role-based policies with column-level granularity. Least-privilege enforced automatically.</p>
+        </div>
+
+        <div class="cap-secondary__item">
+          <div class="cap-secondary__icon" style="--accent: #7bb3d4;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h3 class="cap-secondary__title">Data Masking</h3>
+          <p class="cap-secondary__desc">Dynamic masking in non-production environments. Preserve utility, protect privacy.</p>
+        </div>
+
+        <div class="cap-secondary__item">
+          <div class="cap-secondary__icon" style="--accent: #c8a0dc;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3 class="cap-secondary__title">Incident Management</h3>
+          <p class="cap-secondary__desc">End-to-end lifecycle from detection through resolution, fully documented.</p>
+        </div>
+
+        <div class="cap-secondary__item">
+          <div class="cap-secondary__icon" style="--accent: #7ec850;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="cap-secondary__title">Retention Policies</h3>
+          <p class="cap-secondary__desc">Automated data lifecycle management. Enforce retention and deletion schedules everywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ INTEGRATIONS ═══ -->
+  <section class="section section--surface">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__overline">INTEGRATIONS</p>
+        <h2 class="section__title">Connects to your entire stack</h2>
+        <p class="section__subtitle">16+ native connectors. No agents, no code changes.</p>
+      </div>
+
+      <!-- Constellation — floating logo tiles with connecting lines -->
+      <div class="intg-constellation reveal--fade">
+        <svg class="intg-constellation__lines" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid meet">
+          <!-- Large — corners -->
+          <line x1="500" y1="200" x2="30" y2="20" stroke="var(--sds-color-warm-gray-100)" stroke-width="1" stroke-dasharray="4 6"/>
+          <line x1="500" y1="200" x2="800" y2="20" stroke="var(--sds-color-warm-gray-100)" stroke-width="1" stroke-dasharray="4 6"/>
+          <line x1="500" y1="200" x2="30" y2="288" stroke="var(--sds-color-warm-gray-100)" stroke-width="1" stroke-dasharray="4 6"/>
+          <line x1="500" y1="200" x2="820" y2="288" stroke="var(--sds-color-warm-gray-100)" stroke-width="1" stroke-dasharray="4 6"/>
+          <!-- Medium — mid ring -->
+          <line x1="500" y1="200" x2="280" y2="8" stroke="var(--sds-color-warm-gray-100)" stroke-width="1" stroke-dasharray="4 6"/>
+          <line x1="500" y1="200" x2="580" y2="8" stroke="var(--sds-color-warm-gray-100)" stroke-width="1" stroke-dasharray="4 6"/>
+          <line x1="500" y1="200" x2="150" y2="152" stroke="var(--sds-color-warm-gray-100)" stroke-width="1" stroke-dasharray="4 6"/>
+          <line x1="500" y1="200" x2="750" y2="152" stroke="var(--sds-color-warm-gray-100)" stroke-width="1" stroke-dasharray="4 6"/>
+          <!-- Small — outer -->
+          <line x1="500" y1="200" x2="300" y2="320" stroke="var(--sds-color-warm-gray-075)" stroke-width="1" stroke-dasharray="3 5"/>
+          <line x1="500" y1="200" x2="580" y2="320" stroke="var(--sds-color-warm-gray-075)" stroke-width="1" stroke-dasharray="3 5"/>
+          <line x1="500" y1="200" x2="900" y2="80" stroke="var(--sds-color-warm-gray-075)" stroke-width="1" stroke-dasharray="3 5"/>
+          <line x1="500" y1="200" x2="900" y2="220" stroke="var(--sds-color-warm-gray-075)" stroke-width="1" stroke-dasharray="3 5"/>
+          <line x1="500" y1="200" x2="10" y2="160" stroke="var(--sds-color-warm-gray-075)" stroke-width="1" stroke-dasharray="3 5"/>
+          <line x1="500" y1="200" x2="620" y2="232" stroke="var(--sds-color-warm-gray-075)" stroke-width="1" stroke-dasharray="3 5"/>
+          <line x1="500" y1="200" x2="250" y2="232" stroke="var(--sds-color-warm-gray-075)" stroke-width="1" stroke-dasharray="3 5"/>
+          <line x1="500" y1="200" x2="450" y2="352" stroke="var(--sds-color-warm-gray-075)" stroke-width="1" stroke-dasharray="3 5"/>
+        </svg>
+        <div class="intg-constellation__center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+          <span>STRATA</span>
+        </div>
+        <!-- Large featured logos — corners -->
+        <div class="intg-logo intg-logo--lg" style="--x: 3%; --y: 5%;">
+          <img class="intg-logo__icon" src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="Snowflake" />
+          <span class="intg-logo__name">Snowflake</span>
+        </div>
+        <div class="intg-logo intg-logo--lg" style="--x: 80%; --y: 5%;">
+          <img class="intg-logo__icon" src="https://cdn.simpleicons.org/googlebigquery/669DF6" alt="BigQuery" />
+          <span class="intg-logo__name">BigQuery</span>
+        </div>
+        <div class="intg-logo intg-logo--lg" style="--x: 3%; --y: 72%;">
+          <img class="intg-logo__icon" src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" />
+          <span class="intg-logo__name">PostgreSQL</span>
+        </div>
+        <div class="intg-logo intg-logo--lg" style="--x: 82%; --y: 72%;">
+          <img class="intg-logo__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS S3" />
+          <span class="intg-logo__name">AWS S3</span>
+        </div>
+        <!-- Medium logos — mid ring -->
+        <div class="intg-logo intg-logo--md" style="--x: 28%; --y: 2%;">
+          <img class="intg-logo__icon" src="https://cdn.simpleicons.org/apachekafka/231F20" alt="Kafka" />
+          <span class="intg-logo__name">Kafka</span>
+        </div>
+        <div class="intg-logo intg-logo--md" style="--x: 58%; --y: 2%;">
+          <img class="intg-logo__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="Redshift" />
+          <span class="intg-logo__name">Redshift</span>
+        </div>
+        <div class="intg-logo intg-logo--md" style="--x: 15%; --y: 38%;">
+          <img class="intg-logo__icon" src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" />
+          <span class="intg-logo__name">MongoDB</span>
+        </div>
+        <div class="intg-logo intg-logo--md" style="--x: 75%; --y: 38%;">
+          <img class="intg-logo__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" />
+          <span class="intg-logo__name">Azure</span>
+        </div>
+        <!-- Smaller logos — outer positions -->
+        <div class="intg-logo intg-logo--sm" style="--x: 30%; --y: 80%;">
+          <img class="intg-logo__icon" src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" />
+          <span class="intg-logo__name">MySQL</span>
+        </div>
+        <div class="intg-logo intg-logo--sm" style="--x: 58%; --y: 80%;">
+          <img class="intg-logo__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" />
+          <span class="intg-logo__name">Oracle</span>
+        </div>
+        <div class="intg-logo intg-logo--sm" style="--x: 90%; --y: 20%;">
+          <img class="intg-logo__icon" src="https://cdn.simpleicons.org/databricks/FF3621" alt="Databricks" />
+          <span class="intg-logo__name">Databricks</span>
+        </div>
+        <div class="intg-logo intg-logo--sm" style="--x: 90%; --y: 55%;">
+          <img class="intg-logo__icon" src="https://cdn.simpleicons.org/elasticsearch/005571" alt="Elasticsearch" />
+          <span class="intg-logo__name">Elastic</span>
+        </div>
+        <div class="intg-logo intg-logo--sm" style="--x: 1%; --y: 40%;">
+          <img class="intg-logo__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Tableau" />
+          <span class="intg-logo__name">Tableau</span>
+        </div>
+        <div class="intg-logo intg-logo--sm" style="--x: 62%; --y: 58%;">
+          <img class="intg-logo__icon" src="https://cdn.simpleicons.org/looker/4285F4" alt="Looker" />
+          <span class="intg-logo__name">Looker</span>
+        </div>
+        <div class="intg-logo intg-logo--sm" style="--x: 25%; --y: 58%;">
+          <img class="intg-logo__icon" src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="GCS" />
+          <span class="intg-logo__name">GCS</span>
+        </div>
+        <div class="intg-logo intg-logo--sm" style="--x: 45%; --y: 88%;">
+          <img class="intg-logo__icon" src="https://cdn.simpleicons.org/apache/D22128" alt="Snowplow" />
+          <span class="intg-logo__name">Snowplow</span>
+        </div>
+      </div>
+
+      <p class="intg-count reveal--fade">50+ native connectors &middot; One-click setup &middot; No agents required</p>
+
+      <div class="intg-cta">
+        <a href="contact.html" class="btn btn--ghost">See all integrations <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Option A: Split Panel -->
+  <section class="cta-split reveal">
+    <div class="cta-split__left">
+      <div class="cta-grain"></div>
+      <div class="cta-split__left-content">
+        <p class="cta-split__overline">GET STARTED</p>
+        <h2 class="cta-split__title">See what Strata can do for your data team.</h2>
+        <p class="cta-split__desc">Get a personalized walkthrough of the platform and learn how teams like yours manage data at scale.</p>
+      </div>
+    </div>
+    <div class="cta-split__right">
+      <form class="cta-split__form" onsubmit="return false;">
+        <input type="email" class="cta-split__input" placeholder="Work email" />
+        <input type="text" class="cta-split__input" placeholder="Company name" />
+        <button type="submit" class="cta-split__btn">Get started</button>
+      </form>
+      <p class="cta-split__privacy">By signing up you agree to our Terms of Service</p>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="site-logo footer-logo" style="margin-bottom: var(--sds-space-400);">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+            </div>
+            Strata
+          </a>
+          <p style="font-size: 13px; color: var(--sds-color-warm-gray-500); max-width: 280px; line-height: 1.6;">Enterprise-grade data management platform. Discover, classify, and govern your most sensitive data.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="use-cases.html">Use Cases</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="resources.html">Resources</a>
+          <a href="#">Careers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strata. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

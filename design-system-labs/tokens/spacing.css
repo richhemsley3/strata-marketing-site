@@ -1,0 +1,21 @@
+/* ============================================
+   Space Scale — Design System Lab
+   Pixel-based spacing tokens
+   ============================================ */
+
+:root {
+  --sds-space-0:    0px;
+  --sds-space-050:  2px;
+  --sds-space-100:  4px;
+  --sds-space-150:  6px;
+  --sds-space-200:  8px;
+  --sds-space-250:  10px;
+  --sds-space-300:  12px;
+  --sds-space-400:  16px;
+  --sds-space-500:  20px;
+  --sds-space-600:  24px;
+  --sds-space-800:  32px;
+  --sds-space-1000: 40px;
+  --sds-space-1200: 48px;
+  --sds-space-1600: 64px;
+}

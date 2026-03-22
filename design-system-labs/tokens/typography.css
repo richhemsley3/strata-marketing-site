@@ -1,0 +1,84 @@
+/* ============================================================
+   Software DS — Typography Tokens
+   Proxima Nova type scale with semantic naming
+   ============================================================ */
+
+/* ── @font-face declarations ─────────────────────────────── */
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Reg.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Sbold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Xbold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Token scale ─────────────────────────────────────────── */
+
+:root {
+
+  /* ── Font families ─────────────────────────────────────── */
+  --sds-font-sans:  'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --sds-font-mono:  'SF Mono', SFMono-Regular, Consolas, monospace;
+
+  /* ── Font sizes — semantic names ───────────────────────── */
+  --sds-type-display:    28px;   /* Page titles, hero headings        */
+  --sds-type-heading:    22px;   /* Section headings (h2)             */
+  --sds-type-subheading: 16px;   /* Subsection headings (h3)          */
+  --sds-type-title:      15px;   /* Card titles, large UI labels      */
+  --sds-type-body:       14px;   /* Primary body text, button-md      */
+  --sds-type-label:      13px;   /* Secondary text, nav, table cells  */
+  --sds-type-caption:    12px;   /* Code, chart labels, small UI      */
+  --sds-type-overline:   11px;   /* Captions, demo labels, overlines  */
+
+  /* ── Font weights ──────────────────────────────────────── */
+  --sds-weight-light:     300;
+  --sds-weight-regular:   400;
+  --sds-weight-medium:    500;
+  --sds-weight-semibold:  600;
+  --sds-weight-bold:      700;
+  --sds-weight-extrabold: 800;
+
+  /* ── Line heights ──────────────────────────────────────── */
+  --sds-leading-tight:    1.2;   /* Display, headings                 */
+  --sds-leading-snug:     1.35;  /* Subheadings, UI labels            */
+  --sds-leading-normal:   1.5;   /* Body text, descriptions           */
+  --sds-leading-relaxed:  1.6;   /* Long-form content                 */
+
+  /* ── Letter spacing ────────────────────────────────────── */
+  --sds-tracking-tight:  -0.01em;  /* Display, large headings         */
+  --sds-tracking-normal:  0em;     /* Body text                       */
+  --sds-tracking-wide:    0.5px;   /* Uppercase labels, overlines     */
+}

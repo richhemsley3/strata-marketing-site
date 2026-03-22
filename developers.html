@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developers — Strata Data Management Platform</title>
+  <link rel="stylesheet" href="design-system-labs/tokens/colors.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/spacing.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/typography.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/marketing.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/developers.css">
+</head>
+<body class="developers-page">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+        </div>
+        Strata
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="use-cases.html">Use Cases</a>
+        <a href="resources.html">Resources</a>
+        <a href="developers.html" class="is-active">Developers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary header-cta">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="use-cases.html">Use Cases</a>
+    <a href="resources.html">Resources</a>
+    <a href="developers.html" class="is-active">Developers</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary" style="margin-top: var(--sds-space-400);">Get Started</a>
+  </div>
+
+  <!-- ═══ SECONDARY DEV NAV ═══ -->
+  <nav class="dev-subnav" id="dev-subnav">
+    <div class="dev-subnav__inner">
+      <a href="#quickstart" class="dev-subnav__link is-active">Docs</a>
+      <a href="#resources" class="dev-subnav__link">Tutorials</a>
+      <a href="#resources" class="dev-subnav__link">Explorer</a>
+      <a href="#resources" class="dev-subnav__link">Exchange</a>
+      <a href="#sdks" class="dev-subnav__link">SDKs</a>
+      <a href="#api-overview" class="dev-subnav__link">API</a>
+      <a href="#changelog" class="dev-subnav__link">Changelog</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="dev-hero">
+    <div class="dev-hero__content">
+      <p class="dev-overline">DEVELOPER PLATFORM</p>
+      <h1 class="dev-hero__headline">Build on Strata.</h1>
+      <p class="dev-hero__sub">Connect any data source, automate classification, and enforce governance policies through a single, unified API designed for engineering teams.</p>
+
+      <!-- What's New -->
+      <div class="dev-changelog" id="changelog">
+        <div class="dev-changelog__heading">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
+          What's New
+        </div>
+        <div class="dev-changelog__item">
+          <span class="dev-changelog__date">Mar 18</span>
+          <span class="dev-changelog__tag dev-changelog__tag--new">New</span>
+          <span class="dev-changelog__text">Python SDK v2.4 with async classification support</span>
+        </div>
+        <div class="dev-changelog__item">
+          <span class="dev-changelog__date">Mar 12</span>
+          <span class="dev-changelog__tag dev-changelog__tag--update">Update</span>
+          <span class="dev-changelog__text">Webhook retry logic and exponential backoff</span>
+        </div>
+        <div class="dev-changelog__item">
+          <span class="dev-changelog__date">Mar 5</span>
+          <span class="dev-changelog__tag dev-changelog__tag--fix">Fix</span>
+          <span class="dev-changelog__text">Resolved OAuth token refresh edge case in Node SDK</span>
+        </div>
+      </div>
+
+      <!-- Cmd+K Search Bar -->
+      <div class="dev-search" id="dev-search">
+        <svg class="dev-search__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <span class="dev-search__placeholder" id="dev-search-placeholder">Search documentation...</span>
+        <span class="dev-search__kbd"><kbd>&#8984;</kbd><kbd>K</kbd></span>
+      </div>
+
+      <!-- Quick-link pills -->
+      <div class="dev-hero__pills">
+        <a href="developers/docs.html" class="dev-pill">Quickstart</a>
+        <a href="developers/docs.html" class="dev-pill">API Reference</a>
+        <a href="#sdks" class="dev-pill">SDKs</a>
+        <a href="developers/tutorials.html" class="dev-pill">Tutorials</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ QUICKSTART ═══ -->
+  <section class="dev-section" id="quickstart">
+    <div class="container">
+      <div class="dev-section-header">
+        <p class="dev-overline">GET STARTED</p>
+        <h2 class="dev-section__title">From zero to integrated in five minutes.</h2>
+      </div>
+
+      <!-- Tabs -->
+      <div class="dev-tabs-wrapper">
+        <div class="dev-tabs" role="tablist">
+          <button class="dev-tab is-active" role="tab" aria-selected="true" data-tab="python">Python</button>
+          <button class="dev-tab" role="tab" aria-selected="false" data-tab="node">Node.js</button>
+          <button class="dev-tab" role="tab" aria-selected="false" data-tab="go">Go</button>
+          <button class="dev-tab" role="tab" aria-selected="false" data-tab="curl">cURL</button>
+        </div>
+
+        <!-- Python -->
+        <div class="dev-code-block is-active" data-panel="python">
+          <div class="dev-code-block__header">
+            <span class="dev-code-block__lang">Python</span>
+            <button class="dev-code-block__copy" data-copy-text="import strata
+
+# Initialize the client
+client = strata.Client(api_key=&quot;sk_live_...&quot;)
+
+# Connect a data source
+source = client.sources.create(
+    type=&quot;postgresql&quot;,
+    connection_string=&quot;postgres://user:pass@host/db&quot;
+)
+
+# Run a classification scan
+scan = client.classifications.run(source_id=source.id)
+print(scan.results)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+          <pre class="dev-code-block__content"><span class="dev-code-block__lines"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></span><code><span class="hl-kw">import</span> <span class="hl-mod">strata</span>
+
+<span class="hl-comment"># Initialize the client</span>
+<span class="hl-var">client</span> <span class="hl-op">=</span> strata.<span class="hl-fn">Client</span>(<span class="hl-param">api_key</span><span class="hl-op">=</span><span class="hl-str">"sk_live_..."</span>)
+
+<span class="hl-comment"># Connect a data source</span>
+<span class="hl-var">source</span> <span class="hl-op">=</span> client.sources.<span class="hl-fn">create</span>(
+    <span class="hl-param">type</span><span class="hl-op">=</span><span class="hl-str">"postgresql"</span>,
+    <span class="hl-param">connection_string</span><span class="hl-op">=</span><span class="hl-str">"postgres://user:pass@host/db"</span>
+)
+
+<span class="hl-comment"># Run a classification scan</span>
+<span class="hl-var">scan</span> <span class="hl-op">=</span> client.classifications.<span class="hl-fn">run</span>(<span class="hl-param">source_id</span><span class="hl-op">=</span>source.id)
+<span class="hl-fn">print</span>(scan.results)</code></pre>
+        </div>
+
+        <!-- Node.js -->
+        <div class="dev-code-block" data-panel="node">
+          <div class="dev-code-block__header">
+            <span class="dev-code-block__lang">Node.js</span>
+            <button class="dev-code-block__copy" data-copy-text="import Strata from 'strata-sdk';
+
+// Initialize the client
+const client = new Strata({ apiKey: 'sk_live_...' });
+
+// Connect a data source
+const source = await client.sources.create({
+  type: 'postgresql',
+  connectionString: 'postgres://user:pass@host/db'
+});
+
+// Run a classification scan
+const scan = await client.classifications.run({ sourceId: source.id });
+console.log(scan.results);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+          <pre class="dev-code-block__content"><span class="dev-code-block__lines"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></span><code><span class="hl-kw">import</span> <span class="hl-mod">Strata</span> <span class="hl-kw">from</span> <span class="hl-str">'strata-sdk'</span>;
+
+<span class="hl-comment">// Initialize the client</span>
+<span class="hl-kw">const</span> <span class="hl-var">client</span> <span class="hl-op">=</span> <span class="hl-kw">new</span> <span class="hl-fn">Strata</span>({ <span class="hl-param">apiKey</span>: <span class="hl-str">'sk_live_...'</span> });
+
+<span class="hl-comment">// Connect a data source</span>
+<span class="hl-kw">const</span> <span class="hl-var">source</span> <span class="hl-op">=</span> <span class="hl-kw">await</span> client.sources.<span class="hl-fn">create</span>({
+  <span class="hl-param">type</span>: <span class="hl-str">'postgresql'</span>,
+  <span class="hl-param">connectionString</span>: <span class="hl-str">'postgres://user:pass@host/db'</span>
+});
+
+<span class="hl-comment">// Run a classification scan</span>
+<span class="hl-kw">const</span> <span class="hl-var">scan</span> <span class="hl-op">=</span> <span class="hl-kw">await</span> client.classifications.<span class="hl-fn">run</span>({ <span class="hl-param">sourceId</span>: source.id });
+console.<span class="hl-fn">log</span>(scan.results);</code></pre>
+        </div>
+
+        <!-- Go -->
+        <div class="dev-code-block" data-panel="go">
+          <div class="dev-code-block__header">
+            <span class="dev-code-block__lang">Go</span>
+            <button class="dev-code-block__copy" data-copy-text="package main
+
+import &quot;github.com/strata-io/strata-go&quot;
+
+func main() {
+    // Initialize the client
+    client := strata.NewClient(&quot;sk_live_...&quot;)
+
+    // Connect a data source
+    source, _ := client.Sources.Create(&strata.SourceParams{
+        Type:             &quot;postgresql&quot;,
+        ConnectionString: &quot;postgres://user:pass@host/db&quot;,
+    })
+
+    // Run a classification scan
+    scan, _ := client.Classifications.Run(source.ID)
+    fmt.Println(scan.Results)
+}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+          <pre class="dev-code-block__content"><span class="dev-code-block__lines"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span></span><code><span class="hl-kw">package</span> <span class="hl-mod">main</span>
+
+<span class="hl-kw">import</span> <span class="hl-str">"github.com/strata-io/strata-go"</span>
+
+<span class="hl-kw">func</span> <span class="hl-fn">main</span>() {
+    <span class="hl-comment">// Initialize the client</span>
+    <span class="hl-var">client</span> <span class="hl-op">:=</span> strata.<span class="hl-fn">NewClient</span>(<span class="hl-str">"sk_live_..."</span>)
+
+    <span class="hl-comment">// Connect a data source</span>
+    <span class="hl-var">source</span>, _ <span class="hl-op">:=</span> client.Sources.<span class="hl-fn">Create</span>(<span class="hl-op">&</span>strata.<span class="hl-type">SourceParams</span>{
+        <span class="hl-param">Type</span>:             <span class="hl-str">"postgresql"</span>,
+        <span class="hl-param">ConnectionString</span>: <span class="hl-str">"postgres://user:pass@host/db"</span>,
+    })
+
+    <span class="hl-comment">// Run a classification scan</span>
+    <span class="hl-var">scan</span>, _ <span class="hl-op">:=</span> client.Classifications.<span class="hl-fn">Run</span>(source.ID)
+    fmt.<span class="hl-fn">Println</span>(scan.Results)
+}</code></pre>
+        </div>
+
+        <!-- cURL -->
+        <div class="dev-code-block" data-panel="curl">
+          <div class="dev-code-block__header">
+            <span class="dev-code-block__lang">cURL</span>
+            <button class="dev-code-block__copy" data-copy-text="# Create a data source
+curl -X POST https://api.strata.io/v1/sources \
+  -H &quot;Authorization: Bearer sk_live_...&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;type&quot;: &quot;postgresql&quot;,
+    &quot;connection_string&quot;: &quot;postgres://user:pass@host/db&quot;
+  }'
+
+# Run a classification scan
+curl -X POST https://api.strata.io/v1/classifications \
+  -H &quot;Authorization: Bearer sk_live_...&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{ &quot;source_id&quot;: &quot;src_pg_01&quot; }'">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+          <pre class="dev-code-block__content"><span class="dev-code-block__lines"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span></span><code><span class="hl-comment"># Create a data source</span>
+<span class="hl-var">curl</span> <span class="hl-op">-X</span> POST https://api.strata.io/v1/sources \
+  <span class="hl-op">-H</span> <span class="hl-str">"Authorization: Bearer sk_live_..."</span> \
+  <span class="hl-op">-H</span> <span class="hl-str">"Content-Type: application/json"</span> \
+  <span class="hl-op">-d</span> <span class="hl-str">'{
+    "type": "postgresql",
+    "connection_string": "postgres://user:pass@host/db"
+  }'</span>
+
+<span class="hl-comment"># Run a classification scan</span>
+<span class="hl-var">curl</span> <span class="hl-op">-X</span> POST https://api.strata.io/v1/classifications \
+  <span class="hl-op">-H</span> <span class="hl-str">"Authorization: Bearer sk_live_..."</span> \
+  <span class="hl-op">-H</span> <span class="hl-str">"Content-Type: application/json"</span> \
+  <span class="hl-op">-d</span> <span class="hl-str">'{ "source_id": "src_pg_01" }'</span></code></pre>
+        </div>
+      </div>
+
+      <div class="dev-section-link">
+        <a href="developers/docs.html" class="dev-link">View full quickstart guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DEVELOPER RESOURCES ═══ -->
+  <section class="dev-section dev-section--surface" id="resources">
+    <div class="container">
+      <div class="dev-resources-grid">
+        <a href="developers/docs.html" class="dev-resource">
+          <div class="dev-resource__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </div>
+          <h3 class="dev-resource__title">API Reference</h3>
+          <p class="dev-resource__desc">Complete REST API documentation with request and response schemas.</p>
+          <span class="dev-resource__link">Explore API docs <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="developers/tutorials.html" class="dev-resource">
+          <div class="dev-resource__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <h3 class="dev-resource__title">Tutorials</h3>
+          <p class="dev-resource__desc">Step-by-step integration guides for common use cases.</p>
+          <span class="dev-resource__link">Browse tutorials <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="developers/api-explorer.html" class="dev-resource">
+          <div class="dev-resource__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          </div>
+          <h3 class="dev-resource__title">API Explorer</h3>
+          <p class="dev-resource__desc">Test endpoints interactively in the browser.</p>
+          <span class="dev-resource__link">Open explorer <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="developers/exchange.html" class="dev-resource">
+          <div class="dev-resource__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+          </div>
+          <h3 class="dev-resource__title">Data Exchange</h3>
+          <p class="dev-resource__desc">Import, export, and transform data across formats.</p>
+          <span class="dev-resource__link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SDKS ═══ -->
+  <section class="dev-section" id="sdks">
+    <div class="container">
+      <div class="dev-section-header">
+        <p class="dev-overline">SDKS &amp; LIBRARIES</p>
+        <h2 class="dev-section__title">First-class support for your stack.</h2>
+      </div>
+
+      <div class="dev-sdk-row">
+        <div class="dev-sdk">
+          <div class="dev-sdk__top">
+            <span class="dev-sdk__icon">&#127891;</span>
+            <span class="dev-sdk__name">Python</span>
+            <span class="dev-sdk__badge">v2.4.1</span>
+            <span class="dev-sdk__stars">&#9733; 1.2k</span>
+          </div>
+          <div class="dev-sdk__install">
+            <code>pip install strata-sdk</code>
+            <button class="dev-sdk__copy" data-copy-text="pip install strata-sdk">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="dev-sdk">
+          <div class="dev-sdk__top">
+            <span class="dev-sdk__icon">&#11036;</span>
+            <span class="dev-sdk__name">Node.js</span>
+            <span class="dev-sdk__badge">v3.1.0</span>
+            <span class="dev-sdk__stars">&#9733; 980</span>
+          </div>
+          <div class="dev-sdk__install">
+            <code>npm install strata-sdk</code>
+            <button class="dev-sdk__copy" data-copy-text="npm install strata-sdk">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="dev-sdk">
+          <div class="dev-sdk__top">
+            <span class="dev-sdk__icon">&#9881;</span>
+            <span class="dev-sdk__name">Go</span>
+            <span class="dev-sdk__badge">v1.8.3</span>
+            <span class="dev-sdk__stars">&#9733; 640</span>
+          </div>
+          <div class="dev-sdk__install">
+            <code>go get github.com/strata-io/strata-go</code>
+            <button class="dev-sdk__copy" data-copy-text="go get github.com/strata-io/strata-go">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="dev-sdk">
+          <div class="dev-sdk__top">
+            <span class="dev-sdk__icon">&#9741;</span>
+            <span class="dev-sdk__name">Java</span>
+            <span class="dev-sdk__badge">v1.5.0</span>
+            <span class="dev-sdk__stars">&#9733; 420</span>
+          </div>
+          <div class="dev-sdk__install">
+            <code>com.strata:strata-sdk:1.5.0</code>
+            <button class="dev-sdk__copy" data-copy-text="com.strata:strata-sdk:1.5.0">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="dev-sdk">
+          <div class="dev-sdk__top">
+            <span class="dev-sdk__icon">&#128142;</span>
+            <span class="dev-sdk__name">Ruby</span>
+            <span class="dev-sdk__badge">v1.2.4</span>
+            <span class="dev-sdk__stars">&#9733; 310</span>
+          </div>
+          <div class="dev-sdk__install">
+            <code>gem install strata-sdk</code>
+            <button class="dev-sdk__copy" data-copy-text="gem install strata-sdk">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ API OVERVIEW ═══ -->
+  <section class="dev-section dev-section--surface" id="api-overview">
+    <div class="container">
+      <div class="dev-section-header">
+        <p class="dev-overline">REST API</p>
+        <h2 class="dev-section__title">One API for your entire data layer.</h2>
+      </div>
+
+      <div class="dev-endpoints">
+        <div class="dev-endpoint">
+          <span class="dev-endpoint__method dev-endpoint__method--get">GET</span>
+          <code class="dev-endpoint__path">/v1/sources</code>
+          <span class="dev-endpoint__desc">List connected data sources</span>
+        </div>
+        <div class="dev-endpoint">
+          <span class="dev-endpoint__method dev-endpoint__method--post">POST</span>
+          <code class="dev-endpoint__path">/v1/classifications</code>
+          <span class="dev-endpoint__desc">Run classification on a dataset</span>
+        </div>
+        <div class="dev-endpoint">
+          <span class="dev-endpoint__method dev-endpoint__method--put">PUT</span>
+          <code class="dev-endpoint__path">/v1/policies/{id}</code>
+          <span class="dev-endpoint__desc">Update a compliance policy</span>
+        </div>
+        <div class="dev-endpoint">
+          <span class="dev-endpoint__method dev-endpoint__method--delete">DELETE</span>
+          <code class="dev-endpoint__path">/v1/sources/{id}</code>
+          <span class="dev-endpoint__desc">Remove a connected data source</span>
+        </div>
+        <div class="dev-endpoint">
+          <span class="dev-endpoint__method dev-endpoint__method--get">GET</span>
+          <code class="dev-endpoint__path">/v1/webhooks</code>
+          <span class="dev-endpoint__desc">List configured webhook endpoints</span>
+        </div>
+      </div>
+
+      <div class="dev-section-link">
+        <a href="developers/docs.html" class="dev-link">Explore all endpoints <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA SPLIT PANEL ═══ -->
+  <section class="cta-split reveal">
+    <div class="cta-split__left">
+      <div class="cta-grain"></div>
+      <div class="cta-split__left-content">
+        <p class="cta-split__overline">GET STARTED</p>
+        <h2 class="cta-split__title">Start building with Strata.</h2>
+        <p class="cta-split__desc">Get API keys and connect your first data source in under five minutes.</p>
+      </div>
+    </div>
+    <div class="cta-split__right">
+      <form class="cta-split__form" onsubmit="return false;">
+        <input type="email" class="cta-split__input" placeholder="Work email" />
+        <input type="text" class="cta-split__input" placeholder="Company name" />
+        <button type="submit" class="cta-split__btn">Get started</button>
+      </form>
+      <p class="cta-split__privacy">By signing up you agree to our Terms of Service</p>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="site-logo footer-logo" style="margin-bottom: var(--sds-space-400);">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+            </div>
+            Strata
+          </a>
+          <p style="font-size: 13px; color: var(--sds-color-warm-gray-500); max-width: 280px; line-height: 1.6;">Enterprise-grade data management platform. Discover, classify, and govern your most sensitive data.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="use-cases.html">Use Cases</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="resources.html">Resources</a>
+          <a href="#">Careers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strata. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ COPY TOAST ═══ -->
+  <div class="dev-copy-toast" id="dev-copy-toast">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    Copied to clipboard
+  </div>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    // ── Tab switching with fade animation ──
+    document.querySelectorAll('.dev-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        // Update tabs
+        document.querySelectorAll('.dev-tab').forEach(t => {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+        // Fade out current, then show new
+        const currentPanel = document.querySelector('.dev-code-block.is-active');
+        if (currentPanel) {
+          currentPanel.style.opacity = '0';
+          currentPanel.style.transform = 'translateY(4px)';
+          setTimeout(() => {
+            document.querySelectorAll('.dev-code-block[data-panel]').forEach(p => {
+              p.classList.remove('is-active');
+              p.style.opacity = '';
+              p.style.transform = '';
+            });
+            const newPanel = document.querySelector(`.dev-code-block[data-panel="${target}"]`);
+            newPanel.classList.add('is-active');
+            // Trigger reflow for animation
+            void newPanel.offsetWidth;
+            newPanel.style.opacity = '1';
+            newPanel.style.transform = 'translateY(0)';
+          }, 150);
+        }
+      });
+    });
+
+    // ── Copy with toast notification ──
+    const toast = document.getElementById('dev-copy-toast');
+    let toastTimer;
+
+    function showCopyToast() {
+      clearTimeout(toastTimer);
+      toast.classList.add('is-visible');
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('is-visible');
+      }, 2000);
+    }
+
+    document.querySelectorAll('.dev-code-block__copy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.getAttribute('data-copy-text');
+        if (text) {
+          navigator.clipboard.writeText(text.replace(/&quot;/g, '"').replace(/&amp;/g, '&'));
+        }
+        const svgCheck = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+        const original = btn.innerHTML;
+        btn.innerHTML = svgCheck + ' Copied';
+        btn.style.color = '#22c55e';
+        showCopyToast();
+        setTimeout(() => {
+          btn.innerHTML = original;
+          btn.style.color = '';
+        }, 2000);
+      });
+    });
+
+    document.querySelectorAll('.dev-sdk__copy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.getAttribute('data-copy-text');
+        if (text) {
+          navigator.clipboard.writeText(text);
+        }
+        btn.style.color = '#22c55e';
+        showCopyToast();
+        setTimeout(() => {
+          btn.style.color = '';
+        }, 2000);
+      });
+    });
+
+    // ── Typing animation for search placeholder ──
+    const searchPlaceholder = document.getElementById('dev-search-placeholder');
+    const searchQueries = [
+      'Search for data sources...',
+      'Find classification docs...',
+      'How to set up webhooks...',
+      'Configure access policies...',
+    ];
+    let queryIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeTimer;
+
+    function typeSearch() {
+      const current = searchQueries[queryIndex];
+      if (!isDeleting) {
+        charIndex++;
+        searchPlaceholder.textContent = current.substring(0, charIndex);
+        if (charIndex === current.length) {
+          isDeleting = true;
+          typeTimer = setTimeout(typeSearch, 2200);
+          return;
+        }
+        typeTimer = setTimeout(typeSearch, 60);
+      } else {
+        charIndex--;
+        searchPlaceholder.textContent = current.substring(0, charIndex) || '\u00A0';
+        if (charIndex === 0) {
+          isDeleting = false;
+          queryIndex = (queryIndex + 1) % searchQueries.length;
+          typeTimer = setTimeout(typeSearch, 400);
+          return;
+        }
+        typeTimer = setTimeout(typeSearch, 30);
+      }
+    }
+
+    // Start typing animation after a short delay
+    setTimeout(typeSearch, 1500);
+
+    // ── Search bar focus animation ──
+    const searchBar = document.getElementById('dev-search');
+    searchBar.addEventListener('mouseenter', () => searchBar.classList.add('is-focused'));
+    searchBar.addEventListener('mouseleave', () => searchBar.classList.remove('is-focused'));
+
+    // ── Keyboard shortcut: / to focus search ──
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/' && !e.ctrlKey && !e.metaKey && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        e.preventDefault();
+        searchBar.classList.add('is-focused');
+        searchBar.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => searchBar.classList.remove('is-focused'), 2000);
+      }
+    });
+
+    // ── Secondary nav active state on scroll ──
+    const sections = document.querySelectorAll('.dev-section[id], .dev-hero, #changelog');
+    const subnavLinks = document.querySelectorAll('.dev-subnav__link');
+
+    function updateSubnav() {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 160;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id') || '';
+        }
+      });
+      subnavLinks.forEach(link => {
+        link.classList.remove('is-active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('is-active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateSubnav, { passive: true });
+  </script>
+</body>
+</html>

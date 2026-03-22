@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Explorer — Strata Data Management Platform</title>
+  <link rel="stylesheet" href="../design-system-labs/tokens/colors.css">
+  <link rel="stylesheet" href="../design-system-labs/tokens/spacing.css">
+  <link rel="stylesheet" href="../design-system-labs/tokens/typography.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/marketing.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/dev-explorer.css">
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+        </div>
+        Strata
+      </a>
+      <nav class="site-nav">
+        <a href="../index.html">Home</a>
+        <a href="../features.html">Features</a>
+        <a href="../solutions.html">Solutions</a>
+        <a href="../use-cases.html">Use Cases</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../developers.html" class="is-active">Developers</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <a href="../contact.html" class="btn btn--primary header-cta">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../features.html">Features</a>
+    <a href="../solutions.html">Solutions</a>
+    <a href="../use-cases.html">Use Cases</a>
+    <a href="../resources.html">Resources</a>
+    <a href="../developers.html" class="is-active">Developers</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../contact.html" class="btn btn--primary" style="margin-top: var(--sds-space-400);">Get Started</a>
+  </div>
+
+  <!-- ═══ API EXPLORER APP ═══ -->
+  <div class="explorer-app" id="explorer-app">
+
+    <!-- ── Left Panel: Request Builder ── -->
+    <aside class="explorer-sidebar">
+      <div class="explorer-sidebar__header">
+        <h1 class="explorer-sidebar__title">API Explorer</h1>
+        <span class="explorer-version-badge">v1</span>
+      </div>
+
+      <!-- Endpoint list -->
+      <div class="endpoint-list" id="endpoint-list">
+        <div class="endpoint-group">
+          <p class="endpoint-group__label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            Data Sources
+          </p>
+          <button class="endpoint-item is-active" data-endpoint="get-sources">
+            <span class="method-badge method-badge--get">GET</span>
+            <span class="endpoint-item__path">/v1/sources</span>
+          </button>
+          <button class="endpoint-item" data-endpoint="post-sources">
+            <span class="method-badge method-badge--post">POST</span>
+            <span class="endpoint-item__path">/v1/sources</span>
+          </button>
+          <button class="endpoint-item" data-endpoint="delete-source">
+            <span class="method-badge method-badge--delete">DEL</span>
+            <span class="endpoint-item__path">/v1/sources/{id}</span>
+          </button>
+        </div>
+
+        <div class="endpoint-group">
+          <p class="endpoint-group__label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            Classifications
+          </p>
+          <button class="endpoint-item" data-endpoint="get-classifications">
+            <span class="method-badge method-badge--get">GET</span>
+            <span class="endpoint-item__path">/v1/classifications</span>
+          </button>
+          <button class="endpoint-item" data-endpoint="post-classifications-run">
+            <span class="method-badge method-badge--post">POST</span>
+            <span class="endpoint-item__path">/v1/classifications/run</span>
+          </button>
+        </div>
+
+        <div class="endpoint-group">
+          <p class="endpoint-group__label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Policies
+          </p>
+          <button class="endpoint-item" data-endpoint="get-policies">
+            <span class="method-badge method-badge--get">GET</span>
+            <span class="endpoint-item__path">/v1/policies</span>
+          </button>
+          <button class="endpoint-item" data-endpoint="post-policies">
+            <span class="method-badge method-badge--post">POST</span>
+            <span class="endpoint-item__path">/v1/policies</span>
+          </button>
+          <button class="endpoint-item" data-endpoint="put-policy">
+            <span class="method-badge method-badge--put">PUT</span>
+            <span class="endpoint-item__path">/v1/policies/{id}</span>
+          </button>
+        </div>
+
+        <div class="endpoint-group">
+          <p class="endpoint-group__label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+            Alerts
+          </p>
+          <button class="endpoint-item" data-endpoint="get-alerts">
+            <span class="method-badge method-badge--get">GET</span>
+            <span class="endpoint-item__path">/v1/alerts</span>
+          </button>
+        </div>
+
+        <div class="endpoint-group">
+          <p class="endpoint-group__label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Webhooks
+          </p>
+          <button class="endpoint-item" data-endpoint="post-webhooks">
+            <span class="method-badge method-badge--post">POST</span>
+            <span class="endpoint-item__path">/v1/webhooks</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Request builder form -->
+      <div class="request-builder" id="request-builder">
+        <!-- URL bar -->
+        <div class="request-builder__url">
+          <span class="method-badge method-badge--get" id="builder-method">GET</span>
+          <span class="request-builder__url-lock">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </span>
+          <span class="request-builder__url-text" id="builder-url">https://api.strata.io/v1/sources</span>
+        </div>
+
+        <!-- Auth section -->
+        <div class="builder-section">
+          <div class="builder-section__header">
+            <h3 class="builder-section__title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              Authentication
+            </h3>
+          </div>
+          <div class="builder-section__body">
+            <div class="builder-field">
+              <label class="builder-label tooltip-trigger" for="auth-token">
+                Bearer Token
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <span class="tooltip-text">Your API key from the Strata dashboard. Starts with sk_live_ for production or sk_test_ for sandbox.</span>
+              </label>
+              <input type="text" class="builder-input" id="auth-token" value="sk_live_7f3a9b2c..." placeholder="sk_live_..." />
+            </div>
+          </div>
+        </div>
+
+        <!-- Parameters section -->
+        <div class="builder-section" id="params-section">
+          <div class="builder-section__header">
+            <h3 class="builder-section__title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+              Parameters
+            </h3>
+          </div>
+          <div class="builder-section__body" id="params-body">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Headers section (collapsible) -->
+        <div class="builder-section">
+          <div class="builder-section__header" onclick="toggleSection(this)">
+            <h3 class="builder-section__title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></svg>
+              Headers
+            </h3>
+            <button class="builder-section__toggle" aria-label="Toggle headers">&#9662;</button>
+          </div>
+          <div class="builder-section__body is-hidden" id="headers-body">
+            <div class="builder-field">
+              <label class="builder-label">Content-Type</label>
+              <input type="text" class="builder-input" value="application/json" readonly />
+            </div>
+            <div class="builder-field">
+              <label class="builder-label">Accept</label>
+              <input type="text" class="builder-input" value="application/json" readonly />
+            </div>
+          </div>
+        </div>
+
+        <!-- Button row -->
+        <div class="btn-row">
+          <button class="btn-send" id="btn-send" onclick="sendRequest()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9z"/></svg>
+            Send Request
+            <span class="btn-send__shortcut">Ctrl+Enter</span>
+          </button>
+          <button class="btn-reset" id="btn-reset" onclick="resetResponse()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6"/><path d="M2.5 8A10 10 0 1 1 4.93 17.5"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Request history -->
+      <div class="request-history" id="request-history" style="display:none;">
+        <button class="request-history__toggle" id="history-toggle" onclick="toggleHistory()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          History
+        </button>
+        <ul class="request-history__list is-hidden" id="history-list">
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ── Right Panel: Response Viewer ── -->
+    <main class="response-panel">
+      <div class="response-panel__header">
+        <div class="response-meta">
+          <span class="status-badge status-badge--success" id="status-badge">200 OK</span>
+          <span class="response-time" id="response-time">142ms</span>
+          <span class="response-size" id="response-size">1.2 KB</span>
+          <div class="latency-sparkline" id="latency-sparkline"></div>
+        </div>
+        <div class="response-actions">
+          <button class="btn-share" id="btn-share" onclick="shareRequest()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share
+          </button>
+        </div>
+      </div>
+
+      <!-- Response tabs -->
+      <div class="response-tabs" role="tablist" id="response-tabs">
+        <button class="response-tab is-active" data-tab="response" role="tab">Response</button>
+        <button class="response-tab" data-tab="headers" role="tab">Headers</button>
+        <button class="response-tab" data-tab="curl" role="tab">cURL</button>
+        <div class="response-tabs__indicator" id="tab-indicator"></div>
+      </div>
+
+      <!-- Response content area -->
+      <div class="response-content" id="response-content">
+        <div class="loading-overlay" id="loading-overlay">
+          <div class="loading-spinner"></div>
+        </div>
+
+        <!-- Response tab -->
+        <div class="response-tab-panel is-active" data-panel="response" id="response-json">
+          <div id="json-output"></div>
+        </div>
+
+        <!-- Headers tab -->
+        <div class="response-tab-panel" data-panel="headers">
+          <ul class="response-headers-list" id="response-headers-list">
+            <li><span class="header-name">content-type</span><span class="header-value">application/json; charset=utf-8</span></li>
+            <li><span class="header-name">x-request-id</span><span class="header-value">req_8f2a1b3c9d4e</span></li>
+            <li><span class="header-name">x-ratelimit-limit</span><span class="header-value">1000</span></li>
+            <li><span class="header-name">x-ratelimit-remaining</span><span class="header-value">997</span></li>
+            <li><span class="header-name">x-ratelimit-reset</span><span class="header-value">1711036800</span></li>
+            <li><span class="header-name">cache-control</span><span class="header-value">no-cache, no-store</span></li>
+            <li><span class="header-name">strict-transport-security</span><span class="header-value">max-age=31536000; includeSubDomains</span></li>
+          </ul>
+        </div>
+
+        <!-- cURL tab -->
+        <div class="response-tab-panel" data-panel="curl">
+          <div class="curl-block">
+            <button class="curl-copy-btn" onclick="copyCurl()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copy
+            </button>
+            <pre id="curl-output" style="font-family: var(--sds-font-mono); font-size: var(--sds-type-caption); line-height: 1.7; color: rgba(255,255,255,0.85); white-space: pre-wrap;"></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Share toast notification -->
+  <div class="share-toast" id="share-toast">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#66bb6a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    Link copied! <span class="share-toast__link" id="share-link"></span>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="../index.html" class="site-logo footer-logo" style="margin-bottom: var(--sds-space-400);">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+            </div>
+            Strata
+          </a>
+          <p style="font-size: 13px; color: var(--sds-color-warm-gray-500); max-width: 280px; line-height: 1.6;">Enterprise-grade data management platform. Discover, classify, and govern your most sensitive data.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="../features.html">Features</a>
+          <a href="../solutions.html">Solutions</a>
+          <a href="../use-cases.html">Use Cases</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="../resources.html">Resources</a>
+          <a href="#">Careers</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strata. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script>
+  /* ============================================================
+     API EXPLORER — Interactive mock behaviour
+     ============================================================ */
+  (function() {
+    'use strict';
+
+    // ---- Helper: generate UUID ----
+    function uuid() {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    }
+
+    // ---- Helper: generate ISO timestamp ----
+    function isoNow(offsetMinutes) {
+      var d = new Date();
+      if (offsetMinutes) d = new Date(d.getTime() + offsetMinutes * 60000);
+      return d.toISOString();
+    }
+
+    // ---- Endpoint definitions with enriched mock data ----
+    var endpoints = {
+      'get-sources': {
+        method: 'GET',
+        path: '/v1/sources',
+        url: 'https://api.strata.io/v1/sources',
+        params: [
+          { name: 'status', label: 'Status', placeholder: 'connected | disconnected', type: 'query', tooltip: 'Filter sources by connection status. Omit to return all sources.' },
+          { name: 'limit', label: 'Limit', placeholder: '25', type: 'query', tooltip: 'Maximum number of results to return. Range: 1-100. Default: 25.' }
+        ],
+        response: {
+          data: [
+            {
+              id: 'src_pg_01',
+              uuid: '9a3f2e1d-8b7c-4d6e-a5f0-1c2d3e4f5a6b',
+              name: 'Production PostgreSQL',
+              type: 'postgresql',
+              host: 'db.prod.internal',
+              port: 5432,
+              status: 'connected',
+              tables_scanned: 284,
+              columns_scanned: 4721,
+              last_scan: '2026-03-21T08:14:22.341Z',
+              created_at: '2025-11-02T14:30:00.000Z',
+              connection_latency_ms: 12,
+              metadata: { version: '15.4', ssl: true, region: 'us-east-1' }
+            },
+            {
+              id: 'src_sf_02',
+              uuid: 'b4c5d6e7-f8a9-4b0c-d1e2-f3a4b5c6d7e8',
+              name: 'Snowflake Analytics',
+              type: 'snowflake',
+              host: 'acme.snowflakecomputing.com',
+              port: 443,
+              status: 'connected',
+              tables_scanned: 1420,
+              columns_scanned: 18934,
+              last_scan: '2026-03-21T07:30:15.892Z',
+              created_at: '2025-09-15T09:00:00.000Z',
+              connection_latency_ms: 45,
+              metadata: { warehouse: 'ANALYTICS_WH', role: 'STRATA_READER', region: 'us-west-2' }
+            },
+            {
+              id: 'src_s3_03',
+              uuid: 'c5d6e7f8-a9b0-4c1d-e2f3-a4b5c6d7e8f9',
+              name: 'Customer Data Lake',
+              type: 's3',
+              host: 'customer-data-lake.s3.amazonaws.com',
+              port: null,
+              status: 'connected',
+              tables_scanned: 56,
+              columns_scanned: 892,
+              last_scan: '2026-03-20T23:00:44.123Z',
+              created_at: '2026-01-10T16:45:00.000Z',
+              connection_latency_ms: 8,
+              metadata: { bucket: 'customer-data-lake', prefix: '/raw/', encryption: 'AES-256' }
+            },
+            {
+              id: 'src_my_04',
+              uuid: 'd6e7f8a9-b0c1-4d2e-f3a4-b5c6d7e8f9a0',
+              name: 'Legacy MySQL',
+              type: 'mysql',
+              host: 'legacy-db.internal',
+              port: 3306,
+              status: 'disconnected',
+              tables_scanned: 0,
+              columns_scanned: 0,
+              last_scan: null,
+              created_at: '2026-02-28T11:20:00.000Z',
+              connection_latency_ms: null,
+              metadata: { version: '5.7.38', ssl: false, error: 'Connection refused: timeout after 30s' }
+            }
+          ],
+          meta: { total: 4, page: 1, per_page: 25, request_id: 'req_' + uuid().slice(0, 12) }
+        }
+      },
+      'post-sources': {
+        method: 'POST',
+        path: '/v1/sources',
+        url: 'https://api.strata.io/v1/sources',
+        params: [],
+        body: JSON.stringify({
+          name: 'New PostgreSQL DB',
+          type: 'postgresql',
+          host: 'db.staging.internal',
+          port: 5432,
+          database: 'app_staging',
+          credentials: { username: 'strata_reader', password: '********' }
+        }, null, 2),
+        response: {
+          id: 'src_pg_05',
+          uuid: 'e7f8a9b0-c1d2-4e3f-a4b5-c6d7e8f9a0b1',
+          name: 'New PostgreSQL DB',
+          type: 'postgresql',
+          host: 'db.staging.internal',
+          port: 5432,
+          status: 'connecting',
+          created_at: isoNow(0),
+          updated_at: isoNow(0),
+          connection_test: { status: 'pending', started_at: isoNow(0) }
+        }
+      },
+      'delete-source': {
+        method: 'DELETE',
+        path: '/v1/sources/{id}',
+        url: 'https://api.strata.io/v1/sources/src_my_04',
+        params: [
+          { name: 'id', label: 'Source ID', placeholder: 'src_my_04', type: 'path', tooltip: 'Unique identifier for the data source to delete. Use GET /v1/sources to list available IDs.' }
+        ],
+        response: {
+          deleted: true,
+          id: 'src_my_04',
+          uuid: 'd6e7f8a9-b0c1-4d2e-f3a4-b5c6d7e8f9a0',
+          message: 'Data source successfully removed.',
+          deleted_at: isoNow(0),
+          cascaded: { classifications_removed: 0, alerts_dismissed: 0 }
+        },
+        errorResponses: {
+          '404': {
+            error: {
+              code: 'not_found',
+              message: 'No data source found with the specified ID. Verify the source ID exists using GET /v1/sources.',
+              param: 'id',
+              doc_url: 'https://docs.strata.io/api/sources#delete'
+            }
+          }
+        }
+      },
+      'get-classifications': {
+        method: 'GET',
+        path: '/v1/classifications',
+        url: 'https://api.strata.io/v1/classifications',
+        params: [
+          { name: 'source_id', label: 'Source ID', placeholder: 'src_pg_01', type: 'query', tooltip: 'Filter classifications to a specific data source. Returns all if omitted.' },
+          { name: 'sensitivity', label: 'Sensitivity', placeholder: 'high | medium | low', type: 'query', tooltip: 'Filter by sensitivity level. Supports: high, medium, low.' }
+        ],
+        response: {
+          data: [
+            { id: 'cls_001', uuid: uuid(), column: 'users.email', classification: 'PII - Email', sensitivity: 'high', confidence: 0.98, source_id: 'src_pg_01', detected_at: '2026-03-21T08:14:30.112Z', classifier_version: '2.4.1', sample_count: 1500, pattern: 'RFC 5322 email format' },
+            { id: 'cls_002', uuid: uuid(), column: 'users.phone', classification: 'PII - Phone', sensitivity: 'high', confidence: 0.96, source_id: 'src_pg_01', detected_at: '2026-03-21T08:14:30.445Z', classifier_version: '2.4.1', sample_count: 1200, pattern: 'E.164 phone format' },
+            { id: 'cls_003', uuid: uuid(), column: 'orders.total', classification: 'Financial', sensitivity: 'medium', confidence: 0.91, source_id: 'src_pg_01', detected_at: '2026-03-21T08:14:31.002Z', classifier_version: '2.4.1', sample_count: 8400, pattern: 'Currency amount' },
+            { id: 'cls_004', uuid: uuid(), column: 'users.ssn_hash', classification: 'PII - SSN (hashed)', sensitivity: 'high', confidence: 0.94, source_id: 'src_pg_01', detected_at: '2026-03-21T08:14:31.234Z', classifier_version: '2.4.1', sample_count: 1500, pattern: 'SHA-256 of SSN' },
+            { id: 'cls_005', uuid: uuid(), column: 'logs.ip_address', classification: 'PII - IP Address', sensitivity: 'medium', confidence: 0.89, source_id: 'src_pg_01', detected_at: '2026-03-21T08:14:31.567Z', classifier_version: '2.4.1', sample_count: 45000, pattern: 'IPv4/IPv6 address' }
+          ],
+          meta: { total: 5, scanned_columns: 1847, request_id: 'req_' + uuid().slice(0, 12) }
+        }
+      },
+      'post-classifications-run': {
+        method: 'POST',
+        path: '/v1/classifications/run',
+        url: 'https://api.strata.io/v1/classifications/run',
+        params: [],
+        body: JSON.stringify({ source_id: 'src_pg_01', tables: ['users', 'orders', 'sessions'], depth: 'full' }, null, 2),
+        response: {
+          job_id: 'job_cls_9f8e7d6c',
+          uuid: uuid(),
+          status: 'running',
+          source_id: 'src_pg_01',
+          tables_queued: 3,
+          estimated_duration: '45s',
+          started_at: isoNow(0),
+          progress: { tables_completed: 0, tables_total: 3, percent: 0 },
+          webhook_url: null
+        },
+        errorResponses: {
+          '422': {
+            error: {
+              code: 'validation_error',
+              message: 'Request body failed validation.',
+              details: [
+                { field: 'source_id', message: 'Required field. Must reference an existing data source.' },
+                { field: 'depth', message: 'Must be one of: quick, standard, full.' }
+              ],
+              doc_url: 'https://docs.strata.io/api/classifications#run'
+            }
+          }
+        }
+      },
+      'get-policies': {
+        method: 'GET',
+        path: '/v1/policies',
+        url: 'https://api.strata.io/v1/policies',
+        params: [
+          { name: 'status', label: 'Status', placeholder: 'active | draft', type: 'query', tooltip: 'Filter policies by status. Returns both active and draft if omitted.' }
+        ],
+        response: {
+          data: [
+            { id: 'pol_001', uuid: uuid(), name: 'GDPR Data Retention', description: 'Auto-delete EU user data after 36 months', status: 'active', rules: 4, enforcement: 'automatic', scope: { regions: ['EU'], data_types: ['PII'] }, last_triggered: '2026-03-20T14:00:12.000Z', created_at: '2025-06-15T10:00:00.000Z', created_by: 'user_admin_01' },
+            { id: 'pol_002', uuid: uuid(), name: 'PII Access Control', description: 'Restrict access to high-sensitivity columns', status: 'active', rules: 8, enforcement: 'automatic', scope: { sensitivity: ['high'], data_types: ['PII', 'PHI'] }, last_triggered: '2026-03-21T09:15:44.000Z', created_at: '2025-07-22T08:00:00.000Z', created_by: 'user_admin_01' },
+            { id: 'pol_003', uuid: uuid(), name: 'SOC 2 Audit Logging', description: 'Log all read/write operations on classified data', status: 'active', rules: 3, enforcement: 'passive', scope: { all_sources: true }, last_triggered: '2026-03-21T10:00:05.000Z', created_at: '2025-08-30T12:00:00.000Z', created_by: 'user_compliance_01' },
+            { id: 'pol_004', uuid: uuid(), name: 'CCPA Opt-Out Enforcement', description: 'Enforce data deletion for opted-out CA users', status: 'draft', rules: 2, enforcement: 'manual', scope: { regions: ['US-CA'], data_types: ['PII'] }, last_triggered: null, created_at: '2026-03-10T15:30:00.000Z', created_by: 'user_admin_02' }
+          ],
+          meta: { total: 4, request_id: 'req_' + uuid().slice(0, 12) }
+        }
+      },
+      'post-policies': {
+        method: 'POST',
+        path: '/v1/policies',
+        url: 'https://api.strata.io/v1/policies',
+        params: [],
+        body: JSON.stringify({
+          name: 'HIPAA Compliance',
+          description: 'Enforce encryption and access controls on PHI columns',
+          rules: [
+            { field_pattern: '*.patient_*', action: 'encrypt_at_rest' },
+            { field_pattern: '*.diagnosis_*', action: 'restrict_access', role: 'medical_staff' }
+          ]
+        }, null, 2),
+        response: {
+          id: 'pol_005',
+          uuid: uuid(),
+          name: 'HIPAA Compliance',
+          description: 'Enforce encryption and access controls on PHI columns',
+          status: 'draft',
+          rules: 2,
+          enforcement: 'automatic',
+          created_at: isoNow(0),
+          created_by: 'user_api',
+          validation: { passed: true, warnings: [] }
+        },
+        errorResponses: {
+          '422': {
+            error: {
+              code: 'validation_error',
+              message: 'Request body failed validation.',
+              details: [
+                { field: 'name', message: 'Required. Must be between 3 and 128 characters.' },
+                { field: 'rules', message: 'Required. Must be an array with at least one rule object.' },
+                { field: 'rules[].action', message: 'Must be one of: encrypt_at_rest, restrict_access, mask, redact, audit_log.' }
+              ],
+              doc_url: 'https://docs.strata.io/api/policies#create'
+            }
+          }
+        }
+      },
+      'put-policy': {
+        method: 'PUT',
+        path: '/v1/policies/{id}',
+        url: 'https://api.strata.io/v1/policies/pol_004',
+        params: [
+          { name: 'id', label: 'Policy ID', placeholder: 'pol_004', type: 'path', tooltip: 'The policy ID to update. Use GET /v1/policies to list available policies.' }
+        ],
+        body: JSON.stringify({ status: 'active', description: 'Enforce data deletion for opted-out CA users (updated)' }, null, 2),
+        response: {
+          id: 'pol_004',
+          uuid: uuid(),
+          name: 'CCPA Opt-Out Enforcement',
+          status: 'active',
+          description: 'Enforce data deletion for opted-out CA users (updated)',
+          updated_at: isoNow(0),
+          updated_by: 'user_api',
+          previous_status: 'draft',
+          changelog: [
+            { field: 'status', from: 'draft', to: 'active', at: isoNow(0) },
+            { field: 'description', from: 'Enforce data deletion for opted-out CA users', to: 'Enforce data deletion for opted-out CA users (updated)', at: isoNow(0) }
+          ]
+        }
+      },
+      'get-alerts': {
+        method: 'GET',
+        path: '/v1/alerts',
+        url: 'https://api.strata.io/v1/alerts',
+        params: [
+          { name: 'severity', label: 'Severity', placeholder: 'critical | warning | info', type: 'query', tooltip: 'Filter alerts by severity level. Supports: critical, warning, info.' },
+          { name: 'limit', label: 'Limit', placeholder: '10', type: 'query', tooltip: 'Maximum number of alerts to return. Range: 1-100. Default: 10.' }
+        ],
+        response: {
+          data: [
+            {
+              id: 'alt_001',
+              uuid: uuid(),
+              severity: 'critical',
+              message: 'Unencrypted SSN column detected in production',
+              description: 'Column users.ssn contains unencrypted Social Security Numbers. 1,247 records affected.',
+              source_id: 'src_pg_01',
+              policy_id: 'pol_002',
+              classification_id: 'cls_004',
+              created_at: '2026-03-21T09:45:12.341Z',
+              resolved: false,
+              assignee: null,
+              remediation: { suggested_action: 'encrypt_at_rest', estimated_impact: '1,247 rows' }
+            },
+            {
+              id: 'alt_002',
+              uuid: uuid(),
+              severity: 'warning',
+              message: 'Data retention policy violation: 12 records past expiry',
+              description: 'GDPR retention policy pol_001 detected 12 user records exceeding the 36-month retention window.',
+              source_id: 'src_sf_02',
+              policy_id: 'pol_001',
+              classification_id: null,
+              created_at: '2026-03-21T08:30:05.892Z',
+              resolved: false,
+              assignee: 'user_compliance_01',
+              remediation: { suggested_action: 'delete_expired', estimated_impact: '12 rows' }
+            },
+            {
+              id: 'alt_003',
+              uuid: uuid(),
+              severity: 'info',
+              message: 'Classification scan completed for Customer Data Lake',
+              description: 'Full scan of src_s3_03 completed successfully. 56 tables, 892 columns analyzed. 14 new classifications found.',
+              source_id: 'src_s3_03',
+              policy_id: null,
+              classification_id: null,
+              created_at: '2026-03-20T23:05:33.123Z',
+              resolved: true,
+              assignee: null,
+              remediation: null
+            }
+          ],
+          meta: { total: 3, unresolved: 2, request_id: 'req_' + uuid().slice(0, 12) }
+        }
+      },
+      'post-webhooks': {
+        method: 'POST',
+        path: '/v1/webhooks',
+        url: 'https://api.strata.io/v1/webhooks',
+        params: [],
+        body: JSON.stringify({
+          url: 'https://hooks.example.com/strata',
+          events: ['alert.created', 'classification.completed', 'policy.violated'],
+          secret: 'whsec_...'
+        }, null, 2),
+        response: {
+          id: 'whk_001',
+          uuid: uuid(),
+          url: 'https://hooks.example.com/strata',
+          events: ['alert.created', 'classification.completed', 'policy.violated'],
+          status: 'active',
+          created_at: isoNow(0),
+          secret_preview: 'whsec_...xxxx',
+          delivery: { last_attempt: null, success_rate: null, avg_latency_ms: null },
+          signing_algorithm: 'HMAC-SHA256'
+        }
+      }
+    };
+
+    var currentEndpoint = 'get-sources';
+    var latencyHistory = [];
+    var requestHistory = [];
+
+    // ---- Syntax highlight JSON ----
+    function highlightJSON(obj) {
+      var json = JSON.stringify(obj, null, 2);
+      return json.replace(/("(?:[^"\\]|\\.)*")\s*:/g, '<span class="json-key">$1</span>:')
+                 .replace(/:\s*("(?:[^"\\]|\\.)*")/g, ': <span class="json-string">$1</span>')
+                 .replace(/:\s*(\d+\.?\d*)/g, ': <span class="json-number">$1</span>')
+                 .replace(/:\s*(true|false)/g, ': <span class="json-bool">$1</span>')
+                 .replace(/:\s*(null)/g, ': <span class="json-null">$1</span>')
+                 .replace(/([{}\[\]])/g, '<span class="json-bracket">$1</span>');
+    }
+
+    // ---- Render JSON with line numbers and staggered animation ----
+    function renderJsonWithLines(obj) {
+      var json = JSON.stringify(obj, null, 2);
+      var lines = json.split('\n');
+      var numbersHtml = '';
+      var linesHtml = '';
+      lines.forEach(function(line, i) {
+        numbersHtml += '<span>' + (i + 1) + '</span>\n';
+        var highlighted = line
+          .replace(/("(?:[^"\\]|\\.)*")\s*:/g, '<span class="json-key">$1</span>:')
+          .replace(/:\s*("(?:[^"\\]|\\.)*")/g, ': <span class="json-string">$1</span>')
+          .replace(/:\s*(\d+\.?\d*)/g, ': <span class="json-number">$1</span>')
+          .replace(/:\s*(true|false)/g, ': <span class="json-bool">$1</span>')
+          .replace(/:\s*(null)/g, ': <span class="json-null">$1</span>')
+          .replace(/([{}\[\]])/g, '<span class="json-bracket">$1</span>');
+        linesHtml += '<span class="json-line" style="animation-delay:' + (i * 18) + 'ms">' + highlighted + '</span>\n';
+      });
+      return '<div class="json-line-wrap"><div class="json-line-numbers">' + numbersHtml + '</div><div class="json-lines">' + linesHtml + '</div></div>';
+    }
+
+    // ---- Calculate response size ----
+    function calcSize(obj) {
+      var bytes = new Blob([JSON.stringify(obj)]).size;
+      if (bytes < 1024) return bytes + ' B';
+      return (bytes / 1024).toFixed(1) + ' KB';
+    }
+
+    // ---- Build cURL command ----
+    function buildCurl(ep) {
+      var parts = ['curl'];
+      if (ep.method !== 'GET') {
+        parts.push('-X ' + ep.method);
+      }
+      parts.push(ep.url);
+      parts.push('-H "Authorization: Bearer ' + (document.getElementById('auth-token').value || 'sk_live_...') + '"');
+      parts.push('-H "Content-Type: application/json"');
+      parts.push('-H "Accept: application/json"');
+      if (ep.body) {
+        parts.push("-d '" + ep.body.replace(/\n/g, '\n') + "'");
+      }
+      return parts.join(' \\\n  ');
+    }
+
+    // ---- Render parameters form with tooltips ----
+    function renderParams(ep) {
+      var paramsBody = document.getElementById('params-body');
+      var paramsSection = document.getElementById('params-section');
+      paramsBody.innerHTML = '';
+
+      if (ep.params && ep.params.length > 0) {
+        paramsSection.style.display = '';
+        ep.params.forEach(function(p) {
+          var field = document.createElement('div');
+          field.className = 'builder-field';
+          var tooltipHtml = '';
+          if (p.tooltip) {
+            tooltipHtml = ' <span class="tooltip-trigger"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span class="tooltip-text">' + p.tooltip + '</span></span>';
+          }
+          field.innerHTML = '<label class="builder-label">' + p.label + ' <span style="color:var(--sds-color-warm-gray-350);text-transform:none;letter-spacing:0;font-weight:400;">(' + p.type + ')</span>' + tooltipHtml + '</label>' +
+            '<input type="text" class="builder-input" placeholder="' + p.placeholder + '" data-param="' + p.name + '" />';
+          paramsBody.appendChild(field);
+        });
+      } else if (ep.body) {
+        paramsSection.style.display = '';
+        var field = document.createElement('div');
+        field.className = 'builder-field';
+        field.innerHTML = '<label class="builder-label">Request Body</label>' +
+          '<textarea class="builder-textarea" id="request-body-input">' + ep.body + '</textarea>';
+        paramsBody.appendChild(field);
+      } else {
+        paramsSection.style.display = 'none';
+      }
+    }
+
+    // ---- Latency sparkline ----
+    function updateSparkline(ms) {
+      latencyHistory.push(ms);
+      if (latencyHistory.length > 8) latencyHistory.shift();
+
+      var container = document.getElementById('latency-sparkline');
+      var maxVal = Math.max.apply(null, latencyHistory);
+      container.innerHTML = '';
+      latencyHistory.forEach(function(val) {
+        var bar = document.createElement('div');
+        bar.className = 'latency-sparkline__bar';
+        bar.style.height = Math.max(3, (val / maxVal) * 18) + 'px';
+        bar.title = val + 'ms';
+        container.appendChild(bar);
+      });
+    }
+
+    // ---- Tab indicator animation ----
+    function updateTabIndicator() {
+      var activeTab = document.querySelector('.response-tab.is-active');
+      var indicator = document.getElementById('tab-indicator');
+      if (activeTab && indicator) {
+        var tabsRect = document.getElementById('response-tabs').getBoundingClientRect();
+        var tabRect = activeTab.getBoundingClientRect();
+        indicator.style.left = (tabRect.left - tabsRect.left) + 'px';
+        indicator.style.width = tabRect.width + 'px';
+      }
+    }
+
+    // ---- Determine response based on state (error logic) ----
+    function getResponseForEndpoint(ep, endpointKey) {
+      var hasAuth = document.getElementById('auth-token').value.trim().length > 0;
+
+      // 401 if no auth
+      if (!hasAuth) {
+        return {
+          status: 401,
+          statusText: '401 Unauthorized',
+          statusClass: 'status-badge--error',
+          data: {
+            error: {
+              code: 'unauthorized',
+              message: 'Invalid or missing API key. Include a valid Bearer token in the Authorization header.',
+              doc_url: 'https://docs.strata.io/auth'
+            }
+          },
+          time: Math.floor(Math.random() * 15) + 5
+        };
+      }
+
+      // 404 for delete with non-matching ID
+      if (endpointKey === 'delete-source') {
+        var idInput = document.querySelector('[data-param="id"]');
+        var idVal = idInput ? idInput.value.trim() : '';
+        if (idVal && idVal !== '' && idVal !== 'src_my_04' && idVal !== 'src_pg_01' && idVal !== 'src_sf_02' && idVal !== 'src_s3_03') {
+          return {
+            status: 404,
+            statusText: '404 Not Found',
+            statusClass: 'status-badge--warning',
+            data: ep.errorResponses ? ep.errorResponses['404'] : { error: { code: 'not_found', message: 'Resource not found.' } },
+            time: Math.floor(Math.random() * 20) + 10
+          };
+        }
+      }
+
+      // 422 for POST with empty/invalid body
+      if ((endpointKey === 'post-classifications-run' || endpointKey === 'post-policies') && ep.errorResponses) {
+        var bodyInput = document.getElementById('request-body-input');
+        if (bodyInput) {
+          var bodyText = bodyInput.value.trim();
+          try {
+            var parsed = JSON.parse(bodyText);
+            // Check for clearly incomplete body
+            if (endpointKey === 'post-classifications-run' && !parsed.source_id) {
+              return {
+                status: 422,
+                statusText: '422 Unprocessable Entity',
+                statusClass: 'status-badge--warning',
+                data: ep.errorResponses['422'],
+                time: Math.floor(Math.random() * 15) + 8
+              };
+            }
+            if (endpointKey === 'post-policies' && (!parsed.name || !parsed.rules)) {
+              return {
+                status: 422,
+                statusText: '422 Unprocessable Entity',
+                statusClass: 'status-badge--warning',
+                data: ep.errorResponses['422'],
+                time: Math.floor(Math.random() * 15) + 8
+              };
+            }
+          } catch(e) {
+            return {
+              status: 422,
+              statusText: '422 Unprocessable Entity',
+              statusClass: 'status-badge--warning',
+              data: {
+                error: {
+                  code: 'invalid_json',
+                  message: 'Request body is not valid JSON. Check for syntax errors.',
+                  doc_url: 'https://docs.strata.io/api/errors#422'
+                }
+              },
+              time: Math.floor(Math.random() * 10) + 5
+            };
+          }
+        }
+      }
+
+      // Success
+      return {
+        status: 200,
+        statusText: ep.method === 'POST' ? '201 Created' : '200 OK',
+        statusClass: 'status-badge--success',
+        data: ep.response,
+        time: Math.floor(Math.random() * 180) + 80
+      };
+    }
+
+    // ---- Show shimmer loading ----
+    function showShimmer() {
+      var jsonOutput = document.getElementById('json-output');
+      var shimmerHtml = '<div class="shimmer-container">';
+      for (var i = 0; i < 8; i++) {
+        shimmerHtml += '<div class="shimmer-line"></div>';
+      }
+      shimmerHtml += '</div>';
+      jsonOutput.innerHTML = shimmerHtml;
+    }
+
+    // ---- Select endpoint ----
+    function selectEndpoint(key) {
+      currentEndpoint = key;
+      var ep = endpoints[key];
+
+      // Update active state in list
+      document.querySelectorAll('.endpoint-item').forEach(function(el) {
+        el.classList.toggle('is-active', el.dataset.endpoint === key);
+      });
+
+      // Update method badge
+      var methodEl = document.getElementById('builder-method');
+      methodEl.textContent = ep.method === 'DELETE' ? 'DEL' : ep.method;
+      methodEl.className = 'method-badge method-badge--' + ep.method.toLowerCase();
+
+      // Update URL
+      document.getElementById('builder-url').textContent = ep.url;
+
+      // Render params
+      renderParams(ep);
+
+      // Update response
+      showResponseInstant(ep, key);
+    }
+
+    // ---- Show response (instant, for endpoint selection) ----
+    function showResponseInstant(ep, endpointKey) {
+      var result = getResponseForEndpoint(ep, endpointKey);
+      var statusBadge = document.getElementById('status-badge');
+      var jsonOutput = document.getElementById('json-output');
+      var curlOutput = document.getElementById('curl-output');
+      var responseTime = document.getElementById('response-time');
+      var responseSize = document.getElementById('response-size');
+
+      statusBadge.textContent = result.statusText;
+      statusBadge.className = 'status-badge ' + result.statusClass;
+      jsonOutput.innerHTML = renderJsonWithLines(result.data);
+      responseTime.textContent = result.time + 'ms';
+      responseSize.textContent = calcSize(result.data);
+      updateSparkline(result.time);
+
+      curlOutput.textContent = buildCurl(ep);
+      updateTabIndicator();
+    }
+
+    // ---- Send request (with loading animation) ----
+    window.sendRequest = function() {
+      var ep = endpoints[currentEndpoint];
+      var jsonOutput = document.getElementById('json-output');
+      var statusBadge = document.getElementById('status-badge');
+
+      // Show shimmer
+      showShimmer();
+      statusBadge.textContent = '...';
+      statusBadge.className = 'status-badge';
+
+      var delay = Math.floor(Math.random() * 600) + 400;
+
+      setTimeout(function() {
+        var result = getResponseForEndpoint(ep, currentEndpoint);
+        var responseTime = document.getElementById('response-time');
+        var responseSize = document.getElementById('response-size');
+        var curlOutput = document.getElementById('curl-output');
+
+        statusBadge.textContent = result.statusText;
+        statusBadge.className = 'status-badge ' + result.statusClass + ' is-animating';
+        jsonOutput.innerHTML = renderJsonWithLines(result.data);
+        responseTime.textContent = result.time + 'ms';
+        responseSize.textContent = calcSize(result.data);
+        updateSparkline(result.time);
+        curlOutput.textContent = buildCurl(ep);
+
+        // Remove animation class after it completes
+        setTimeout(function() {
+          statusBadge.classList.remove('is-animating');
+        }, 400);
+
+        // Add to history
+        addToHistory(ep, result);
+      }, delay);
+    };
+
+    // ---- Reset response ----
+    window.resetResponse = function() {
+      var jsonOutput = document.getElementById('json-output');
+      var statusBadge = document.getElementById('status-badge');
+      var responseTime = document.getElementById('response-time');
+      var responseSize = document.getElementById('response-size');
+
+      jsonOutput.innerHTML = '<div class="json-line-wrap" style="opacity:0.3;"><div class="json-lines" style="color:rgba(255,255,255,0.25); padding: 20px 0;">No response yet. Click "Send Request" or press Ctrl+Enter.</div></div>';
+      statusBadge.textContent = '---';
+      statusBadge.className = 'status-badge';
+      responseTime.textContent = '--';
+      responseSize.textContent = '--';
+    };
+
+    // ---- Request history ----
+    function addToHistory(ep, result) {
+      requestHistory.unshift({
+        method: ep.method,
+        path: ep.path,
+        status: result.status,
+        statusText: result.statusText,
+        time: result.time,
+        endpointKey: currentEndpoint
+      });
+      if (requestHistory.length > 3) requestHistory.pop();
+      renderHistory();
+    }
+
+    function renderHistory() {
+      var container = document.getElementById('request-history');
+      var list = document.getElementById('history-list');
+
+      if (requestHistory.length === 0) {
+        container.style.display = 'none';
+        return;
+      }
+
+      container.style.display = '';
+      list.innerHTML = '';
+
+      requestHistory.forEach(function(item) {
+        var li = document.createElement('li');
+        li.className = 'request-history__item';
+        li.onclick = function() { selectEndpoint(item.endpointKey); };
+        var statusClass = item.status < 300 ? 'is-success' : 'is-error';
+        li.innerHTML = '<span class="method-badge method-badge--' + item.method.toLowerCase() + '">' + (item.method === 'DELETE' ? 'DEL' : item.method) + '</span>' +
+          '<span class="request-history__item-path">' + item.path + '</span>' +
+          '<span class="request-history__item-status ' + statusClass + '">' + item.status + '</span>' +
+          '<span class="request-history__item-time">' + item.time + 'ms</span>';
+        list.appendChild(li);
+      });
+    }
+
+    window.toggleHistory = function() {
+      var toggle = document.getElementById('history-toggle');
+      var list = document.getElementById('history-list');
+      toggle.classList.toggle('is-open');
+      list.classList.toggle('is-hidden');
+    };
+
+    // ---- Share request ----
+    window.shareRequest = function() {
+      var ep = endpoints[currentEndpoint];
+      var mockId = Math.random().toString(36).slice(2, 10);
+      var link = 'strata.io/api/share/' + mockId;
+
+      var toast = document.getElementById('share-toast');
+      var linkSpan = document.getElementById('share-link');
+      linkSpan.textContent = link;
+
+      navigator.clipboard.writeText('https://' + link).catch(function() {});
+
+      toast.classList.add('is-visible');
+      setTimeout(function() {
+        toast.classList.remove('is-visible');
+      }, 3000);
+    };
+
+    // ---- Toggle collapsible section ----
+    window.toggleSection = function(header) {
+      var body = header.nextElementSibling;
+      var toggle = header.querySelector('.builder-section__toggle');
+      body.classList.toggle('is-hidden');
+      if (toggle) toggle.classList.toggle('is-collapsed');
+    };
+
+    // ---- Copy cURL ----
+    window.copyCurl = function() {
+      var text = document.getElementById('curl-output').textContent;
+      navigator.clipboard.writeText(text).then(function() {
+        var btn = document.querySelector('.curl-copy-btn');
+        btn.textContent = 'Copied!';
+        setTimeout(function() {
+          btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy';
+        }, 1500);
+      });
+    };
+
+    // ---- Response tab switching with animated indicator ----
+    document.querySelectorAll('.response-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.response-tab').forEach(function(t) { t.classList.remove('is-active'); });
+        document.querySelectorAll('.response-tab-panel').forEach(function(p) { p.classList.remove('is-active'); });
+        tab.classList.add('is-active');
+        var panel = document.querySelector('.response-tab-panel[data-panel="' + tab.dataset.tab + '"]');
+        if (panel) panel.classList.add('is-active');
+        updateTabIndicator();
+      });
+    });
+
+    // ---- Endpoint click handlers ----
+    document.querySelectorAll('.endpoint-item').forEach(function(item) {
+      item.addEventListener('click', function() {
+        selectEndpoint(item.dataset.endpoint);
+      });
+    });
+
+    // ---- Keyboard shortcut: Ctrl+Enter to send ----
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        e.preventDefault();
+        sendRequest();
+      }
+    });
+
+    // ---- Initialize with GET /v1/sources ----
+    selectEndpoint('get-sources');
+
+    // ---- Update tab indicator on window resize ----
+    window.addEventListener('resize', updateTabIndicator);
+
+    // Initial tab indicator
+    setTimeout(updateTabIndicator, 50);
+
+  })();
+  </script>
+</body>
+</html>

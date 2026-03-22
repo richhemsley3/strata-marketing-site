@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — Strata</title>
+  <link rel="stylesheet" href="design-system-labs/tokens/colors.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/spacing.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/typography.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/marketing.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/resources.css">
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+        </div>
+        Strata
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="use-cases.html">Use Cases</a>
+        <a href="resources.html" class="is-active">Resources</a>
+        <a href="developers.html">Developers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary header-cta">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="use-cases.html">Use Cases</a>
+    <a href="resources.html" class="is-active">Resources</a>
+    <a href="developers.html">Developers</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary" style="margin-top: var(--sds-space-400);">Get Started</a>
+  </div>
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="hero hero--short">
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__content">
+      <p class="section__overline reveal--fade" style="margin-bottom: var(--sds-space-400);">INSIGHTS &amp; RESOURCES</p>
+      <h1 class="hero__headline reveal--fade stagger-1">The data management reading room</h1>
+      <p class="hero__subheadline reveal--fade stagger-2">Expert perspectives on data management, compliance strategy, and the frameworks that keep modern organizations ahead of emerging challenges.</p>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURED RESOURCE — EDITORIAL HERO ═══ -->
+  <section class="res-featured-section">
+    <div class="container">
+
+      <div class="res-featured reveal--scale">
+        <div class="res-featured__visual">
+          <div class="wp-cover wp-cover--geometric">
+            <div class="wp-cover__content">
+              <div class="wp-cover__logo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+                Strata
+              </div>
+              <div class="wp-cover__title">The Complete Guide to Enterprise Data Management</div>
+              <div class="wp-cover__year">2026 Edition &middot; 42 pages</div>
+            </div>
+          </div>
+        </div>
+        <div class="res-featured__body">
+          <span class="res-featured__badge">Featured White Paper</span>
+          <h2 class="res-featured__title">Your definitive playbook for enterprise data management</h2>
+          <p class="res-featured__excerpt">Strategies, technologies, and frameworks that leading organizations are adopting to manage sensitive data across multi-cloud environments, SaaS platforms, and hybrid infrastructure.</p>
+          <div class="res-featured__meta">
+            <span>42 pages</span>
+            <span>&middot;</span>
+            <span>March 2026</span>
+          </div>
+          <a href="#" class="btn btn--ghost">Download white paper <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ RESOURCE CONTROLS + LIST ═══ -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Controls bar: search + filters + view toggle -->
+      <div class="res-controls" id="res-controls">
+        <div class="res-controls__bar">
+
+          <!-- Search -->
+          <div class="res-search">
+            <svg class="res-search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" class="res-search__input" id="res-search" placeholder="Search resources..." autocomplete="off" />
+            <button class="res-search__clear" id="res-search-clear" aria-label="Clear search" type="button">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+            </button>
+          </div>
+
+          <!-- Filter pills -->
+          <div class="res-filters" id="res-filters">
+            <button class="res-filters__pill is-active" data-filter="all">All <span class="res-filters__count" data-count-for="all">(12)</span></button>
+            <button class="res-filters__pill" data-filter="blog">Blog <span class="res-filters__count" data-count-for="blog">(4)</span></button>
+            <button class="res-filters__pill" data-filter="whitepaper">White Papers <span class="res-filters__count" data-count-for="whitepaper">(3)</span></button>
+            <button class="res-filters__pill" data-filter="bestpractice">Best Practices <span class="res-filters__count" data-count-for="bestpractice">(3)</span></button>
+            <button class="res-filters__pill" data-filter="report">Reports <span class="res-filters__count" data-count-for="report">(2)</span></button>
+          </div>
+
+          <!-- View toggle -->
+          <div class="res-view-toggle" id="res-view-toggle">
+            <button class="res-view-toggle__btn is-active" data-view="cards" aria-label="Card view" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </button>
+            <button class="res-view-toggle__btn" data-view="list" aria-label="List view" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section label with count -->
+      <div class="res-list-header reveal--fade">
+        <p class="section__overline" style="text-align: left; margin-bottom: 0;">LATEST RESOURCES</p>
+        <span class="res-list-count">Showing <span id="res-count">12</span> articles</span>
+      </div>
+
+      <!-- Resources container (toggles between list and cards) -->
+      <div class="res-list resources-view--cards" id="res-list">
+
+        <a href="#" class="res-item reveal" data-category="blog" data-description="Emerging architectures and the shift toward data-centric management models reshaping how enterprises govern their most sensitive assets.">
+          <div class="res-item__accent" data-type="blog"></div>
+          <span class="res-row__type" style="color: var(--sds-color-brand-atlantic);">Blog</span>
+          <span class="res-row__title">Why 73% of Enterprises Are Rethinking Data Management Architecture in 2026</span>
+          <span class="res-row__desc">Emerging architectures and the shift toward data-centric management models reshaping how enterprises govern their most sensitive assets.</span>
+          <span class="res-row__meta">5 min read</span>
+          <span class="res-row__date">Mar 18, 2026</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#" class="res-item reveal stagger-1" data-category="whitepaper" data-description="A comprehensive framework for implementing zero trust principles at the data layer, with real-world deployment patterns.">
+          <div class="res-item__accent" data-type="whitepaper"></div>
+          <span class="res-row__type" style="color: #6B7DA5;">White Paper</span>
+          <span class="res-row__title">Zero Trust Data Architecture: From Concept to Implementation</span>
+          <span class="res-row__desc">A comprehensive framework for implementing zero trust principles at the data layer, with real-world deployment patterns.</span>
+          <span class="res-row__meta">18 pages</span>
+          <span class="res-row__date">Mar 12, 2026</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#" class="res-item reveal stagger-2" data-category="bestpractice" data-description="Practical steps to streamline compliance workflows using automation, reducing manual effort while strengthening audit readiness.">
+          <div class="res-item__accent" data-type="bestpractice"></div>
+          <span class="res-row__type" style="color: #7A9A01;">Best Practice</span>
+          <span class="res-row__title">5 Steps to Automate Your Compliance Workflow and Cut Manual Effort by 80%</span>
+          <span class="res-row__desc">Practical steps to streamline compliance workflows using automation, reducing manual effort while strengthening audit readiness.</span>
+          <span class="res-row__meta">8 min read</span>
+          <span class="res-row__date">Mar 4, 2026</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#" class="res-item reveal stagger-3" data-category="blog" data-description="How misclassified data led to three high-profile breaches and the lessons security teams can apply to their own organizations.">
+          <div class="res-item__accent" data-type="blog"></div>
+          <span class="res-row__type" style="color: var(--sds-color-brand-atlantic);">Blog</span>
+          <span class="res-row__title">The Hidden Cost of Misclassified Data: Lessons from Three Enterprise Breaches</span>
+          <span class="res-row__desc">How misclassified data led to three high-profile breaches and the lessons security teams can apply to their own organizations.</span>
+          <span class="res-row__meta">6 min read</span>
+          <span class="res-row__date">Feb 25, 2026</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#" class="res-item reveal stagger-4" data-category="report" data-description="Detailed cost analysis of data breaches across industries with insights on the most effective prevention strategies.">
+          <div class="res-item__accent" data-type="report"></div>
+          <span class="res-row__type" style="color: #BF5547;">Report</span>
+          <span class="res-row__title">Data Breach Cost Analysis 2026: What the Numbers Tell Us About Prevention</span>
+          <span class="res-row__desc">Detailed cost analysis of data breaches across industries with insights on the most effective prevention strategies.</span>
+          <span class="res-row__meta">24 pages</span>
+          <span class="res-row__date">Feb 18, 2026</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#" class="res-item reveal stagger-5" data-category="bestpractice" data-description="Building a data-first culture that goes beyond compliance checklists to make data management instinctive across teams.">
+          <div class="res-item__accent" data-type="bestpractice"></div>
+          <span class="res-row__type" style="color: #7A9A01;">Best Practice</span>
+          <span class="res-row__title">From Checkbox to Culture: How CISOs Are Making Data Governance Second Nature</span>
+          <span class="res-row__desc">Building a data-first culture that goes beyond compliance checklists to make data management instinctive across teams.</span>
+          <span class="res-row__meta">10 min read</span>
+          <span class="res-row__date">Feb 12, 2026</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#" class="res-item reveal" data-category="whitepaper" data-description="Strategies and tooling for maintaining consistent data governance policies across AWS, Azure, GCP, and hybrid environments.">
+          <div class="res-item__accent" data-type="whitepaper"></div>
+          <span class="res-row__type" style="color: #6B7DA5;">White Paper</span>
+          <span class="res-row__title">The CISO's Playbook for Cloud Data Governance Across Multi-Cloud Environments</span>
+          <span class="res-row__desc">Strategies and tooling for maintaining consistent data governance policies across AWS, Azure, GCP, and hybrid environments.</span>
+          <span class="res-row__meta">24 pages</span>
+          <span class="res-row__date">Feb 5, 2026</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#" class="res-item reveal stagger-1" data-category="blog" data-description="How machine learning classifiers outperform traditional regex-based scanning for discovering sensitive data across unstructured stores.">
+          <div class="res-item__accent" data-type="blog"></div>
+          <span class="res-row__type" style="color: var(--sds-color-brand-atlantic);">Blog</span>
+          <span class="res-row__title">Beyond Pattern Matching: How ML-Driven Discovery Finds Sensitive Data Humans Miss</span>
+          <span class="res-row__desc">How machine learning classifiers outperform traditional regex-based scanning for discovering sensitive data across unstructured stores.</span>
+          <span class="res-row__meta">7 min read</span>
+          <span class="res-row__date">Jan 28, 2026</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#" class="res-item reveal stagger-2" data-category="report" data-description="Comprehensive review of the most significant data management developments of 2025 and their implications for enterprise strategy.">
+          <div class="res-item__accent" data-type="report"></div>
+          <span class="res-row__type" style="color: #BF5547;">Report</span>
+          <span class="res-row__title">2025 Year in Review: Data Management Trends and Lessons Learned</span>
+          <span class="res-row__desc">Comprehensive review of the most significant data management developments of 2025 and their implications for enterprise strategy.</span>
+          <span class="res-row__meta">32 pages</span>
+          <span class="res-row__date">Jan 20, 2026</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#" class="res-item reveal stagger-3" data-category="bestpractice" data-description="Balancing rigorous access controls with employee productivity through smart policy design and contextual authorization.">
+          <div class="res-item__accent" data-type="bestpractice"></div>
+          <span class="res-row__type" style="color: #7A9A01;">Best Practice</span>
+          <span class="res-row__title">Implementing Least-Privilege Access Controls Without Disrupting Productivity</span>
+          <span class="res-row__desc">Balancing rigorous access controls with employee productivity through smart policy design and contextual authorization.</span>
+          <span class="res-row__meta">9 min read</span>
+          <span class="res-row__date">Jan 14, 2026</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#" class="res-item reveal stagger-4" data-category="blog" data-description="Mapping the global privacy regulation landscape and what every data platform needs to stay compliant across jurisdictions.">
+          <div class="res-item__accent" data-type="blog"></div>
+          <span class="res-row__type" style="color: var(--sds-color-brand-atlantic);">Blog</span>
+          <span class="res-row__title">The 2026 Privacy Map: 14 Regulations Your Data Stack Must Support This Year</span>
+          <span class="res-row__desc">Mapping the global privacy regulation landscape and what every data platform needs to stay compliant across jurisdictions.</span>
+          <span class="res-row__meta">11 min read</span>
+          <span class="res-row__date">Jan 6, 2026</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#" class="res-item reveal stagger-5" data-category="whitepaper" data-description="Understanding the scope of unstructured dark data and strategies for bringing visibility and governance to hidden data estates.">
+          <div class="res-item__accent" data-type="whitepaper"></div>
+          <span class="res-row__type" style="color: #6B7DA5;">White Paper</span>
+          <span class="res-row__title">Dark Data Problem: Why 68% of Your Unstructured Data Estate Is Invisible to Management</span>
+          <span class="res-row__desc">Understanding the scope of unstructured dark data and strategies for bringing visibility and governance to hidden data estates.</span>
+          <span class="res-row__meta">16 pages</span>
+          <span class="res-row__date">Dec 18, 2025</span>
+          <svg class="res-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+
+      </div>
+
+      <!-- No results state -->
+      <div class="res-no-results" id="res-no-results" style="display: none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--sds-color-warm-gray-250);"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <p class="res-no-results__title">No resources found</p>
+        <p class="res-no-results__text">Try adjusting your search or filter to find what you're looking for.</p>
+        <button class="btn btn--ghost" id="res-clear-all" type="button">Clear all filters</button>
+      </div>
+
+      <!-- Load more -->
+      <div class="res-load-more reveal--fade" style="text-align: center; margin-top: var(--sds-space-700);">
+        <button class="btn btn--ghost">Load more resources <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12l7 7 7-7"/></svg></button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Option A: Split Panel -->
+  <section class="cta-split reveal">
+    <div class="cta-split__left">
+      <div class="cta-grain"></div>
+      <div class="cta-split__left-content">
+        <p class="cta-split__overline">GET STARTED</p>
+        <h2 class="cta-split__title">See what Strata can do for your data team.</h2>
+        <p class="cta-split__desc">Get a personalized walkthrough of the platform and learn how teams like yours manage data at scale.</p>
+      </div>
+    </div>
+    <div class="cta-split__right">
+      <form class="cta-split__form" onsubmit="return false;">
+        <input type="email" class="cta-split__input" placeholder="Work email" />
+        <input type="text" class="cta-split__input" placeholder="Company name" />
+        <button type="submit" class="cta-split__btn">Get started</button>
+      </form>
+      <p class="cta-split__privacy">By signing up you agree to our Terms of Service</p>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="site-logo footer-logo" style="margin-bottom: var(--sds-space-400);">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+            </div>
+            Strata
+          </a>
+          <p style="font-size: 13px; color: var(--sds-color-warm-gray-500); max-width: 280px; line-height: 1.6;">Enterprise-grade data management platform. Discover, classify, and govern your most sensitive data.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="use-cases.html">Use Cases</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="resources.html">Resources</a>
+          <a href="#">Careers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strata. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+
+  <!-- Resource controls logic -->
+  <script>
+    (function() {
+      const pills = document.querySelectorAll('.res-filters__pill');
+      const items = document.querySelectorAll('.res-item');
+      const countEl = document.getElementById('res-count');
+      const searchInput = document.getElementById('res-search');
+      const searchClear = document.getElementById('res-search-clear');
+      const viewBtns = document.querySelectorAll('.res-view-toggle__btn');
+      const resList = document.getElementById('res-list');
+      const noResults = document.getElementById('res-no-results');
+      const clearAllBtn = document.getElementById('res-clear-all');
+      const loadMore = document.querySelector('.res-load-more');
+
+      let activeFilter = 'all';
+      let searchQuery = '';
+
+      // --- Filtering ---
+      function applyFilters() {
+        let visible = 0;
+        const categoryCounts = { all: 0, blog: 0, whitepaper: 0, bestpractice: 0, report: 0 };
+
+        items.forEach(item => {
+          const cat = item.dataset.category;
+          const title = item.querySelector('.res-row__title').textContent.toLowerCase();
+          const matchesSearch = !searchQuery || title.includes(searchQuery.toLowerCase());
+          const matchesFilter = activeFilter === 'all' || cat === activeFilter;
+
+          // Count items matching search per category
+          if (matchesSearch) {
+            categoryCounts.all++;
+            if (categoryCounts[cat] !== undefined) categoryCounts[cat]++;
+          }
+
+          if (matchesSearch && matchesFilter) {
+            item.classList.remove('res-item--hidden');
+            visible++;
+          } else {
+            item.classList.add('res-item--hidden');
+          }
+        });
+
+        // Update pill counts
+        document.querySelectorAll('.res-filters__count').forEach(span => {
+          const key = span.dataset.countFor;
+          if (categoryCounts[key] !== undefined) {
+            span.textContent = '(' + categoryCounts[key] + ')';
+          }
+        });
+
+        // Animate count update
+        if (countEl) {
+          countEl.classList.add('is-updating');
+          setTimeout(() => {
+            countEl.textContent = visible;
+            countEl.classList.remove('is-updating');
+          }, 180);
+        }
+
+        // No results state
+        if (visible === 0) {
+          noResults.style.display = 'flex';
+          if (loadMore) loadMore.style.display = 'none';
+        } else {
+          noResults.style.display = 'none';
+          if (loadMore) loadMore.style.display = '';
+        }
+      }
+
+      // Filter pills
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('is-active'));
+          pill.classList.add('is-active');
+          activeFilter = pill.dataset.filter;
+          applyFilters();
+        });
+      });
+
+      // --- Search ---
+      searchInput.addEventListener('input', () => {
+        searchQuery = searchInput.value.trim();
+        searchClear.classList.toggle('is-visible', searchQuery.length > 0);
+        applyFilters();
+      });
+
+      searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        searchClear.classList.remove('is-visible');
+        searchInput.focus();
+        applyFilters();
+      });
+
+      // --- Clear all (no results state) ---
+      if (clearAllBtn) {
+        clearAllBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          searchClear.classList.remove('is-visible');
+          pills.forEach(p => p.classList.remove('is-active'));
+          pills[0].classList.add('is-active');
+          activeFilter = 'all';
+          applyFilters();
+        });
+      }
+
+      // --- View toggle ---
+      function setView(view) {
+        viewBtns.forEach(b => b.classList.toggle('is-active', b.dataset.view === view));
+        resList.classList.toggle('resources-view--list', view === 'list');
+        resList.classList.toggle('resources-view--cards', view === 'cards');
+        try { localStorage.setItem('res-view', view); } catch(e) {}
+      }
+
+      viewBtns.forEach(btn => {
+        btn.addEventListener('click', () => setView(btn.dataset.view));
+      });
+
+      // Restore saved preference
+      try {
+        const saved = localStorage.getItem('res-view');
+        if (saved === 'list') setView('list');
+      } catch(e) {}
+
+      // --- Sticky controls ---
+      const controls = document.getElementById('res-controls');
+      const header = document.getElementById('site-header');
+      if (controls && header) {
+        const observer = new IntersectionObserver(([e]) => {
+          controls.classList.toggle('is-stuck', e.intersectionRatio < 1);
+        }, { threshold: [1], rootMargin: '-' + (header.offsetHeight + 1) + 'px 0px 0px 0px' });
+        observer.observe(controls);
+      }
+    })();
+  </script>
+</body>
+</html>

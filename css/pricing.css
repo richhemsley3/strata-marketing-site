@@ -1,0 +1,610 @@
+/* ============================================================
+   Pricing Page — Strata Data Security Site
+   Premium B2B SaaS pricing with featured tier emphasis
+   ============================================================ */
+
+/* ── Pricing Section — tighter top spacing ────────────────── */
+.pricing-section {
+  padding-top: var(--sds-space-400);
+}
+
+/* ── Trust Badges ─────────────────────────────────────────── */
+.pricing-trust {
+  display: flex;
+  justify-content: center;
+  gap: var(--sds-space-800);
+  margin-bottom: var(--sds-space-1200);
+  flex-wrap: wrap;
+}
+
+.pricing-trust__item {
+  display: flex;
+  align-items: center;
+  gap: var(--sds-space-200);
+  font-size: 13px;
+  font-weight: var(--sds-weight-medium);
+  color: var(--sds-color-warm-gray-500);
+  letter-spacing: 0.01em;
+}
+
+.pricing-trust__item svg {
+  color: var(--sds-color-brand-atlantic);
+  flex-shrink: 0;
+}
+
+/* ── Billing Toggle ───────────────────────────────────────── */
+.pricing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sds-space-300);
+  margin-top: var(--sds-space-800);
+}
+
+.pricing-toggle__label {
+  font-size: 14px;
+  font-weight: var(--sds-weight-medium);
+  color: var(--sds-color-warm-gray-400);
+  transition: color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.pricing-toggle__label--active {
+  color: var(--mkt-heading-color);
+}
+
+.pricing-toggle__save {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: var(--sds-weight-semibold);
+  color: var(--sds-color-brand-atlantic);
+  background: rgba(166, 203, 214, 0.15);
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.pricing-toggle__switch {
+  position: relative;
+  width: 48px;
+  height: 26px;
+  background: var(--sds-color-warm-gray-150);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  padding: 0;
+}
+
+.pricing-toggle__switch.is-active {
+  background: var(--sds-color-brand-atlantic);
+}
+
+.pricing-toggle__knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-toggle__switch.is-active .pricing-toggle__knob {
+  transform: translateX(22px);
+}
+
+/* ── Pricing Grid ─────────────────────────────────────────── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sds-space-600);
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    align-items: stretch;
+  }
+}
+
+/* ── Pricing Cards ────────────────────────────────────────── */
+.pricing-card {
+  background: var(--sds-color-white);
+  border: 1px solid var(--sds-color-warm-gray-100);
+  border-radius: 16px;
+  padding: var(--sds-space-800) var(--sds-space-700);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--sds-color-warm-gray-200);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 768px) {
+  /* Side cards share borders with featured */
+  .pricing-card:first-child {
+    border-radius: 16px 0 0 16px;
+    border-right: none;
+  }
+
+  .pricing-card--enterprise {
+    border-radius: 0 16px 16px 0;
+    border-left: none;
+  }
+
+  .pricing-card--featured {
+    border-radius: 20px;
+    border: 1px solid var(--sds-color-warm-gray-150);
+    z-index: 2;
+  }
+
+  /* Side cards don't lift on hover — only featured lifts */
+  .pricing-card:first-child:hover,
+  .pricing-card--enterprise:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--sds-color-warm-gray-150);
+  }
+}
+
+/* ── Featured Card ────────────────────────────────────────── */
+.pricing-card--featured {
+  background: var(--sds-color-white);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  padding: var(--sds-space-1000) var(--sds-space-800);
+}
+
+/* Subtle accent line at top of featured card */
+.pricing-card--featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 3px;
+  background: var(--sds-color-brand-midnight);
+  border-radius: 0 0 3px 3px;
+}
+
+@media (min-width: 768px) {
+  .pricing-card--featured {
+    margin: calc(-1 * var(--sds-space-800)) 0;
+    padding-top: var(--sds-space-1200);
+    padding-bottom: var(--sds-space-1200);
+  }
+}
+
+.pricing-card--featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 56px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Badge */
+.pricing-card__badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  font-weight: var(--sds-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: white;
+  background: var(--sds-color-brand-midnight);
+  padding: 6px 20px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Card Header */
+.pricing-card__header {
+  margin-bottom: var(--sds-space-600);
+}
+
+.pricing-card__name {
+  font-family: var(--mkt-font-display);
+  font-size: var(--sds-type-title);
+  font-weight: 400;
+  color: var(--mkt-heading-color);
+  margin-bottom: var(--sds-space-200);
+}
+
+.pricing-card__desc {
+  font-size: 14px;
+  color: var(--sds-color-warm-gray-500);
+  line-height: 1.6;
+}
+
+/* Price */
+.pricing-card__price-wrap {
+  margin-bottom: var(--sds-space-800);
+  padding-bottom: var(--sds-space-600);
+  border-bottom: 1px solid var(--sds-color-warm-gray-100);
+}
+
+.pricing-card--featured .pricing-card__price-wrap {
+  border-bottom-color: var(--sds-color-warm-gray-150);
+}
+
+.pricing-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-bottom: var(--sds-space-100);
+}
+
+.pricing-card__currency {
+  font-family: var(--mkt-font-display);
+  font-size: clamp(20px, 2.5vw, 24px);
+  font-weight: 400;
+  color: var(--mkt-heading-color);
+  line-height: 1;
+}
+
+.pricing-card__amount {
+  font-family: var(--mkt-font-display);
+  font-size: clamp(48px, 5vw, 64px);
+  font-weight: 400;
+  color: var(--mkt-heading-color);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+/* Brief scale pop animation when price changes */
+@keyframes price-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.pricing-card__amount.is-changing {
+  animation: price-pop 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricing-card__price--custom {
+  gap: 0;
+}
+
+.pricing-card__amount-text {
+  font-family: var(--mkt-font-display);
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 400;
+  color: var(--mkt-heading-color);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.pricing-card__period {
+  font-size: 13px;
+  color: var(--sds-color-warm-gray-450);
+}
+
+/* Features List */
+.pricing-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--sds-space-800);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-space-350);
+}
+
+.pricing-card__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sds-space-300);
+  font-size: 14px;
+  color: var(--sds-color-warm-gray-600);
+  line-height: 1.5;
+}
+
+.pricing-card__features li svg {
+  flex-shrink: 0;
+  color: var(--sds-color-brand-atlantic);
+  margin-top: 2px;
+}
+
+.pricing-card--featured .pricing-card__features li svg {
+  color: var(--sds-color-brand-midnight);
+}
+
+.pricing-card--featured .pricing-card__features li {
+  color: var(--sds-color-warm-gray-700);
+}
+
+/* CTA Button */
+.pricing-card__cta {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Enterprise personal note */
+.pricing-card__enterprise-cta {
+  margin-top: auto;
+}
+
+.pricing-card__enterprise-note {
+  font-size: 12px;
+  color: var(--sds-color-warm-gray-400);
+  text-align: center;
+  margin-top: var(--sds-space-300);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* ── Comparison Table ─────────────────────────────────────── */
+.comparison-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 920px;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 1px solid var(--sds-color-warm-gray-100);
+  background: var(--sds-color-white);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.comparison-table th {
+  padding: var(--sds-space-500) var(--sds-space-500);
+  text-align: center;
+  font-size: 13px;
+  font-weight: var(--sds-weight-semibold);
+  color: var(--mkt-heading-color);
+  border-bottom: 1px solid var(--sds-color-warm-gray-100);
+  background: var(--sds-color-warm-gray-025);
+  white-space: nowrap;
+}
+
+.comparison-table th:first-child {
+  text-align: left;
+  width: 40%;
+}
+
+.comparison-table__featured-col {
+  color: var(--sds-color-brand-midnight);
+  position: relative;
+  background: rgba(166, 203, 214, 0.05);
+}
+
+.comparison-table td {
+  padding: var(--sds-space-350) var(--sds-space-500);
+  text-align: center;
+  color: var(--sds-color-warm-gray-600);
+  border-bottom: 1px solid var(--sds-color-warm-gray-050);
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: var(--sds-weight-medium);
+  color: var(--sds-color-warm-gray-700);
+}
+
+.comparison-table__featured-cell {
+  background: rgba(166, 203, 214, 0.05);
+}
+
+/* Featured column subtle left/right borders */
+.comparison-table__featured-col,
+.comparison-table__featured-cell {
+  border-left: 1px solid rgba(166, 203, 214, 0.12);
+  border-right: 1px solid rgba(166, 203, 214, 0.12);
+}
+
+/* Group Headers */
+.comparison-table__group-header td {
+  font-family: var(--sds-font-sans);
+  font-size: 11px;
+  font-weight: var(--sds-weight-semibold);
+  color: var(--sds-color-brand-atlantic);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding-top: var(--sds-space-600);
+  padding-bottom: var(--sds-space-300);
+  border-bottom: 1px solid var(--sds-color-warm-gray-100);
+  background: transparent;
+  text-align: left;
+}
+
+.comparison-table__group-header td:first-child {
+  font-weight: var(--sds-weight-semibold);
+}
+
+/* Row hover */
+.comparison-table tbody tr:not(.comparison-table__group-header):hover td {
+  background: rgba(0, 0, 0, 0.01);
+}
+
+.comparison-table tbody tr:not(.comparison-table__group-header):hover .comparison-table__featured-cell {
+  background: rgba(166, 203, 214, 0.08);
+}
+
+/* Check & Dash Icons */
+.comparison-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sds-color-brand-atlantic);
+}
+
+.comparison-dash {
+  color: var(--sds-color-warm-gray-200);
+  font-size: 18px;
+}
+
+/* ── FAQ Section ──────────────────────────────────────────── */
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--sds-color-warm-gray-100);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--sds-color-warm-gray-100);
+}
+
+.faq-item__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sds-space-600) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: var(--sds-space-400);
+  transition: opacity 0.2s ease;
+}
+
+.faq-item__trigger:hover .faq-item__question {
+  color: var(--sds-color-brand-atlantic);
+}
+
+.faq-item__trigger:hover .faq-item__icon {
+  background: var(--sds-color-warm-gray-100);
+}
+
+.faq-item__question {
+  font-family: var(--mkt-font-display);
+  font-size: clamp(16px, 1.5vw, 18px);
+  font-weight: 400;
+  color: var(--mkt-heading-color);
+  line-height: 1.4;
+  transition: color 0.25s ease;
+}
+
+.faq-item__icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--sds-color-warm-gray-050);
+  color: var(--sds-color-warm-gray-500);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item__icon svg {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.is-open .faq-item__icon {
+  background: var(--sds-color-brand-midnight);
+  color: white;
+}
+
+.faq-item.is-open .faq-item__icon svg {
+  transform: rotate(45deg);
+}
+
+.faq-item__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.is-open .faq-item__content {
+  max-height: 300px;
+}
+
+.faq-item__content-inner {
+  padding-bottom: var(--sds-space-600);
+}
+
+.faq-item__content-inner p {
+  font-size: 15px;
+  color: var(--sds-color-warm-gray-500);
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .pricing-grid {
+    gap: var(--sds-space-600);
+  }
+
+  .pricing-card {
+    border-radius: 16px;
+    border: 1px solid var(--sds-color-warm-gray-100);
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  }
+
+  .pricing-card--featured {
+    border: 1px solid var(--sds-color-warm-gray-150);
+    order: -1;
+  }
+
+  .pricing-card--enterprise {
+    border: 1px solid var(--sds-color-warm-gray-100);
+  }
+
+  .pricing-trust {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sds-space-300);
+  }
+
+  .comparison-table {
+    min-width: 620px;
+  }
+
+  .pricing-card__amount {
+    font-size: 48px;
+  }
+
+  .pricing-card__amount-text {
+    font-size: 36px;
+  }
+}
+
+/* Tablet: 2 + 1 layout */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pricing-grid {
+    gap: var(--sds-space-500);
+  }
+
+  .pricing-card {
+    padding: var(--sds-space-700) var(--sds-space-600);
+  }
+
+  .pricing-card--featured {
+    padding: var(--sds-space-900) var(--sds-space-700);
+  }
+}

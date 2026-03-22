@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use Cases — Strata</title>
+  <link rel="stylesheet" href="design-system-labs/tokens/colors.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/spacing.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/typography.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/marketing.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/use-cases.css">
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+        </div>
+        Strata
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="use-cases.html" class="is-active">Use Cases</a>
+        <a href="resources.html">Resources</a>
+        <a href="developers.html">Developers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary header-cta">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="use-cases.html" class="is-active">Use Cases</a>
+    <a href="resources.html">Resources</a>
+    <a href="developers.html">Developers</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary" style="margin-top: var(--sds-space-400);">Get Started</a>
+  </div>
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="hero hero--inner">
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__content">
+      <p class="section__overline reveal--fade" style="margin-bottom: var(--sds-space-300);">USE CASES</p>
+      <h1 class="hero__headline hero__headline--inner reveal--fade">Real results from teams like yours.</h1>
+    </div>
+  </section>
+
+  <!-- ═══ STAT ROW — Inline credibility ═══ -->
+  <section class="uc-stat-row">
+    <div class="container">
+      <div class="uc-stat-row__inner reveal--fade">
+        <div class="uc-stat">
+          <strong>90%</strong>
+          <span>audit work eliminated</span>
+        </div>
+        <div class="uc-stat">
+          <strong>99.9%</strong>
+          <span>sensitive data detected</span>
+        </div>
+        <div class="uc-stat">
+          <strong>340+</strong>
+          <span>secrets caught, month one</span>
+        </div>
+        <div class="uc-stat">
+          <strong>100%</strong>
+          <span>consecutive audit passes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ USE CASE CARDS ═══ -->
+  <section class="section uc-cards-section">
+    <div class="container">
+      <div class="uc-cards">
+
+        <!-- Compliance Burden -->
+        <div class="uc-card reveal--fade">
+          <p class="section__overline">COMPLIANCE BURDEN</p>
+          <h2 class="uc-card__title">Audit prep dropped from six weeks to three days.</h2>
+          <p class="uc-card__desc">A global bank ran SOX, PCI-DSS, MiFID II, and GDPR across 14 countries. Strata unified it into one dashboard.</p>
+          <div class="uc-card__metric">
+            <span class="uc-card__metric-before">6 weeks</span>
+            <svg class="uc-card__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            <span class="uc-card__metric-after">3 days</span>
+          </div>
+          <a href="contact.html" class="btn btn--ghost">Full story <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Data Blind Spots -->
+        <div class="uc-card reveal--fade stagger-1">
+          <p class="section__overline uc-overline--amber">DATA BLIND SPOTS</p>
+          <h2 class="uc-card__title">Legacy systems missed 8% of patient data. We found it all.</h2>
+          <p class="uc-card__desc">Twelve hospitals, four million records. PHI buried in unstructured clinical notes that legacy tools never caught.</p>
+          <div class="uc-card__metric">
+            <span class="uc-card__metric-before">92.1%</span>
+            <svg class="uc-card__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            <span class="uc-card__metric-after">99.9%</span>
+          </div>
+          <a href="contact.html" class="btn btn--ghost">Full story <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Secrets Sprawl -->
+        <div class="uc-card reveal--fade stagger-2">
+          <p class="section__overline uc-overline--blue">SECRETS SPRAWL</p>
+          <h2 class="uc-card__title">340 secrets were live in production. Nobody knew.</h2>
+          <p class="uc-card__desc">Two hundred microservices with API keys in config files. Strata plugged into CI/CD and caught them in month one.</p>
+          <div class="uc-card__metric uc-card__metric--solo">
+            <span class="uc-card__metric-after">340+ credentials caught</span>
+          </div>
+          <a href="contact.html" class="btn btn--ghost">Full story <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Modernization Risk -->
+        <div class="uc-card reveal--fade stagger-3">
+          <p class="section__overline uc-overline--sage">MODERNIZATION RISK</p>
+          <h2 class="uc-card__title">Cloud migration stalled because data governance couldn't keep up.</h2>
+          <p class="uc-card__desc">A federal agency needed FedRAMP High while moving to the cloud. Strata mapped 82 NIST controls automatically.</p>
+          <div class="uc-card__metric">
+            <span class="uc-card__metric-before">Weeks</span>
+            <svg class="uc-card__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            <span class="uc-card__metric-after">Hours</span>
+          </div>
+          <a href="contact.html" class="btn btn--ghost">Full story <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SINGLE TESTIMONIAL ═══ -->
+  <section class="section uc-testimonial-section">
+    <div class="container">
+      <div class="uc-testimonial reveal--fade">
+        <blockquote class="uc-testimonial__quote">"We ship faster because we're not worrying about accidental data exposure anymore."</blockquote>
+        <cite class="uc-testimonial__cite">Head of Security Engineering, Enterprise SaaS Platform</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Option A: Split Panel -->
+  <section class="cta-split reveal">
+    <div class="cta-split__left">
+      <div class="cta-grain"></div>
+      <div class="cta-split__left-content">
+        <p class="cta-split__overline">GET STARTED</p>
+        <h2 class="cta-split__title">See what Strata can do for your data team.</h2>
+        <p class="cta-split__desc">Get a personalized walkthrough of the platform and learn how teams like yours manage data at scale.</p>
+      </div>
+    </div>
+    <div class="cta-split__right">
+      <form class="cta-split__form" onsubmit="return false;">
+        <input type="email" class="cta-split__input" placeholder="Work email" />
+        <input type="text" class="cta-split__input" placeholder="Company name" />
+        <button type="submit" class="cta-split__btn">Get started</button>
+      </form>
+      <p class="cta-split__privacy">By signing up you agree to our Terms of Service</p>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="site-logo footer-logo" style="margin-bottom: var(--sds-space-400);">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+            </div>
+            Strata
+          </a>
+          <p style="font-size: 13px; color: var(--sds-color-warm-gray-500); max-width: 280px; line-height: 1.6;">Enterprise-grade data management platform. Discover, classify, and govern your most sensitive data.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="use-cases.html">Use Cases</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="resources.html">Resources</a>
+          <a href="#">Careers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strata. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorials — Strata Developers</title>
+  <link rel="stylesheet" href="../design-system-labs/tokens/colors.css">
+  <link rel="stylesheet" href="../design-system-labs/tokens/spacing.css">
+  <link rel="stylesheet" href="../design-system-labs/tokens/typography.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/marketing.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/developers.css">
+  <link rel="stylesheet" href="../css/dev-tutorials.css">
+</head>
+<body class="developers-page">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+        </div>
+        Strata
+      </a>
+      <nav class="site-nav">
+        <a href="../index.html">Home</a>
+        <a href="../features.html">Features</a>
+        <a href="../solutions.html">Solutions</a>
+        <a href="../use-cases.html">Use Cases</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../developers.html" class="is-active">Developers</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <a href="../contact.html" class="btn btn--primary header-cta">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../features.html">Features</a>
+    <a href="../solutions.html">Solutions</a>
+    <a href="../use-cases.html">Use Cases</a>
+    <a href="../resources.html">Resources</a>
+    <a href="../developers.html" class="is-active">Developers</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../contact.html" class="btn btn--primary" style="margin-top: var(--sds-space-400);">Get Started</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero hero--short">
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__content">
+      <p class="section__overline reveal--fade" style="margin-bottom: var(--sds-space-400);">TUTORIALS</p>
+      <h1 class="hero__headline reveal--fade stagger-1">Learn by building.</h1>
+      <p class="hero__subheadline reveal--fade stagger-2">Step-by-step guides from first connection to production deployment.</p>
+    </div>
+  </section>
+
+  <!-- ═══ FILTER BAR ═══ -->
+  <section class="tut-filter-section">
+    <div class="container">
+      <div class="tut-filter-bar">
+        <div class="tut-filters" id="tut-filters">
+          <button class="tut-filters__pill is-active" data-filter="all">All</button>
+          <button class="tut-filters__pill" data-filter="getting-started">Getting Started</button>
+          <button class="tut-filters__pill" data-filter="integration">Integration</button>
+          <button class="tut-filters__pill" data-filter="advanced">Advanced</button>
+          <button class="tut-filters__pill" data-filter="video">Video</button>
+        </div>
+        <span class="tut-filter-count" id="tut-filter-count">Showing 12 tutorials</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURED TUTORIAL ═══ -->
+  <section class="section tut-featured-section">
+    <div class="container">
+      <div class="tut-featured" data-category="getting-started">
+        <div class="tut-featured__body">
+          <span class="tut-badge tut-badge--getting-started">Getting Started</span>
+          <h2 class="tut-featured__title">Your first Strata integration</h2>
+          <p class="tut-featured__desc">Go from zero to scanning in under 10 minutes. Connect a PostgreSQL database, configure automatic classification rules, and surface every sensitive field across your schema.</p>
+          <div class="tut-featured__meta">
+            <span class="tut-meta__item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              10 min
+            </span>
+            <span class="tut-meta__item">
+              <span class="tut-difficulty tut-difficulty--beginner"></span>
+              Beginner
+            </span>
+          </div>
+          <div class="tut-featured__author">
+            <span class="tut-avatar">MR</span>
+            <span>Maya Rodriguez &middot; Updated 2 days ago</span>
+          </div>
+          <a href="#" class="btn btn--primary btn--lg" style="margin-top: var(--sds-space-600);">Start tutorial <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="tut-featured__code">
+          <div class="tut-code-preview" id="featured-code-preview">
+            <div class="tut-code-preview__header">
+              <span class="tut-code-preview__dot"></span>
+              <span class="tut-code-preview__dot"></span>
+              <span class="tut-code-preview__dot"></span>
+              <span class="tut-code-preview__filename">quickstart.py</span>
+            </div>
+            <pre class="tut-code-preview__body"><code id="typing-code"></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ TUTORIAL LIST ═══ -->
+  <section class="section" id="tutorial-list">
+    <div class="container">
+
+      <div class="tut-list" id="tut-list">
+
+        <a href="#" class="tut-row" data-category="getting-started">
+          <span class="tut-badge tut-badge--getting-started">Getting Started</span>
+          <span class="tut-row__title">Connecting a PostgreSQL database</span>
+          <span class="tut-row__desc">Authenticate, configure connection pooling, and verify your first data source in the Strata dashboard.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--beginner"></span> Beginner</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            8 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">MR</span>
+            <span class="tut-row__updated">3 days ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--beginner"></span>
+        </a>
+
+        <a href="#" class="tut-row" data-category="getting-started">
+          <span class="tut-badge tut-badge--getting-started">Getting Started</span>
+          <span class="tut-row__title">Your first classification pipeline</span>
+          <span class="tut-row__desc">Define PII detection rules, run a pipeline on sample data, and review classified fields with confidence scores.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--beginner"></span> Beginner</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            12 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">JK</span>
+            <span class="tut-row__updated">5 days ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--beginner"></span>
+        </a>
+
+        <a href="#" class="tut-row" data-category="integration">
+          <span class="tut-badge tut-badge--integration">Integration</span>
+          <span class="tut-row__title">Webhook-driven compliance alerts</span>
+          <span class="tut-row__desc">Register webhook endpoints, filter events by severity, and route compliance violations to Slack or PagerDuty.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--intermediate"></span> Intermediate</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            10 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">AL</span>
+            <span class="tut-row__updated">1 week ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--intermediate"></span>
+        </a>
+
+        <a href="#" class="tut-row" data-category="integration">
+          <span class="tut-badge tut-badge--integration">Integration</span>
+          <span class="tut-row__title">Building a custom data source connector</span>
+          <span class="tut-row__desc">Implement the Connector interface, handle auth flows, and register your connector with the Strata plugin system.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--intermediate"></span> Intermediate</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            15 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">DP</span>
+            <span class="tut-row__updated">1 week ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--intermediate"></span>
+        </a>
+
+        <a href="#" class="tut-row" data-category="integration">
+          <span class="tut-badge tut-badge--integration">Integration</span>
+          <span class="tut-row__title">Real-time monitoring with WebSockets</span>
+          <span class="tut-row__desc">Open a persistent WebSocket connection to stream scan progress, field discoveries, and policy violations in real time.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--intermediate"></span> Intermediate</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            12 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">MR</span>
+            <span class="tut-row__updated">2 weeks ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--intermediate"></span>
+        </a>
+
+        <a href="#" class="tut-row" data-category="integration">
+          <span class="tut-badge tut-badge--integration">Integration</span>
+          <span class="tut-row__title">CI/CD pipeline integration</span>
+          <span class="tut-row__desc">Add Strata scans to GitHub Actions, GitLab CI, or Jenkins pipelines to catch sensitive data exposure before deployment.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--intermediate"></span> Intermediate</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            14 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">JK</span>
+            <span class="tut-row__updated">4 days ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--intermediate"></span>
+        </a>
+
+        <a href="#" class="tut-row" data-category="advanced">
+          <span class="tut-badge tut-badge--advanced">Advanced</span>
+          <span class="tut-row__title">Multi-tenant data isolation patterns<span class="tut-badge tut-badge--prereq">Prerequisites</span></span>
+          <span class="tut-row__desc">Architect tenant-scoped scanning with isolated credentials, per-tenant policies, and aggregated cross-tenant reporting.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--advanced"></span> Advanced</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            20 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">AL</span>
+            <span class="tut-row__updated">1 week ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--advanced"></span>
+        </a>
+
+        <a href="#" class="tut-row" data-category="advanced">
+          <span class="tut-badge tut-badge--advanced">Advanced</span>
+          <span class="tut-row__title">Custom risk scoring with ML models<span class="tut-badge tut-badge--prereq">Prerequisites</span></span>
+          <span class="tut-row__desc">Train a classification model on your domain-specific data, deploy it to the Strata scoring engine, and validate results against ground truth.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--advanced"></span> Advanced</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            25 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">DP</span>
+            <span class="tut-row__updated">2 weeks ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--advanced"></span>
+        </a>
+
+        <a href="#" class="tut-row" data-category="advanced">
+          <span class="tut-badge tut-badge--advanced">Advanced</span>
+          <span class="tut-row__title">High-throughput batch classification<span class="tut-badge tut-badge--prereq">Prerequisites</span></span>
+          <span class="tut-row__desc">Configure worker pools, tune batch sizes, and process millions of records per hour with parallel classification pipelines.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--advanced"></span> Advanced</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            18 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">MR</span>
+            <span class="tut-row__updated">3 weeks ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--advanced"></span>
+        </a>
+
+        <a href="#" class="tut-row" data-category="advanced">
+          <span class="tut-badge tut-badge--advanced">Advanced</span>
+          <span class="tut-row__title">Data lineage tracking across sources<span class="tut-badge tut-badge--prereq">Prerequisites</span></span>
+          <span class="tut-row__desc">Map sensitive data flows across databases, warehouses, and APIs. Visualize lineage graphs and trace field-level transformations.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--advanced"></span> Advanced</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            22 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">AL</span>
+            <span class="tut-row__updated">5 days ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--advanced"></span>
+        </a>
+
+        <a href="#" class="tut-row" data-category="integration">
+          <span class="tut-badge tut-badge--integration">Integration</span>
+          <span class="tut-row__title">Custom webhook event handlers</span>
+          <span class="tut-row__desc">Build serverless webhook consumers that parse Strata event payloads, validate signatures, and trigger downstream workflows.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--intermediate"></span> Intermediate</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            11 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">JK</span>
+            <span class="tut-row__updated">6 days ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--intermediate"></span>
+        </a>
+
+        <a href="#" class="tut-row" data-category="getting-started">
+          <span class="tut-badge tut-badge--getting-started">Getting Started</span>
+          <span class="tut-row__title">Migration guide: v1 to v2 SDK</span>
+          <span class="tut-row__desc">Upgrade your integration from the legacy v1 SDK to v2 with automatic code transforms, breaking change warnings, and rollback support.</span>
+          <span class="tut-row__difficulty"><span class="tut-difficulty tut-difficulty--beginner"></span> Beginner</span>
+          <span class="tut-row__time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            10 min
+          </span>
+          <span class="tut-row__meta-right">
+            <span class="tut-avatar tut-avatar--sm">DP</span>
+            <span class="tut-row__updated">1 day ago</span>
+          </span>
+          <svg class="tut-row__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <span class="tut-row__difficulty-bar tut-row__difficulty-bar--beginner"></span>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ VIDEO TUTORIALS ═══ -->
+  <section class="section tut-videos-section" id="video-tutorials" data-category="video">
+    <div class="container">
+      <div class="dev-section-header reveal">
+        <p class="section__overline">VIDEO TUTORIALS</p>
+        <h2 class="section__title">Watch and learn.</h2>
+      </div>
+
+      <div class="tut-videos-grid">
+
+        <a href="#" class="tut-video-card">
+          <div class="tut-video-card__thumb">
+            <div class="tut-video-card__play">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+            <span class="tut-video-card__duration">8:42</span>
+          </div>
+          <div class="tut-video-card__body">
+            <h4 class="tut-video-card__title">Strata in 5 minutes</h4>
+            <p class="tut-video-card__desc">A rapid walkthrough of connecting a database, running a scan, and reviewing results in the dashboard.</p>
+            <div class="tut-video-card__meta">
+              <span class="tut-avatar tut-avatar--sm">MR</span>
+              <span>Maya Rodriguez &middot; 3 days ago</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="tut-video-card">
+          <div class="tut-video-card__thumb">
+            <div class="tut-video-card__play">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+            <span class="tut-video-card__duration">14:30</span>
+          </div>
+          <div class="tut-video-card__body">
+            <h4 class="tut-video-card__title">Building compliance policies</h4>
+            <p class="tut-video-card__desc">Create GDPR and CCPA policy templates, attach them to data sources, and automate violation reporting.</p>
+            <div class="tut-video-card__meta">
+              <span class="tut-avatar tut-avatar--sm">JK</span>
+              <span>James Kim &middot; 1 week ago</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="tut-video-card">
+          <div class="tut-video-card__thumb">
+            <div class="tut-video-card__play">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+            <span class="tut-video-card__duration">11:15</span>
+          </div>
+          <div class="tut-video-card__body">
+            <h4 class="tut-video-card__title">Advanced API patterns</h4>
+            <p class="tut-video-card__desc">Pagination, rate limiting, retry strategies, and idempotency keys for production-grade Strata integrations.</p>
+            <div class="tut-video-card__meta">
+              <span class="tut-avatar tut-avatar--sm">AL</span>
+              <span>Amir Levi &middot; 2 weeks ago</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ FRAMEWORK QUICKSTARTS ═══ -->
+  <section class="section" id="quickstarts">
+    <div class="container">
+      <div class="dev-section-header reveal">
+        <p class="section__overline">QUICKSTARTS</p>
+        <h2 class="section__title">Start with your stack.</h2>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tut-tabs" id="tut-tabs">
+        <div class="tut-tabs__bar">
+          <button class="tut-tabs__tab is-active" data-tab="python">Python</button>
+          <button class="tut-tabs__tab" data-tab="nodejs">Node.js</button>
+          <button class="tut-tabs__tab" data-tab="go">Go</button>
+          <button class="tut-tabs__tab" data-tab="java">Java</button>
+        </div>
+
+        <div class="tut-tabs__panels-wrap">
+
+        <!-- Python -->
+        <div class="tut-tabs__panel is-active" data-panel="python">
+          <div class="tut-stepper">
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">1</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span class="tut-stepper__line"><span class="tut-stepper__line-fill"></span></span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Install</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">Terminal</span>
+                    <button class="tut-code-block__copy" data-copy="pip install strata-sdk" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code>pip install strata-sdk</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">2</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span class="tut-stepper__line"><span class="tut-stepper__line-fill"></span></span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Configure</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">Python</span>
+                    <button class="tut-code-block__copy" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code><span class="code-kw">import</span> <span class="code-mod">os</span>
+<span class="code-kw">from</span> <span class="code-mod">strata</span> <span class="code-kw">import</span> <span class="code-cls">StrataClient</span>
+
+<span class="code-var">client</span> = <span class="code-cls">StrataClient</span>(
+    api_key=os.environ[<span class="code-str">"STRATA_API_KEY"</span>]
+)</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">3</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Run your first scan</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">Python</span>
+                    <button class="tut-code-block__copy" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code><span class="code-var">scan</span> = client.<span class="code-fn">scans</span>.<span class="code-fn">create</span>(
+    source_id=<span class="code-str">"src_pg_01"</span>,
+    classify=<span class="code-kw">True</span>
+)
+
+<span class="code-cmt"># Poll until complete</span>
+<span class="code-var">result</span> = scan.<span class="code-fn">wait</span>()
+<span class="code-fn">print</span>(f<span class="code-str">"Classified {result.fields_scanned} fields"</span>)
+<span class="code-fn">print</span>(f<span class="code-str">"Found {result.sensitive_count} sensitive"</span>)</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Node.js -->
+        <div class="tut-tabs__panel" data-panel="nodejs">
+          <div class="tut-stepper">
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">1</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span class="tut-stepper__line"><span class="tut-stepper__line-fill"></span></span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Install</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">Terminal</span>
+                    <button class="tut-code-block__copy" data-copy="npm install @strata/sdk" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code>npm install @strata/sdk</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">2</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span class="tut-stepper__line"><span class="tut-stepper__line-fill"></span></span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Configure</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">JavaScript</span>
+                    <button class="tut-code-block__copy" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code><span class="code-kw">import</span> { <span class="code-cls">StrataClient</span> } <span class="code-kw">from</span> <span class="code-str">'@strata/sdk'</span>;
+
+<span class="code-kw">const</span> <span class="code-var">client</span> = <span class="code-kw">new</span> <span class="code-cls">StrataClient</span>({
+  apiKey: process.env.<span class="code-var">STRATA_API_KEY</span>
+});</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">3</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Run your first scan</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">JavaScript</span>
+                    <button class="tut-code-block__copy" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code><span class="code-kw">const</span> <span class="code-var">scan</span> = <span class="code-kw">await</span> client.<span class="code-fn">scans</span>.<span class="code-fn">create</span>({
+  sourceId: <span class="code-str">'src_pg_01'</span>,
+  classify: <span class="code-kw">true</span>
+});
+
+<span class="code-kw">const</span> <span class="code-var">result</span> = <span class="code-kw">await</span> scan.<span class="code-fn">waitForCompletion</span>();
+console.<span class="code-fn">log</span>(<span class="code-str">`Classified ${result.fieldsScanned} fields`</span>);
+console.<span class="code-fn">log</span>(<span class="code-str">`Found ${result.sensitiveCount} sensitive`</span>);</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Go -->
+        <div class="tut-tabs__panel" data-panel="go">
+          <div class="tut-stepper">
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">1</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span class="tut-stepper__line"><span class="tut-stepper__line-fill"></span></span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Install</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">Terminal</span>
+                    <button class="tut-code-block__copy" data-copy="go get github.com/strata-io/strata-go" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code>go get github.com/strata-io/strata-go</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">2</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span class="tut-stepper__line"><span class="tut-stepper__line-fill"></span></span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Configure</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">Go</span>
+                    <button class="tut-code-block__copy" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code><span class="code-kw">import</span> (
+    <span class="code-str">"os"</span>
+    strata <span class="code-str">"github.com/strata-io/strata-go"</span>
+)
+
+<span class="code-var">client</span> := strata.<span class="code-fn">NewClient</span>(
+    strata.<span class="code-fn">WithAPIKey</span>(os.<span class="code-fn">Getenv</span>(<span class="code-str">"STRATA_API_KEY"</span>)),
+)</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">3</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Run your first scan</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">Go</span>
+                    <button class="tut-code-block__copy" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code><span class="code-var">scan</span>, <span class="code-var">err</span> := client.Scans.<span class="code-fn">Create</span>(ctx, &strata.<span class="code-cls">ScanParams</span>{
+    SourceID: <span class="code-str">"src_pg_01"</span>,
+    Classify: <span class="code-kw">true</span>,
+})
+
+<span class="code-var">result</span>, <span class="code-var">err</span> := scan.<span class="code-fn">Wait</span>(ctx)
+fmt.<span class="code-fn">Printf</span>(<span class="code-str">"Classified %d fields\n"</span>, result.FieldsScanned)
+fmt.<span class="code-fn">Printf</span>(<span class="code-str">"Found %d sensitive\n"</span>, result.SensitiveCount)</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Java -->
+        <div class="tut-tabs__panel" data-panel="java">
+          <div class="tut-stepper">
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">1</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span class="tut-stepper__line"><span class="tut-stepper__line-fill"></span></span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Install</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">Maven</span>
+                    <button class="tut-code-block__copy" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code><span class="code-kw">&lt;dependency&gt;</span>
+  <span class="code-kw">&lt;groupId&gt;</span><span class="code-str">io.strata</span><span class="code-kw">&lt;/groupId&gt;</span>
+  <span class="code-kw">&lt;artifactId&gt;</span><span class="code-str">strata-sdk</span><span class="code-kw">&lt;/artifactId&gt;</span>
+  <span class="code-kw">&lt;version&gt;</span><span class="code-str">1.0.0</span><span class="code-kw">&lt;/version&gt;</span>
+<span class="code-kw">&lt;/dependency&gt;</span></code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">2</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span class="tut-stepper__line"><span class="tut-stepper__line-fill"></span></span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Configure</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">Java</span>
+                    <button class="tut-code-block__copy" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code><span class="code-kw">import</span> <span class="code-mod">io.strata.sdk.StrataClient</span>;
+
+<span class="code-cls">StrataClient</span> <span class="code-var">client</span> = <span class="code-cls">StrataClient</span>.<span class="code-fn">builder</span>()
+    .<span class="code-fn">apiKey</span>(System.<span class="code-fn">getenv</span>(<span class="code-str">"STRATA_API_KEY"</span>))
+    .<span class="code-fn">build</span>();</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tut-stepper__item">
+              <div class="tut-stepper__indicator">
+                <span class="tut-stepper__number">
+                  <span class="tut-stepper__num-text">3</span>
+                  <svg class="tut-stepper__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+              </div>
+              <div class="tut-stepper__content">
+                <h4 class="tut-stepper__title">Run your first scan</h4>
+                <div class="tut-code-block">
+                  <div class="tut-code-block__header">
+                    <span class="tut-code-block__lang">Java</span>
+                    <button class="tut-code-block__copy" aria-label="Copy to clipboard">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <pre class="tut-code-block__body"><code><span class="code-cls">Scan</span> <span class="code-var">scan</span> = client.<span class="code-fn">scans</span>().<span class="code-fn">create</span>(
+    <span class="code-cls">ScanParams</span>.<span class="code-fn">builder</span>()
+        .<span class="code-fn">sourceId</span>(<span class="code-str">"src_pg_01"</span>)
+        .<span class="code-fn">classify</span>(<span class="code-kw">true</span>)
+        .<span class="code-fn">build</span>()
+);
+
+<span class="code-cls">ScanResult</span> <span class="code-var">result</span> = scan.<span class="code-fn">waitForCompletion</span>();
+System.out.<span class="code-fn">printf</span>(<span class="code-str">"Classified %d fields%n"</span>, result.<span class="code-fn">getFieldsScanned</span>());
+System.out.<span class="code-fn">printf</span>(<span class="code-str">"Found %d sensitive%n"</span>, result.<span class="code-fn">getSensitiveCount</span>());</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div><!-- /panels-wrap -->
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="section-divider" /></div>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="section tut-cta-section">
+    <div class="container">
+      <div class="tut-cta reveal">
+        <p class="tut-cta__text">Can't find what you need?</p>
+        <a href="../contact.html" class="tut-cta__link">Get in touch with our developer relations team <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="../index.html" class="site-logo footer-logo" style="margin-bottom: var(--sds-space-400);">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+            </div>
+            Strata
+          </a>
+          <p style="font-size: 13px; color: var(--sds-color-warm-gray-500); max-width: 280px; line-height: 1.6;">Enterprise-grade data management platform. Discover, classify, and govern your most sensitive data.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="../features.html">Features</a>
+          <a href="../solutions.html">Solutions</a>
+          <a href="../use-cases.html">Use Cases</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="../resources.html">Resources</a>
+          <a href="#">Careers</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strata. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copy toast element -->
+  <div class="tut-copy-toast" id="tut-copy-toast">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    Copied to clipboard
+  </div>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/animations.js"></script>
+
+  <!-- Tutorials page JS -->
+  <script>
+  (function() {
+
+    // ── Typing animation for featured code preview ──
+    var codeLines = [
+      '<span class="code-kw">from</span> <span class="code-mod">strata</span> <span class="code-kw">import</span> <span class="code-cls">StrataClient</span>',
+      '',
+      '<span class="code-cmt"># Initialize the client</span>',
+      '<span class="code-var">client</span> = <span class="code-cls">StrataClient</span>(api_key=<span class="code-str">"sk_live_..."</span>)',
+      '',
+      '<span class="code-cmt"># Connect your database</span>',
+      '<span class="code-var">source</span> = client.<span class="code-fn">sources</span>.<span class="code-fn">create</span>(',
+      '    <span class="code-var">type</span>=<span class="code-str">"postgresql"</span>,',
+      '    <span class="code-var">connection_string</span>=<span class="code-str">"postgres://..."</span>',
+      ')',
+      '',
+      '<span class="code-cmt"># Run your first scan</span>',
+      '<span class="code-var">scan</span> = client.<span class="code-fn">scans</span>.<span class="code-fn">start</span>(source_id=source.id)',
+      '<span class="code-fn">print</span>(f<span class="code-str">"Found {scan.findings} sensitive fields"</span>)'
+    ];
+
+    var typingContainer = document.getElementById('typing-code');
+    var typingStarted = false;
+
+    function startTypingAnimation() {
+      if (typingStarted) return;
+      typingStarted = true;
+      typingContainer.innerHTML = '';
+
+      codeLines.forEach(function(line, i) {
+        var span = document.createElement('span');
+        span.className = 'tut-code-line';
+        span.innerHTML = line || '&nbsp;';
+        typingContainer.appendChild(span);
+
+        setTimeout(function() {
+          span.classList.add('is-typed');
+          // Add cursor to current line, remove from previous
+          var cursor = typingContainer.querySelector('.tut-code-cursor');
+          if (cursor) cursor.remove();
+          if (i === codeLines.length - 1) {
+            var c = document.createElement('span');
+            c.className = 'tut-code-cursor';
+            span.appendChild(c);
+          }
+        }, 120 * (i + 1));
+      });
+
+      // Add final cursor after all lines
+      setTimeout(function() {
+        var lastLine = typingContainer.querySelector('.tut-code-line:last-child');
+        if (lastLine && !lastLine.querySelector('.tut-code-cursor')) {
+          var c = document.createElement('span');
+          c.className = 'tut-code-cursor';
+          lastLine.appendChild(c);
+        }
+      }, 120 * (codeLines.length + 1));
+    }
+
+    // Trigger typing when code preview scrolls into view
+    var codePreview = document.getElementById('featured-code-preview');
+    if (codePreview) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            startTypingAnimation();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(codePreview);
+    }
+
+
+    // ── Filter pills with staggered animation and result count ──
+    var filters = document.querySelectorAll('#tut-filters .tut-filters__pill');
+    var rows = document.querySelectorAll('.tut-row');
+    var featured = document.querySelector('.tut-featured');
+    var filterCount = document.getElementById('tut-filter-count');
+    var videoSection = document.getElementById('video-tutorials');
+
+    function updateFilterCount(count) {
+      if (filterCount) {
+        filterCount.textContent = 'Showing ' + count + ' tutorial' + (count !== 1 ? 's' : '');
+      }
+    }
+
+    filters.forEach(function(pill) {
+      pill.addEventListener('click', function() {
+        filters.forEach(function(p) { p.classList.remove('is-active'); });
+        pill.classList.add('is-active');
+        var filter = pill.getAttribute('data-filter');
+        var visibleCount = 0;
+        var staggerIndex = 0;
+
+        // Filter tutorial rows with staggered fade-in
+        rows.forEach(function(row) {
+          if (filter === 'all' || row.getAttribute('data-category') === filter) {
+            row.style.display = '';
+            row.classList.add('tut-row--animate');
+            row.classList.remove('tut-row--show');
+            var idx = staggerIndex++;
+            visibleCount++;
+            setTimeout(function() {
+              row.classList.add('tut-row--show');
+            }, 50 * idx);
+            // Clean up animation classes after animation completes
+            setTimeout(function() {
+              row.classList.remove('tut-row--animate', 'tut-row--show');
+            }, 50 * idx + 400);
+          } else {
+            row.style.display = 'none';
+          }
+        });
+
+        // Filter featured section
+        if (featured) {
+          var featuredCat = featured.getAttribute('data-category');
+          if (filter === 'all' || featuredCat === filter) {
+            featured.closest('.tut-featured-section').style.display = '';
+          } else {
+            featured.closest('.tut-featured-section').style.display = 'none';
+          }
+        }
+
+        // Filter video section
+        if (videoSection) {
+          if (filter === 'all' || filter === 'video') {
+            videoSection.style.display = '';
+            if (filter === 'video') visibleCount += 3;
+          } else {
+            videoSection.style.display = 'none';
+          }
+        }
+
+        // Count featured too
+        if (filter === 'all' || (featured && featured.getAttribute('data-category') === filter)) {
+          visibleCount++;
+        }
+
+        updateFilterCount(visibleCount);
+      });
+    });
+
+
+    // ── Tab switching with slide animation ──
+    var tabs = document.querySelectorAll('.tut-tabs__tab');
+    var panels = document.querySelectorAll('.tut-tabs__panel');
+
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var currentPanel = document.querySelector('.tut-tabs__panel.is-active');
+        tabs.forEach(function(t) { t.classList.remove('is-active'); });
+        tab.classList.add('is-active');
+        var target = tab.getAttribute('data-tab');
+        var nextPanel = document.querySelector('.tut-tabs__panel[data-panel="' + target + '"]');
+
+        if (currentPanel && currentPanel !== nextPanel) {
+          currentPanel.classList.remove('is-active');
+        }
+
+        if (nextPanel) {
+          nextPanel.classList.add('is-active', 'tut-panel--slide-in');
+          nextPanel.addEventListener('animationend', function handler() {
+            nextPanel.classList.remove('tut-panel--slide-in');
+            nextPanel.removeEventListener('animationend', handler);
+          });
+        }
+      });
+    });
+
+
+    // ── Copy buttons with toast ──
+    var toast = document.getElementById('tut-copy-toast');
+    var toastTimeout;
+
+    document.querySelectorAll('.tut-code-block__copy').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var text = btn.getAttribute('data-copy');
+        if (!text) {
+          var code = btn.closest('.tut-code-block').querySelector('code');
+          text = code ? code.textContent : '';
+        }
+        navigator.clipboard.writeText(text).then(function() {
+          // Show slide-up toast
+          if (toast) {
+            clearTimeout(toastTimeout);
+            toast.classList.add('is-visible');
+            toastTimeout = setTimeout(function() {
+              toast.classList.remove('is-visible');
+            }, 2000);
+          }
+          // Also update button text
+          var label = btn.querySelector('span');
+          if (label) {
+            label.textContent = 'Copied!';
+            setTimeout(function() { label.textContent = 'Copy'; }, 2000);
+          }
+        });
+      });
+    });
+
+
+    // ── Stepper scroll progress animation ──
+    var stepperItems = document.querySelectorAll('.tut-stepper__item');
+
+    if (stepperItems.length > 0) {
+      var stepObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          var item = entry.target;
+          var number = item.querySelector('.tut-stepper__number');
+          var line = item.querySelector('.tut-stepper__line');
+
+          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+            // Mark step as completed
+            if (number) number.classList.add('is-completed');
+            if (line) line.classList.add('is-filled');
+          }
+        });
+      }, { threshold: 0.5 });
+
+      stepperItems.forEach(function(item) {
+        stepObserver.observe(item);
+      });
+    }
+
+  })();
+  </script>
+
+</body>
+</html>

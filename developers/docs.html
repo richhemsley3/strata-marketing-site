@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Reference — Strata Data Management Platform</title>
+  <link rel="stylesheet" href="../design-system-labs/tokens/colors.css">
+  <link rel="stylesheet" href="../design-system-labs/tokens/spacing.css">
+  <link rel="stylesheet" href="../design-system-labs/tokens/typography.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/marketing.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/developers.css">
+  <link rel="stylesheet" href="../css/dev-docs.css">
+</head>
+<body class="developers-page docs-page">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+        </div>
+        Strata
+      </a>
+      <nav class="site-nav">
+        <a href="../index.html">Home</a>
+        <a href="../features.html">Features</a>
+        <a href="../solutions.html">Solutions</a>
+        <a href="../use-cases.html">Use Cases</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../developers.html" class="is-active">Developers</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <a href="../contact.html" class="btn btn--primary header-cta">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="../features.html">Features</a>
+    <a href="../solutions.html">Solutions</a>
+    <a href="../use-cases.html">Use Cases</a>
+    <a href="../resources.html">Resources</a>
+    <a href="../developers.html" class="is-active">Developers</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../contact.html" class="btn btn--primary" style="margin-top: var(--sds-space-400);">Get Started</a>
+  </div>
+
+  <!-- ═══ THREE-COLUMN DOCS LAYOUT ═══ -->
+  <div class="docs-layout">
+
+    <!-- ── Left Sidebar ── -->
+    <aside class="docs-sidebar">
+      <div class="docs-sidebar__title">Strata API</div>
+
+      <div class="docs-sidebar__search">
+        <input type="text" placeholder="Search endpoints..." id="docs-search" />
+      </div>
+
+      <nav class="docs-nav" id="docs-nav">
+        <!-- Getting Started -->
+        <div class="docs-nav__section">
+          <span class="docs-nav__section-label">
+            Overview
+            <svg class="section-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+          </span>
+          <div class="docs-nav__section-items">
+            <a href="#authentication" class="docs-nav__item">Authentication</a>
+            <a href="#rate-limiting" class="docs-nav__item">Rate Limiting</a>
+            <a href="#errors" class="docs-nav__item">Errors</a>
+          </div>
+        </div>
+
+        <!-- Data Sources -->
+        <div class="docs-nav__section">
+          <span class="docs-nav__section-label">
+            Data Sources
+            <svg class="section-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+          </span>
+          <div class="docs-nav__section-items">
+            <a href="#list-sources" class="docs-nav__item">
+              <span class="method-dot method-dot--get"></span>
+              <code>GET /v1/sources</code>
+            </a>
+            <a href="#create-source" class="docs-nav__item">
+              <span class="method-dot method-dot--post"></span>
+              <code>POST /v1/sources</code>
+            </a>
+            <a href="#delete-source" class="docs-nav__item">
+              <span class="method-dot method-dot--delete"></span>
+              <code>DEL /v1/sources/{id}</code>
+            </a>
+          </div>
+        </div>
+
+        <!-- Classifications -->
+        <div class="docs-nav__section">
+          <span class="docs-nav__section-label">
+            Classifications
+            <svg class="section-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+          </span>
+          <div class="docs-nav__section-items">
+            <a href="#list-classifications" class="docs-nav__item">
+              <span class="method-dot method-dot--get"></span>
+              <code>GET /v1/classifications</code>
+            </a>
+            <a href="#create-classification" class="docs-nav__item">
+              <span class="method-dot method-dot--post"></span>
+              <code>POST /v1/classifications</code>
+            </a>
+          </div>
+        </div>
+
+        <!-- Policies -->
+        <div class="docs-nav__section">
+          <span class="docs-nav__section-label">
+            Policies
+            <svg class="section-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+          </span>
+          <div class="docs-nav__section-items">
+            <a href="#list-policies" class="docs-nav__item">
+              <span class="method-dot method-dot--get"></span>
+              <code>GET /v1/policies</code>
+            </a>
+            <a href="#create-policy" class="docs-nav__item">
+              <span class="method-dot method-dot--post"></span>
+              <code>POST /v1/policies</code>
+            </a>
+            <a href="#update-policy" class="docs-nav__item">
+              <span class="method-dot method-dot--put"></span>
+              <code>PUT /v1/policies/{id}</code>
+            </a>
+            <a href="#delete-policy" class="docs-nav__item">
+              <span class="method-dot method-dot--delete"></span>
+              <code>DEL /v1/policies/{id}</code>
+            </a>
+          </div>
+        </div>
+
+        <!-- Alerts -->
+        <div class="docs-nav__section">
+          <span class="docs-nav__section-label">
+            Alerts
+            <svg class="section-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+          </span>
+          <div class="docs-nav__section-items">
+            <a href="#list-alerts" class="docs-nav__item">
+              <span class="method-dot method-dot--get"></span>
+              <code>GET /v1/alerts</code>
+            </a>
+          </div>
+        </div>
+
+        <!-- Webhooks -->
+        <div class="docs-nav__section">
+          <span class="docs-nav__section-label">
+            Webhooks
+            <svg class="section-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+          </span>
+          <div class="docs-nav__section-items">
+            <a href="#create-webhook" class="docs-nav__item">
+              <span class="method-dot method-dot--post"></span>
+              <code>POST /v1/webhooks</code>
+            </a>
+          </div>
+        </div>
+
+        <!-- Audit Logs -->
+        <div class="docs-nav__section">
+          <span class="docs-nav__section-label">
+            Audit Logs
+            <svg class="section-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+          </span>
+          <div class="docs-nav__section-items">
+            <a href="#list-audit-logs" class="docs-nav__item">
+              <span class="method-dot method-dot--get"></span>
+              <code>GET /v1/audit-logs</code>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- ── Center Content ── -->
+    <main class="docs-content" id="docs-content">
+
+      <!-- Breadcrumbs -->
+      <nav class="docs-breadcrumbs">
+        <a href="../developers.html">Developers</a>
+        <span class="docs-breadcrumbs__separator">/</span>
+        <a href="docs.html">API Reference</a>
+      </nav>
+
+      <h1 class="docs-content__title">API Reference</h1>
+      <p class="docs-content__desc">
+        Complete reference for the Strata REST API. All endpoints use JSON request and response bodies. Authenticate with Bearer tokens and manage your data sources, classifications, and policies programmatically.
+      </p>
+
+      <!-- On This Page mini-TOC -->
+      <div class="docs-page-toc">
+        <div class="docs-page-toc__title">On this page</div>
+        <ul class="docs-page-toc__list">
+          <li><a href="#authentication">Authentication</a></li>
+          <li><a href="#rate-limiting">Rate Limiting</a></li>
+          <li><a href="#errors">Errors</a></li>
+          <li><a href="#list-sources"><span class="toc-method toc-method--get">GET</span> List sources</a></li>
+          <li><a href="#create-source"><span class="toc-method toc-method--post">POST</span> Create source</a></li>
+          <li><a href="#delete-source"><span class="toc-method toc-method--delete">DEL</span> Delete source</a></li>
+          <li><a href="#list-classifications"><span class="toc-method toc-method--get">GET</span> List classifications</a></li>
+          <li><a href="#create-classification"><span class="toc-method toc-method--post">POST</span> Create classification</a></li>
+          <li><a href="#list-policies"><span class="toc-method toc-method--get">GET</span> List policies</a></li>
+          <li><a href="#create-policy"><span class="toc-method toc-method--post">POST</span> Create policy</a></li>
+          <li><a href="#update-policy"><span class="toc-method toc-method--put">PUT</span> Update policy</a></li>
+          <li><a href="#delete-policy"><span class="toc-method toc-method--delete">DEL</span> Delete policy</a></li>
+        </ul>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════ -->
+      <!-- AUTHENTICATION SECTION                                -->
+      <!-- ══════════════════════════════════════════════════════ -->
+      <section class="docs-info-section" id="authentication">
+        <h2 class="docs-info-section__title">Authentication</h2>
+        <p>
+          The Strata API uses Bearer token authentication. Include your API key in the <code>Authorization</code> header of every request. API keys can be created and managed from the <strong>Settings &gt; API Keys</strong> page in your Strata dashboard.
+        </p>
+
+        <div class="inline-code-block">Authorization: Bearer sk_live_your_api_key_here</div>
+
+        <h3 class="docs-info-section__subtitle">Authentication Methods</h3>
+        <p>
+          Strata supports three authentication methods depending on your integration needs:
+        </p>
+
+        <table class="docs-error-table">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Use Case</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Bearer Token</strong></td>
+              <td>Server-to-server API calls</td>
+              <td>Pass <code>sk_live_...</code> in the Authorization header. Recommended for backend integrations.</td>
+            </tr>
+            <tr>
+              <td><strong>API Key</strong></td>
+              <td>Quick prototyping</td>
+              <td>Pass key as a query parameter: <code>?api_key=sk_live_...</code>. Not recommended for production.</td>
+            </tr>
+            <tr>
+              <td><strong>OAuth 2.0</strong></td>
+              <td>Third-party applications</td>
+              <td>Standard authorization code flow. Contact support to register your OAuth application.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          All API requests must be made over HTTPS. Requests made over HTTP will be rejected. API keys carry significant privileges -- keep them secure and never expose them in client-side code or public repositories.
+        </p>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════ -->
+      <!-- RATE LIMITING SECTION                                 -->
+      <!-- ══════════════════════════════════════════════════════ -->
+      <section class="docs-info-section" id="rate-limiting">
+        <h2 class="docs-info-section__title">Rate Limiting</h2>
+        <p>
+          The Strata API enforces rate limits to ensure fair usage and platform stability. Rate limits are applied per API key and reset every 60 seconds. When you exceed a rate limit, the API returns a <code>429 Too Many Requests</code> response.
+        </p>
+
+        <table class="docs-error-table">
+          <thead>
+            <tr>
+              <th>Endpoint</th>
+              <th>Rate Limit</th>
+              <th>Burst</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>GET</code> endpoints</td>
+              <td>200 requests / min</td>
+              <td>50 concurrent</td>
+            </tr>
+            <tr>
+              <td><code>POST</code> endpoints</td>
+              <td>60 requests / min</td>
+              <td>10 concurrent</td>
+            </tr>
+            <tr>
+              <td><code>PUT / PATCH</code> endpoints</td>
+              <td>60 requests / min</td>
+              <td>10 concurrent</td>
+            </tr>
+            <tr>
+              <td><code>DELETE</code> endpoints</td>
+              <td>30 requests / min</td>
+              <td>5 concurrent</td>
+            </tr>
+            <tr>
+              <td><code>/v1/classifications</code> (POST)</td>
+              <td>20 requests / min</td>
+              <td>3 concurrent</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          Rate limit headers are included in every response: <code>X-RateLimit-Limit</code>, <code>X-RateLimit-Remaining</code>, and <code>X-RateLimit-Reset</code>. Use these to implement backoff strategies in your integrations.
+        </p>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════ -->
+      <!-- ERRORS SECTION                                        -->
+      <!-- ══════════════════════════════════════════════════════ -->
+      <section class="docs-info-section" id="errors">
+        <h2 class="docs-info-section__title">Errors</h2>
+        <p>
+          Strata uses conventional HTTP response codes to indicate the success or failure of an API request. Codes in the <code>2xx</code> range indicate success, codes in the <code>4xx</code> range indicate a client error, and codes in the <code>5xx</code> range indicate a server error.
+        </p>
+
+        <table class="docs-error-table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Status</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="error-code error-code--400">400</span></td>
+              <td>Bad Request</td>
+              <td>The request body is malformed or missing required parameters.</td>
+            </tr>
+            <tr>
+              <td><span class="error-code error-code--401">401</span></td>
+              <td>Unauthorized</td>
+              <td>No valid API key was provided in the Authorization header.</td>
+            </tr>
+            <tr>
+              <td><span class="error-code error-code--403">403</span></td>
+              <td>Forbidden</td>
+              <td>The API key does not have permission to perform the requested action.</td>
+            </tr>
+            <tr>
+              <td><span class="error-code error-code--404">404</span></td>
+              <td>Not Found</td>
+              <td>The requested resource does not exist or has been deleted.</td>
+            </tr>
+            <tr>
+              <td><span class="error-code error-code--429">429</span></td>
+              <td>Too Many Requests</td>
+              <td>Rate limit exceeded. Wait and retry after the <code>X-RateLimit-Reset</code> interval.</td>
+            </tr>
+            <tr>
+              <td><span class="error-code error-code--500">500</span></td>
+              <td>Internal Server Error</td>
+              <td>An unexpected error occurred on the Strata server. Contact support if this persists.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════ -->
+      <!-- DATA SOURCES                                          -->
+      <!-- ══════════════════════════════════════════════════════ -->
+
+      <!-- ── GET /v1/sources ── -->
+      <section class="docs-endpoint" id="list-sources">
+        <div class="docs-endpoint__header">
+          <h2 class="docs-endpoint__title">List all sources</h2>
+          <span class="method-badge method-badge--get">GET</span>
+          <span class="docs-endpoint__path">/v1/sources</span>
+          <a href="api-explorer.html?endpoint=list-sources" class="docs-try-btn">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="4,2 10,6 4,10"/></svg>
+            Try it
+          </a>
+        </div>
+        <p class="docs-endpoint__desc">
+          Returns a paginated list of all data sources connected to your organization. Results can be filtered by type and are sorted by creation date, with the most recent sources appearing first.
+        </p>
+
+        <h4 class="docs-params__title">Query Parameters</h4>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>limit</td>
+              <td><span class="param-type param-type--integer">integer</span> <span class="param-optional">optional</span></td>
+              <td>Maximum number of sources to return. Default: 20, max: 100.</td>
+            </tr>
+            <tr>
+              <td>offset</td>
+              <td><span class="param-type param-type--integer">integer</span> <span class="param-optional">optional</span></td>
+              <td>Number of records to skip for pagination. Default: 0.</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-optional">optional</span></td>
+              <td>Filter by source type. One of: <code>postgresql</code>, <code>mysql</code>, <code>snowflake</code>, <code>s3</code>, <code>bigquery</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4 class="docs-params__title">Response</h4>
+        <p class="docs-endpoint__desc">
+          Returns an object with a <code>data</code> array of source objects and pagination metadata. Each source includes its unique ID, display name, connection type, region, status, and timestamps.
+        </p>
+      </section>
+
+      <!-- ── POST /v1/sources ── -->
+      <section class="docs-endpoint" id="create-source">
+        <div class="docs-endpoint__header">
+          <h2 class="docs-endpoint__title">Create a source</h2>
+          <span class="method-badge method-badge--post">POST</span>
+          <span class="docs-endpoint__path">/v1/sources</span>
+          <a href="api-explorer.html?endpoint=create-source" class="docs-try-btn">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="4,2 10,6 4,10"/></svg>
+            Try it
+          </a>
+        </div>
+        <p class="docs-endpoint__desc">
+          Registers a new data source with Strata. Once created, the platform will begin an initial scan to discover and classify sensitive data within the source.
+        </p>
+
+        <h4 class="docs-params__title">Request Body Parameters</h4>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>A human-readable display name for the data source.</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>The database or storage type. One of: <code>postgresql</code>, <code>mysql</code>, <code>snowflake</code>, <code>s3</code>, <code>bigquery</code>.</td>
+            </tr>
+            <tr>
+              <td>connection_string</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>Encrypted connection URI or ARN for the data source.</td>
+            </tr>
+            <tr>
+              <td>region</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-optional">optional</span></td>
+              <td>Cloud region where the source is hosted. Example: <code>us-east-1</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ── DELETE /v1/sources/{id} ── -->
+      <section class="docs-endpoint" id="delete-source">
+        <div class="docs-endpoint__header">
+          <h2 class="docs-endpoint__title">Delete a source</h2>
+          <span class="method-badge method-badge--delete">DELETE</span>
+          <span class="docs-endpoint__path">/v1/sources/{id}</span>
+          <a href="api-explorer.html?endpoint=delete-source" class="docs-try-btn">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="4,2 10,6 4,10"/></svg>
+            Try it
+          </a>
+        </div>
+        <p class="docs-endpoint__desc">
+          Permanently removes a data source and all associated scan history from Strata. This action cannot be undone. Active policies referencing this source will be automatically disabled.
+        </p>
+
+        <h4 class="docs-params__title">Path Parameters</h4>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>The unique identifier of the data source to delete. Starts with <code>src_</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════ -->
+      <!-- CLASSIFICATIONS                                       -->
+      <!-- ══════════════════════════════════════════════════════ -->
+
+      <!-- ── GET /v1/classifications ── -->
+      <section class="docs-endpoint" id="list-classifications">
+        <div class="docs-endpoint__header">
+          <h2 class="docs-endpoint__title">List classifications</h2>
+          <span class="method-badge method-badge--get">GET</span>
+          <span class="docs-endpoint__path">/v1/classifications</span>
+          <a href="api-explorer.html?endpoint=list-classifications" class="docs-try-btn">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="4,2 10,6 4,10"/></svg>
+            Try it
+          </a>
+        </div>
+        <p class="docs-endpoint__desc">
+          Returns a paginated list of all data classification rules configured for your organization. Classifications define how Strata identifies and labels sensitive data patterns such as PII, PHI, financial data, and custom patterns.
+        </p>
+
+        <h4 class="docs-params__title">Query Parameters</h4>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>limit</td>
+              <td><span class="param-type param-type--integer">integer</span> <span class="param-optional">optional</span></td>
+              <td>Maximum number of classifications to return. Default: 20, max: 100.</td>
+            </tr>
+            <tr>
+              <td>offset</td>
+              <td><span class="param-type param-type--integer">integer</span> <span class="param-optional">optional</span></td>
+              <td>Number of records to skip for pagination. Default: 0.</td>
+            </tr>
+            <tr>
+              <td>category</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-optional">optional</span></td>
+              <td>Filter by category. One of: <code>pii</code>, <code>phi</code>, <code>financial</code>, <code>credentials</code>, <code>custom</code>.</td>
+            </tr>
+            <tr>
+              <td>severity</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-optional">optional</span></td>
+              <td>Filter by severity level. One of: <code>critical</code>, <code>high</code>, <code>medium</code>, <code>low</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4 class="docs-params__title">Response</h4>
+        <p class="docs-endpoint__desc">
+          Returns an object with a <code>data</code> array of classification objects. Each classification includes its ID, label, category, severity level, detection pattern, and timestamps.
+        </p>
+      </section>
+
+      <!-- ── POST /v1/classifications ── -->
+      <section class="docs-endpoint" id="create-classification">
+        <div class="docs-endpoint__header">
+          <h2 class="docs-endpoint__title">Create a classification</h2>
+          <span class="method-badge method-badge--post">POST</span>
+          <span class="docs-endpoint__path">/v1/classifications</span>
+          <a href="api-explorer.html?endpoint=create-classification" class="docs-try-btn">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="4,2 10,6 4,10"/></svg>
+            Try it
+          </a>
+        </div>
+        <p class="docs-endpoint__desc">
+          Creates a new custom classification rule. Strata will apply this rule during subsequent scans to identify matching data patterns across all connected sources.
+        </p>
+
+        <h4 class="docs-params__title">Request Body Parameters</h4>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>label</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>Human-readable name for the classification (e.g., "Social Security Number").</td>
+            </tr>
+            <tr>
+              <td>category</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>Classification category. One of: <code>pii</code>, <code>phi</code>, <code>financial</code>, <code>credentials</code>, <code>custom</code>.</td>
+            </tr>
+            <tr>
+              <td>severity</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>Severity level. One of: <code>critical</code>, <code>high</code>, <code>medium</code>, <code>low</code>.</td>
+            </tr>
+            <tr>
+              <td>pattern</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>Regex pattern used to detect this data type (e.g., <code>\d{3}-\d{2}-\d{4}</code>).</td>
+            </tr>
+            <tr>
+              <td>description</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-optional">optional</span></td>
+              <td>Additional context about what this classification identifies.</td>
+            </tr>
+            <tr>
+              <td>enabled</td>
+              <td><span class="param-type param-type--boolean">boolean</span> <span class="param-optional">optional</span></td>
+              <td>Whether the classification is active. Default: <code>true</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════ -->
+      <!-- POLICIES                                              -->
+      <!-- ══════════════════════════════════════════════════════ -->
+
+      <!-- ── GET /v1/policies ── -->
+      <section class="docs-endpoint" id="list-policies">
+        <div class="docs-endpoint__header">
+          <h2 class="docs-endpoint__title">List policies</h2>
+          <span class="method-badge method-badge--get">GET</span>
+          <span class="docs-endpoint__path">/v1/policies</span>
+          <a href="api-explorer.html?endpoint=list-policies" class="docs-try-btn">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="4,2 10,6 4,10"/></svg>
+            Try it
+          </a>
+        </div>
+        <p class="docs-endpoint__desc">
+          Returns a paginated list of all data governance policies. Policies define the rules and actions that Strata enforces when sensitive data is detected, including masking, alerting, and access control.
+        </p>
+
+        <h4 class="docs-params__title">Query Parameters</h4>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>limit</td>
+              <td><span class="param-type param-type--integer">integer</span> <span class="param-optional">optional</span></td>
+              <td>Maximum number of policies to return. Default: 20, max: 100.</td>
+            </tr>
+            <tr>
+              <td>offset</td>
+              <td><span class="param-type param-type--integer">integer</span> <span class="param-optional">optional</span></td>
+              <td>Number of records to skip for pagination. Default: 0.</td>
+            </tr>
+            <tr>
+              <td>status</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-optional">optional</span></td>
+              <td>Filter by status. One of: <code>active</code>, <code>inactive</code>, <code>draft</code>.</td>
+            </tr>
+            <tr>
+              <td>action</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-optional">optional</span></td>
+              <td>Filter by enforcement action. One of: <code>mask</code>, <code>alert</code>, <code>block</code>, <code>log</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4 class="docs-params__title">Response</h4>
+        <p class="docs-endpoint__desc">
+          Returns an object with a <code>data</code> array of policy objects. Each policy includes its ID, name, associated classifications, enforcement action, scope, and timestamps.
+        </p>
+      </section>
+
+      <!-- ── POST /v1/policies ── -->
+      <section class="docs-endpoint" id="create-policy">
+        <div class="docs-endpoint__header">
+          <h2 class="docs-endpoint__title">Create a policy</h2>
+          <span class="method-badge method-badge--post">POST</span>
+          <span class="docs-endpoint__path">/v1/policies</span>
+          <a href="api-explorer.html?endpoint=create-policy" class="docs-try-btn">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="4,2 10,6 4,10"/></svg>
+            Try it
+          </a>
+        </div>
+        <p class="docs-endpoint__desc">
+          Creates a new governance policy. Policies bind classification rules to enforcement actions and can be scoped to specific data sources or applied organization-wide.
+        </p>
+
+        <h4 class="docs-params__title">Request Body Parameters</h4>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>Human-readable name for the policy (e.g., "Mask SSN in Production").</td>
+            </tr>
+            <tr>
+              <td>classification_ids</td>
+              <td><span class="param-type param-type--array">array</span> <span class="param-required">required</span></td>
+              <td>Array of classification IDs this policy applies to.</td>
+            </tr>
+            <tr>
+              <td>action</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>Enforcement action. One of: <code>mask</code>, <code>alert</code>, <code>block</code>, <code>log</code>.</td>
+            </tr>
+            <tr>
+              <td>source_ids</td>
+              <td><span class="param-type param-type--array">array</span> <span class="param-optional">optional</span></td>
+              <td>Array of source IDs to scope this policy to. Omit for org-wide enforcement.</td>
+            </tr>
+            <tr>
+              <td>description</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-optional">optional</span></td>
+              <td>Description of the policy's purpose and scope.</td>
+            </tr>
+            <tr>
+              <td>enabled</td>
+              <td><span class="param-type param-type--boolean">boolean</span> <span class="param-optional">optional</span></td>
+              <td>Whether the policy is active on creation. Default: <code>true</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ── PUT /v1/policies/{id} ── -->
+      <section class="docs-endpoint" id="update-policy">
+        <div class="docs-endpoint__header">
+          <h2 class="docs-endpoint__title">Update a policy</h2>
+          <span class="method-badge method-badge--put">PUT</span>
+          <span class="docs-endpoint__path">/v1/policies/{id}</span>
+          <a href="api-explorer.html?endpoint=update-policy" class="docs-try-btn">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="4,2 10,6 4,10"/></svg>
+            Try it
+          </a>
+        </div>
+        <p class="docs-endpoint__desc">
+          Updates an existing policy. All fields are optional -- only the provided fields will be updated. Changes take effect immediately for active policies.
+        </p>
+
+        <h4 class="docs-params__title">Path Parameters</h4>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>The unique identifier of the policy. Starts with <code>pol_</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4 class="docs-params__title">Request Body Parameters</h4>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-optional">optional</span></td>
+              <td>Updated display name for the policy.</td>
+            </tr>
+            <tr>
+              <td>action</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-optional">optional</span></td>
+              <td>Updated enforcement action.</td>
+            </tr>
+            <tr>
+              <td>enabled</td>
+              <td><span class="param-type param-type--boolean">boolean</span> <span class="param-optional">optional</span></td>
+              <td>Enable or disable the policy.</td>
+            </tr>
+            <tr>
+              <td>classification_ids</td>
+              <td><span class="param-type param-type--array">array</span> <span class="param-optional">optional</span></td>
+              <td>Updated list of classification IDs.</td>
+            </tr>
+            <tr>
+              <td>source_ids</td>
+              <td><span class="param-type param-type--array">array</span> <span class="param-optional">optional</span></td>
+              <td>Updated list of source IDs for scope.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ── DELETE /v1/policies/{id} ── -->
+      <section class="docs-endpoint" id="delete-policy">
+        <div class="docs-endpoint__header">
+          <h2 class="docs-endpoint__title">Delete a policy</h2>
+          <span class="method-badge method-badge--delete">DELETE</span>
+          <span class="docs-endpoint__path">/v1/policies/{id}</span>
+          <a href="api-explorer.html?endpoint=delete-policy" class="docs-try-btn">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="4,2 10,6 4,10"/></svg>
+            Try it
+          </a>
+        </div>
+        <p class="docs-endpoint__desc">
+          Permanently deletes a governance policy. This action cannot be undone. Data sources previously governed by this policy will no longer have its enforcement action applied.
+        </p>
+
+        <h4 class="docs-params__title">Path Parameters</h4>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id</td>
+              <td><span class="param-type param-type--string">string</span> <span class="param-required">required</span></td>
+              <td>The unique identifier of the policy to delete. Starts with <code>pol_</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+    <!-- ── Right Code Panel ── -->
+    <aside class="docs-code-panel">
+
+      <!-- Language tabs -->
+      <div class="docs-lang-tabs" id="lang-tabs">
+        <button class="docs-lang-tab is-active" data-lang="curl">cURL</button>
+        <button class="docs-lang-tab" data-lang="python">Python</button>
+        <button class="docs-lang-tab" data-lang="node">Node.js</button>
+        <button class="docs-lang-tab" data-lang="go">Go</button>
+        <div class="docs-lang-tabs__indicator" id="lang-indicator"></div>
+      </div>
+
+      <!-- ── Auth Example ── -->
+      <div class="docs-code-section" id="code-authentication">
+        <div class="docs-code-section__label">Authentication Example</div>
+        <div class="docs-code-block has-line-numbers" data-lang="curl">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>curl <span class="code-url">https://api.strata.io/v1/sources</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span> \
+  -H <span class="code-string">"Content-Type: application/json"</span></code></pre>
+        </div>
+        <div class="docs-code-block has-line-numbers" data-lang="python" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">import</span> strata
+
+client = strata.Client(<span class="code-string">"sk_live_..."</span>)</code></pre>
+        </div>
+        <div class="docs-code-block has-line-numbers" data-lang="node" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">const</span> Strata = require(<span class="code-string">'strata-node'</span>);
+<span class="code-keyword">const</span> client = <span class="code-keyword">new</span> Strata(<span class="code-string">'sk_live_...'</span>);</code></pre>
+        </div>
+        <div class="docs-code-block has-line-numbers" data-lang="go" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">import</span> <span class="code-string">"github.com/strata-io/strata-go"</span>
+
+client := strata.NewClient(<span class="code-string">"sk_live_..."</span>)</code></pre>
+        </div>
+      </div>
+
+      <hr class="docs-code-divider" />
+
+      <!-- ── Error Response Examples ── -->
+      <div class="docs-code-section" id="code-errors">
+        <div class="docs-code-section__label">Error Responses</div>
+
+        <div class="docs-code-block has-line-numbers docs-response-expandable is-collapsed" data-expandable>
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-comment">// 400 Bad Request</span>
+{
+  <span class="code-key">"error"</span>: {
+    <span class="code-key">"type"</span>: <span class="code-string">"invalid_request"</span>,
+    <span class="code-key">"message"</span>: <span class="code-string">"Missing required field: name"</span>,
+    <span class="code-key">"param"</span>: <span class="code-string">"name"</span>,
+    <span class="code-key">"code"</span>: <span class="code-number">400</span>
+  }
+}
+
+<span class="code-comment">// 401 Unauthorized</span>
+{
+  <span class="code-key">"error"</span>: {
+    <span class="code-key">"type"</span>: <span class="code-string">"authentication_error"</span>,
+    <span class="code-key">"message"</span>: <span class="code-string">"Invalid API key provided"</span>,
+    <span class="code-key">"code"</span>: <span class="code-number">401</span>
+  }
+}
+
+<span class="code-comment">// 404 Not Found</span>
+{
+  <span class="code-key">"error"</span>: {
+    <span class="code-key">"type"</span>: <span class="code-string">"not_found"</span>,
+    <span class="code-key">"message"</span>: <span class="code-string">"No source found with id: src_pg_99"</span>,
+    <span class="code-key">"code"</span>: <span class="code-number">404</span>
+  }
+}
+
+<span class="code-comment">// 429 Too Many Requests</span>
+{
+  <span class="code-key">"error"</span>: {
+    <span class="code-key">"type"</span>: <span class="code-string">"rate_limit_exceeded"</span>,
+    <span class="code-key">"message"</span>: <span class="code-string">"Rate limit exceeded. Retry after 42 seconds."</span>,
+    <span class="code-key">"code"</span>: <span class="code-number">429</span>,
+    <span class="code-key">"retry_after"</span>: <span class="code-number">42</span>
+  }
+}</code></pre>
+        </div>
+        <button class="docs-expand-btn" data-expand-toggle>
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          <span class="expand-label">Show full response</span>
+        </button>
+      </div>
+
+      <hr class="docs-code-divider" />
+
+      <!-- ── GET /v1/sources ── -->
+      <div class="docs-code-section" id="code-list-sources">
+        <div class="docs-code-section__label">Request</div>
+        <div class="docs-code-section__endpoint">
+          <span class="docs-code-method docs-code-method--get">GET</span>
+          <span>/v1/sources</span>
+        </div>
+
+        <!-- cURL -->
+        <div class="docs-code-block has-line-numbers" data-lang="curl">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>curl <span class="code-url">https://api.strata.io/v1/sources</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span> \
+  -H <span class="code-string">"Content-Type: application/json"</span> \
+  -G \
+  -d <span class="code-string">"limit=20"</span> \
+  -d <span class="code-string">"type=postgresql"</span></code></pre>
+        </div>
+
+        <!-- Python -->
+        <div class="docs-code-block has-line-numbers" data-lang="python" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">import</span> strata
+
+client = strata.Client(<span class="code-string">"sk_live_..."</span>)
+
+sources = client.sources.list(
+    limit=<span class="code-number">20</span>,
+    type=<span class="code-string">"postgresql"</span>
+)</code></pre>
+        </div>
+
+        <!-- Node.js -->
+        <div class="docs-code-block has-line-numbers" data-lang="node" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">const</span> Strata = require(<span class="code-string">'strata-node'</span>);
+
+<span class="code-keyword">const</span> client = <span class="code-keyword">new</span> Strata(<span class="code-string">'sk_live_...'</span>);
+
+<span class="code-keyword">const</span> sources = <span class="code-keyword">await</span> client.sources.list({
+  limit: <span class="code-number">20</span>,
+  type: <span class="code-string">'postgresql'</span>
+});</code></pre>
+        </div>
+
+        <!-- Go -->
+        <div class="docs-code-block has-line-numbers" data-lang="go" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">import</span> <span class="code-string">"github.com/strata-io/strata-go"</span>
+
+client := strata.NewClient(<span class="code-string">"sk_live_..."</span>)
+
+sources, err := client.Sources.List(&strata.ListParams{
+    Limit: strata.Int64(<span class="code-number">20</span>),
+    Type:  strata.String(<span class="code-string">"postgresql"</span>),
+})</code></pre>
+        </div>
+
+        <div class="docs-response-label">Response</div>
+        <div class="docs-code-block has-line-numbers docs-response-expandable is-collapsed" data-expandable>
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>{
+  <span class="code-key">"data"</span>: [
+    {
+      <span class="code-key">"id"</span>: <span class="code-string">"src_pg_01"</span>,
+      <span class="code-key">"name"</span>: <span class="code-string">"Production PostgreSQL"</span>,
+      <span class="code-key">"type"</span>: <span class="code-string">"postgresql"</span>,
+      <span class="code-key">"region"</span>: <span class="code-string">"us-east-1"</span>,
+      <span class="code-key">"status"</span>: <span class="code-string">"connected"</span>,
+      <span class="code-key">"tables_scanned"</span>: <span class="code-number">142</span>,
+      <span class="code-key">"last_scan_at"</span>: <span class="code-string">"2026-03-20T12:00:00Z"</span>,
+      <span class="code-key">"created_at"</span>: <span class="code-string">"2026-01-15T08:30:00Z"</span>
+    }
+  ],
+  <span class="code-key">"total"</span>: <span class="code-number">12</span>,
+  <span class="code-key">"limit"</span>: <span class="code-number">20</span>,
+  <span class="code-key">"offset"</span>: <span class="code-number">0</span>
+}</code></pre>
+        </div>
+        <button class="docs-expand-btn" data-expand-toggle>
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          <span class="expand-label">Show full response</span>
+        </button>
+      </div>
+
+      <hr class="docs-code-divider" />
+
+      <!-- ── POST /v1/sources ── -->
+      <div class="docs-code-section" id="code-create-source">
+        <div class="docs-code-section__label">Request</div>
+        <div class="docs-code-section__endpoint">
+          <span class="docs-code-method docs-code-method--post">POST</span>
+          <span>/v1/sources</span>
+        </div>
+
+        <!-- cURL -->
+        <div class="docs-code-block has-line-numbers" data-lang="curl">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>curl <span class="code-url">https://api.strata.io/v1/sources</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span> \
+  -H <span class="code-string">"Content-Type: application/json"</span> \
+  -d <span class="code-string">'{
+    "name": "Production PostgreSQL",
+    "type": "postgresql",
+    "connection_string": "postgresql://...",
+    "region": "us-east-1"
+  }'</span></code></pre>
+        </div>
+
+        <!-- Python -->
+        <div class="docs-code-block has-line-numbers" data-lang="python" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">import</span> strata
+
+client = strata.Client(<span class="code-string">"sk_live_..."</span>)
+
+source = client.sources.create(
+    name=<span class="code-string">"Production PostgreSQL"</span>,
+    type=<span class="code-string">"postgresql"</span>,
+    connection_string=<span class="code-string">"postgresql://..."</span>,
+    region=<span class="code-string">"us-east-1"</span>
+)</code></pre>
+        </div>
+
+        <!-- Node.js -->
+        <div class="docs-code-block has-line-numbers" data-lang="node" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">const</span> source = <span class="code-keyword">await</span> client.sources.create({
+  name: <span class="code-string">'Production PostgreSQL'</span>,
+  type: <span class="code-string">'postgresql'</span>,
+  connectionString: <span class="code-string">'postgresql://...'</span>,
+  region: <span class="code-string">'us-east-1'</span>
+});</code></pre>
+        </div>
+
+        <!-- Go -->
+        <div class="docs-code-block has-line-numbers" data-lang="go" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>source, err := client.Sources.Create(&strata.SourceParams{
+    Name:             strata.String(<span class="code-string">"Production PostgreSQL"</span>),
+    Type:             strata.String(<span class="code-string">"postgresql"</span>),
+    ConnectionString: strata.String(<span class="code-string">"postgresql://..."</span>),
+    Region:           strata.String(<span class="code-string">"us-east-1"</span>),
+})</code></pre>
+        </div>
+
+        <div class="docs-response-label">Response</div>
+        <div class="docs-code-block has-line-numbers">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>{
+  <span class="code-key">"id"</span>: <span class="code-string">"src_pg_02"</span>,
+  <span class="code-key">"name"</span>: <span class="code-string">"Production PostgreSQL"</span>,
+  <span class="code-key">"type"</span>: <span class="code-string">"postgresql"</span>,
+  <span class="code-key">"region"</span>: <span class="code-string">"us-east-1"</span>,
+  <span class="code-key">"status"</span>: <span class="code-string">"initializing"</span>,
+  <span class="code-key">"created_at"</span>: <span class="code-string">"2026-03-21T14:22:00Z"</span>
+}</code></pre>
+        </div>
+      </div>
+
+      <hr class="docs-code-divider" />
+
+      <!-- ── DELETE /v1/sources/{id} ── -->
+      <div class="docs-code-section" id="code-delete-source">
+        <div class="docs-code-section__label">Request</div>
+        <div class="docs-code-section__endpoint">
+          <span class="docs-code-method docs-code-method--delete">DELETE</span>
+          <span>/v1/sources/{id}</span>
+        </div>
+
+        <!-- cURL -->
+        <div class="docs-code-block has-line-numbers" data-lang="curl">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>curl -X DELETE <span class="code-url">https://api.strata.io/v1/sources/src_pg_01</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span></code></pre>
+        </div>
+
+        <!-- Python -->
+        <div class="docs-code-block has-line-numbers" data-lang="python" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">import</span> strata
+
+client = strata.Client(<span class="code-string">"sk_live_..."</span>)
+
+client.sources.delete(<span class="code-string">"src_pg_01"</span>)</code></pre>
+        </div>
+
+        <!-- Node.js -->
+        <div class="docs-code-block has-line-numbers" data-lang="node" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">await</span> client.sources.delete(<span class="code-string">'src_pg_01'</span>);</code></pre>
+        </div>
+
+        <!-- Go -->
+        <div class="docs-code-block has-line-numbers" data-lang="go" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>_, err := client.Sources.Delete(<span class="code-string">"src_pg_01"</span>, <span class="code-keyword">nil</span>)</code></pre>
+        </div>
+
+        <div class="docs-response-label">Response</div>
+        <div class="docs-code-block has-line-numbers">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>{
+  <span class="code-key">"id"</span>: <span class="code-string">"src_pg_01"</span>,
+  <span class="code-key">"deleted"</span>: <span class="code-bool">true</span>
+}</code></pre>
+        </div>
+      </div>
+
+      <hr class="docs-code-divider" />
+
+      <!-- ── GET /v1/classifications ── -->
+      <div class="docs-code-section" id="code-list-classifications">
+        <div class="docs-code-section__label">Request</div>
+        <div class="docs-code-section__endpoint">
+          <span class="docs-code-method docs-code-method--get">GET</span>
+          <span>/v1/classifications</span>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="curl">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>curl <span class="code-url">https://api.strata.io/v1/classifications</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span> \
+  -G \
+  -d <span class="code-string">"category=pii"</span> \
+  -d <span class="code-string">"severity=critical"</span></code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="python" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>classifications = client.classifications.list(
+    category=<span class="code-string">"pii"</span>,
+    severity=<span class="code-string">"critical"</span>
+)</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="node" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">const</span> classifications = <span class="code-keyword">await</span> client.classifications.list({
+  category: <span class="code-string">'pii'</span>,
+  severity: <span class="code-string">'critical'</span>
+});</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="go" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>classifications, err := client.Classifications.List(&strata.ClassificationParams{
+    Category: strata.String(<span class="code-string">"pii"</span>),
+    Severity: strata.String(<span class="code-string">"critical"</span>),
+})</code></pre>
+        </div>
+
+        <div class="docs-response-label">Response</div>
+        <div class="docs-code-block has-line-numbers docs-response-expandable is-collapsed" data-expandable>
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>{
+  <span class="code-key">"data"</span>: [
+    {
+      <span class="code-key">"id"</span>: <span class="code-string">"cls_ssn_01"</span>,
+      <span class="code-key">"label"</span>: <span class="code-string">"Social Security Number"</span>,
+      <span class="code-key">"category"</span>: <span class="code-string">"pii"</span>,
+      <span class="code-key">"severity"</span>: <span class="code-string">"critical"</span>,
+      <span class="code-key">"pattern"</span>: <span class="code-string">"\\d{3}-\\d{2}-\\d{4}"</span>,
+      <span class="code-key">"matches_found"</span>: <span class="code-number">2847</span>,
+      <span class="code-key">"enabled"</span>: <span class="code-bool">true</span>,
+      <span class="code-key">"created_at"</span>: <span class="code-string">"2026-01-10T09:00:00Z"</span>
+    },
+    {
+      <span class="code-key">"id"</span>: <span class="code-string">"cls_email_02"</span>,
+      <span class="code-key">"label"</span>: <span class="code-string">"Email Address"</span>,
+      <span class="code-key">"category"</span>: <span class="code-string">"pii"</span>,
+      <span class="code-key">"severity"</span>: <span class="code-string">"high"</span>,
+      <span class="code-key">"pattern"</span>: <span class="code-string">"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+"</span>,
+      <span class="code-key">"matches_found"</span>: <span class="code-number">15320</span>,
+      <span class="code-key">"enabled"</span>: <span class="code-bool">true</span>,
+      <span class="code-key">"created_at"</span>: <span class="code-string">"2026-01-10T09:05:00Z"</span>
+    }
+  ],
+  <span class="code-key">"total"</span>: <span class="code-number">24</span>,
+  <span class="code-key">"limit"</span>: <span class="code-number">20</span>,
+  <span class="code-key">"offset"</span>: <span class="code-number">0</span>
+}</code></pre>
+        </div>
+        <button class="docs-expand-btn" data-expand-toggle>
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          <span class="expand-label">Show full response</span>
+        </button>
+      </div>
+
+      <hr class="docs-code-divider" />
+
+      <!-- ── POST /v1/classifications ── -->
+      <div class="docs-code-section" id="code-create-classification">
+        <div class="docs-code-section__label">Request</div>
+        <div class="docs-code-section__endpoint">
+          <span class="docs-code-method docs-code-method--post">POST</span>
+          <span>/v1/classifications</span>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="curl">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>curl <span class="code-url">https://api.strata.io/v1/classifications</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span> \
+  -H <span class="code-string">"Content-Type: application/json"</span> \
+  -d <span class="code-string">'{
+    "label": "Social Security Number",
+    "category": "pii",
+    "severity": "critical",
+    "pattern": "\\d{3}-\\d{2}-\\d{4}",
+    "description": "US Social Security Numbers"
+  }'</span></code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="python" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>classification = client.classifications.create(
+    label=<span class="code-string">"Social Security Number"</span>,
+    category=<span class="code-string">"pii"</span>,
+    severity=<span class="code-string">"critical"</span>,
+    pattern=<span class="code-string">r"\d{3}-\d{2}-\d{4}"</span>,
+    description=<span class="code-string">"US Social Security Numbers"</span>
+)</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="node" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">const</span> classification = <span class="code-keyword">await</span> client.classifications.create({
+  label: <span class="code-string">'Social Security Number'</span>,
+  category: <span class="code-string">'pii'</span>,
+  severity: <span class="code-string">'critical'</span>,
+  pattern: <span class="code-string">'\\d{3}-\\d{2}-\\d{4}'</span>,
+  description: <span class="code-string">'US Social Security Numbers'</span>
+});</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="go" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>classification, err := client.Classifications.Create(&strata.ClassificationParams{
+    Label:       strata.String(<span class="code-string">"Social Security Number"</span>),
+    Category:    strata.String(<span class="code-string">"pii"</span>),
+    Severity:    strata.String(<span class="code-string">"critical"</span>),
+    Pattern:     strata.String(<span class="code-string">`\d{3}-\d{2}-\d{4}`</span>),
+    Description: strata.String(<span class="code-string">"US Social Security Numbers"</span>),
+})</code></pre>
+        </div>
+
+        <div class="docs-response-label">Response</div>
+        <div class="docs-code-block has-line-numbers">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>{
+  <span class="code-key">"id"</span>: <span class="code-string">"cls_custom_03"</span>,
+  <span class="code-key">"label"</span>: <span class="code-string">"Social Security Number"</span>,
+  <span class="code-key">"category"</span>: <span class="code-string">"pii"</span>,
+  <span class="code-key">"severity"</span>: <span class="code-string">"critical"</span>,
+  <span class="code-key">"pattern"</span>: <span class="code-string">"\\d{3}-\\d{2}-\\d{4}"</span>,
+  <span class="code-key">"enabled"</span>: <span class="code-bool">true</span>,
+  <span class="code-key">"created_at"</span>: <span class="code-string">"2026-03-21T14:30:00Z"</span>
+}</code></pre>
+        </div>
+      </div>
+
+      <hr class="docs-code-divider" />
+
+      <!-- ── GET /v1/policies ── -->
+      <div class="docs-code-section" id="code-list-policies">
+        <div class="docs-code-section__label">Request</div>
+        <div class="docs-code-section__endpoint">
+          <span class="docs-code-method docs-code-method--get">GET</span>
+          <span>/v1/policies</span>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="curl">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>curl <span class="code-url">https://api.strata.io/v1/policies</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span> \
+  -G \
+  -d <span class="code-string">"status=active"</span></code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="python" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>policies = client.policies.list(
+    status=<span class="code-string">"active"</span>
+)</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="node" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">const</span> policies = <span class="code-keyword">await</span> client.policies.list({
+  status: <span class="code-string">'active'</span>
+});</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="go" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>policies, err := client.Policies.List(&strata.PolicyListParams{
+    Status: strata.String(<span class="code-string">"active"</span>),
+})</code></pre>
+        </div>
+
+        <div class="docs-response-label">Response</div>
+        <div class="docs-code-block has-line-numbers docs-response-expandable is-collapsed" data-expandable>
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>{
+  <span class="code-key">"data"</span>: [
+    {
+      <span class="code-key">"id"</span>: <span class="code-string">"pol_mask_01"</span>,
+      <span class="code-key">"name"</span>: <span class="code-string">"Mask SSN in Production"</span>,
+      <span class="code-key">"action"</span>: <span class="code-string">"mask"</span>,
+      <span class="code-key">"status"</span>: <span class="code-string">"active"</span>,
+      <span class="code-key">"classification_ids"</span>: [<span class="code-string">"cls_ssn_01"</span>],
+      <span class="code-key">"source_ids"</span>: [<span class="code-string">"src_pg_01"</span>, <span class="code-string">"src_pg_02"</span>],
+      <span class="code-key">"created_at"</span>: <span class="code-string">"2026-02-01T10:00:00Z"</span>,
+      <span class="code-key">"updated_at"</span>: <span class="code-string">"2026-03-15T16:45:00Z"</span>
+    }
+  ],
+  <span class="code-key">"total"</span>: <span class="code-number">8</span>,
+  <span class="code-key">"limit"</span>: <span class="code-number">20</span>,
+  <span class="code-key">"offset"</span>: <span class="code-number">0</span>
+}</code></pre>
+        </div>
+        <button class="docs-expand-btn" data-expand-toggle>
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          <span class="expand-label">Show full response</span>
+        </button>
+      </div>
+
+      <hr class="docs-code-divider" />
+
+      <!-- ── POST /v1/policies ── -->
+      <div class="docs-code-section" id="code-create-policy">
+        <div class="docs-code-section__label">Request</div>
+        <div class="docs-code-section__endpoint">
+          <span class="docs-code-method docs-code-method--post">POST</span>
+          <span>/v1/policies</span>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="curl">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>curl <span class="code-url">https://api.strata.io/v1/policies</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span> \
+  -H <span class="code-string">"Content-Type: application/json"</span> \
+  -d <span class="code-string">'{
+    "name": "Mask SSN in Production",
+    "classification_ids": ["cls_ssn_01"],
+    "action": "mask",
+    "source_ids": ["src_pg_01"]
+  }'</span></code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="python" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>policy = client.policies.create(
+    name=<span class="code-string">"Mask SSN in Production"</span>,
+    classification_ids=[<span class="code-string">"cls_ssn_01"</span>],
+    action=<span class="code-string">"mask"</span>,
+    source_ids=[<span class="code-string">"src_pg_01"</span>]
+)</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="node" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">const</span> policy = <span class="code-keyword">await</span> client.policies.create({
+  name: <span class="code-string">'Mask SSN in Production'</span>,
+  classificationIds: [<span class="code-string">'cls_ssn_01'</span>],
+  action: <span class="code-string">'mask'</span>,
+  sourceIds: [<span class="code-string">'src_pg_01'</span>]
+});</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="go" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>policy, err := client.Policies.Create(&strata.PolicyParams{
+    Name:              strata.String(<span class="code-string">"Mask SSN in Production"</span>),
+    ClassificationIDs: []<span class="code-keyword">string</span>{<span class="code-string">"cls_ssn_01"</span>},
+    Action:            strata.String(<span class="code-string">"mask"</span>),
+    SourceIDs:         []<span class="code-keyword">string</span>{<span class="code-string">"src_pg_01"</span>},
+})</code></pre>
+        </div>
+
+        <div class="docs-response-label">Response</div>
+        <div class="docs-code-block has-line-numbers">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>{
+  <span class="code-key">"id"</span>: <span class="code-string">"pol_mask_02"</span>,
+  <span class="code-key">"name"</span>: <span class="code-string">"Mask SSN in Production"</span>,
+  <span class="code-key">"action"</span>: <span class="code-string">"mask"</span>,
+  <span class="code-key">"status"</span>: <span class="code-string">"active"</span>,
+  <span class="code-key">"classification_ids"</span>: [<span class="code-string">"cls_ssn_01"</span>],
+  <span class="code-key">"source_ids"</span>: [<span class="code-string">"src_pg_01"</span>],
+  <span class="code-key">"created_at"</span>: <span class="code-string">"2026-03-21T15:00:00Z"</span>
+}</code></pre>
+        </div>
+      </div>
+
+      <hr class="docs-code-divider" />
+
+      <!-- ── PUT /v1/policies/{id} ── -->
+      <div class="docs-code-section" id="code-update-policy">
+        <div class="docs-code-section__label">Request</div>
+        <div class="docs-code-section__endpoint">
+          <span class="docs-code-method docs-code-method--put">PUT</span>
+          <span>/v1/policies/{id}</span>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="curl">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>curl -X PUT <span class="code-url">https://api.strata.io/v1/policies/pol_mask_01</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span> \
+  -H <span class="code-string">"Content-Type: application/json"</span> \
+  -d <span class="code-string">'{
+    "action": "block",
+    "enabled": true
+  }'</span></code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="python" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>policy = client.policies.update(
+    <span class="code-string">"pol_mask_01"</span>,
+    action=<span class="code-string">"block"</span>,
+    enabled=<span class="code-bool">True</span>
+)</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="node" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">const</span> policy = <span class="code-keyword">await</span> client.policies.update(<span class="code-string">'pol_mask_01'</span>, {
+  action: <span class="code-string">'block'</span>,
+  enabled: <span class="code-bool">true</span>
+});</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="go" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>policy, err := client.Policies.Update(<span class="code-string">"pol_mask_01"</span>, &strata.PolicyParams{
+    Action:  strata.String(<span class="code-string">"block"</span>),
+    Enabled: strata.Bool(<span class="code-bool">true</span>),
+})</code></pre>
+        </div>
+
+        <div class="docs-response-label">Response</div>
+        <div class="docs-code-block has-line-numbers">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>{
+  <span class="code-key">"id"</span>: <span class="code-string">"pol_mask_01"</span>,
+  <span class="code-key">"name"</span>: <span class="code-string">"Mask SSN in Production"</span>,
+  <span class="code-key">"action"</span>: <span class="code-string">"block"</span>,
+  <span class="code-key">"status"</span>: <span class="code-string">"active"</span>,
+  <span class="code-key">"updated_at"</span>: <span class="code-string">"2026-03-21T15:10:00Z"</span>
+}</code></pre>
+        </div>
+      </div>
+
+      <hr class="docs-code-divider" />
+
+      <!-- ── DELETE /v1/policies/{id} ── -->
+      <div class="docs-code-section" id="code-delete-policy">
+        <div class="docs-code-section__label">Request</div>
+        <div class="docs-code-section__endpoint">
+          <span class="docs-code-method docs-code-method--delete">DELETE</span>
+          <span>/v1/policies/{id}</span>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="curl">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>curl -X DELETE <span class="code-url">https://api.strata.io/v1/policies/pol_mask_01</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span></code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="python" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>client.policies.delete(<span class="code-string">"pol_mask_01"</span>)</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="node" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code><span class="code-keyword">await</span> client.policies.delete(<span class="code-string">'pol_mask_01'</span>);</code></pre>
+        </div>
+
+        <div class="docs-code-block has-line-numbers" data-lang="go" style="display:none;">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>_, err := client.Policies.Delete(<span class="code-string">"pol_mask_01"</span>, <span class="code-keyword">nil</span>)</code></pre>
+        </div>
+
+        <div class="docs-response-label">Response</div>
+        <div class="docs-code-block has-line-numbers">
+          <button class="docs-code-copy" data-copy>
+            <svg class="copy-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M1 8V2a1 1 0 011-1h6"/></svg>
+            <svg class="check-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
+          <pre><code>{
+  <span class="code-key">"id"</span>: <span class="code-string">"pol_mask_01"</span>,
+  <span class="code-key">"deleted"</span>: <span class="code-bool">true</span>
+}</code></pre>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="docs-back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="../index.html" class="site-logo footer-logo" style="margin-bottom: var(--sds-space-400);">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+            </div>
+            Strata
+          </a>
+          <p style="font-size: 13px; color: var(--sds-color-warm-gray-500); max-width: 280px; line-height: 1.6;">Enterprise-grade data management platform. Discover, classify, and govern your most sensitive data.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="../features.html">Features</a>
+          <a href="../solutions.html">Solutions</a>
+          <a href="../use-cases.html">Use Cases</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="../resources.html">Resources</a>
+          <a href="#">Careers</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strata. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/animations.js"></script>
+  <script>
+    /* ── Language Switcher with Sliding Underline ── */
+    const langTabs = document.querySelectorAll('.docs-lang-tab');
+    const codeBlocks = document.querySelectorAll('.docs-code-block[data-lang]');
+    const langIndicator = document.getElementById('lang-indicator');
+
+    function updateIndicator(tab) {
+      if (!langIndicator || !tab) return;
+      langIndicator.style.left = tab.offsetLeft + 'px';
+      langIndicator.style.width = tab.offsetWidth + 'px';
+    }
+
+    // Initialize indicator position
+    const activeTab = document.querySelector('.docs-lang-tab.is-active');
+    if (activeTab) {
+      requestAnimationFrame(() => updateIndicator(activeTab));
+    }
+
+    langTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const lang = tab.dataset.lang;
+
+        // Update active tab
+        langTabs.forEach(t => t.classList.remove('is-active'));
+        tab.classList.add('is-active');
+
+        // Slide indicator
+        updateIndicator(tab);
+
+        // Show/hide code blocks
+        codeBlocks.forEach(block => {
+          block.style.display = block.dataset.lang === lang ? '' : 'none';
+        });
+      });
+    });
+
+    /* ── Copy Button with Checkmark ── */
+    document.querySelectorAll('.docs-code-copy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const codeBlock = btn.closest('.docs-code-block');
+        const code = codeBlock.querySelector('pre').textContent;
+        const label = btn.querySelector('.copy-label');
+
+        navigator.clipboard.writeText(code).then(() => {
+          if (label) label.textContent = 'Copied!';
+          btn.classList.add('is-copied');
+          setTimeout(() => {
+            if (label) label.textContent = 'Copy';
+            btn.classList.remove('is-copied');
+          }, 2000);
+        });
+      });
+    });
+
+    /* ── Expand/Collapse Response Blocks ── */
+    document.querySelectorAll('[data-expand-toggle]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const section = btn.previousElementSibling || btn.closest('.docs-code-section').querySelector('.docs-response-expandable');
+        // Find the expandable block - it's the sibling before this button
+        let expandable = btn.previousElementSibling;
+        while (expandable && !expandable.classList.contains('docs-response-expandable')) {
+          expandable = expandable.previousElementSibling;
+        }
+        if (!expandable) return;
+
+        expandable.classList.toggle('is-collapsed');
+        const label = btn.querySelector('.expand-label');
+        if (label) {
+          label.textContent = expandable.classList.contains('is-collapsed') ? 'Show full response' : 'Collapse';
+        }
+      });
+    });
+
+    /* ── Line Numbers ── */
+    document.querySelectorAll('.docs-code-block.has-line-numbers pre').forEach(pre => {
+      const code = pre.querySelector('code');
+      if (!code) return;
+      const lines = code.innerHTML.split('\n');
+      const numbered = lines.map((line, i) => {
+        return '<span class="line-number">' + (i + 1) + '</span>' + line;
+      }).join('\n');
+      code.innerHTML = numbered;
+    });
+
+    /* ── Scroll Spy — highlight active sidebar item ── */
+    const navItems = document.querySelectorAll('.docs-nav__item[href^="#"]');
+    const sections = [];
+
+    navItems.forEach(item => {
+      const id = item.getAttribute('href').substring(1);
+      const el = document.getElementById(id);
+      if (el) sections.push({ id, el, navItem: item });
+    });
+
+    function updateScrollSpy() {
+      const scrollTop = window.scrollY + 120; // offset for header
+
+      let current = null;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        if (sections[i].el.offsetTop <= scrollTop) {
+          current = sections[i];
+          break;
+        }
+      }
+
+      if (current) {
+        navItems.forEach(n => n.classList.remove('is-active'));
+        current.navItem.classList.add('is-active');
+      }
+    }
+
+    window.addEventListener('scroll', updateScrollSpy, { passive: true });
+    updateScrollSpy();
+
+    /* ── Sidebar Navigation — smooth scroll ── */
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = item.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    /* ── Collapsible Sidebar Sections ── */
+    document.querySelectorAll('.docs-nav__section-label').forEach(label => {
+      label.addEventListener('click', () => {
+        const section = label.closest('.docs-nav__section');
+        section.classList.toggle('is-collapsed');
+      });
+    });
+
+    /* ── Back to Top Button ── */
+    const backToTop = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTop.classList.add('is-visible');
+      } else {
+        backToTop.classList.remove('is-visible');
+      }
+    }, { passive: true });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ── Search Filter ── */
+    const searchInput = document.getElementById('docs-search');
+    const navSections = document.querySelectorAll('.docs-nav__section');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+
+      navSections.forEach(section => {
+        const items = section.querySelectorAll('.docs-nav__item');
+        let hasVisible = false;
+
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          const match = !query || text.includes(query);
+          item.style.display = match ? '' : 'none';
+          if (match) hasVisible = true;
+        });
+
+        // Hide section label if no items match
+        const label = section.querySelector('.docs-nav__section-label');
+        if (label) {
+          label.style.display = hasVisible ? '' : 'none';
+        }
+
+        // Auto-expand sections that have matches
+        if (query && hasVisible) {
+          section.classList.remove('is-collapsed');
+        }
+      });
+    });
+
+    /* ── Mini-TOC smooth scroll ── */
+    document.querySelectorAll('.docs-page-toc__list a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = link.getAttribute('href').substring(1);
+        const target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

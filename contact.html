@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Strata</title>
+  <link rel="stylesheet" href="design-system-labs/tokens/colors.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/spacing.css">
+  <link rel="stylesheet" href="design-system-labs/tokens/typography.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/marketing.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+        </div>
+        Strata
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="use-cases.html">Use Cases</a>
+        <a href="resources.html">Resources</a>
+        <a href="developers.html">Developers</a>
+        <a href="contact.html" class="is-active">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary header-cta">Get Started</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="use-cases.html">Use Cases</a>
+    <a href="resources.html">Resources</a>
+    <a href="developers.html">Developers</a>
+    <a href="contact.html" class="is-active">Contact</a>
+    <a href="contact.html" class="btn btn--primary" style="margin-top: var(--sds-space-400);">Get Started</a>
+  </div>
+
+  <!-- ═══ CONTACT HERO ═══ -->
+  <section class="contact-hero">
+    <div class="contact-hero__bg"></div>
+    <div class="container">
+      <div class="contact-hero__content">
+        <p class="section__overline reveal--fade">LET'S TALK</p>
+        <h1 class="contact-hero__headline reveal--fade stagger-1">Start a conversation with our team.</h1>
+        <p class="contact-hero__sub reveal--fade stagger-2">Whether you need a guided demo, have a technical question, or want to explore how Strata fits your stack — we're here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT PATHS ═══ -->
+  <section class="contact-paths">
+    <div class="container">
+      <div class="contact-paths__grid">
+
+        <!-- Path 1: Get a Demo (Primary) -->
+        <div class="contact-path contact-path--primary reveal stagger-1">
+          <div class="contact-path__badge">Most popular</div>
+          <div class="contact-path__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h2 class="contact-path__title">Get a demo</h2>
+          <p class="contact-path__desc">See Strata in action with a personalized walkthrough tailored to your data stack and management needs.</p>
+          <ul class="contact-path__perks">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              30-minute personalized session
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              See your use case in the platform
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              No commitment required
+            </li>
+          </ul>
+          <a href="#demo-form" class="btn btn--primary btn--lg contact-path__cta">
+            Request a demo
+            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Path 2: General Inquiry (Secondary) -->
+        <div class="contact-path contact-path--secondary reveal stagger-2">
+          <div class="contact-path__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h2 class="contact-path__title">General inquiry</h2>
+          <p class="contact-path__desc">Have a question about pricing, partnerships, or something else? Drop us a line and we'll get back to you quickly.</p>
+          <ul class="contact-path__perks">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Typically responds within 2 hours
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              No sales pressure, ever
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Talk to real engineers
+            </li>
+          </ul>
+          <a href="#inquiry-form" class="btn btn--ghost btn--lg contact-path__cta">
+            Send a message
+            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DEMO FORM (Primary) ═══ -->
+  <section class="contact-form-section" id="demo-form">
+    <div class="container">
+      <div class="contact-form-wrap reveal--scale">
+        <div class="contact-form__header">
+          <p class="section__overline">REQUEST A DEMO</p>
+          <h2 class="contact-form__title">Tell us a bit about yourself</h2>
+          <p class="contact-form__subtitle">We'll match you with the right team member and prepare a demo tailored to your environment.</p>
+        </div>
+
+        <form class="contact-form" id="demo-contact-form">
+          <div class="contact-form__row">
+            <div class="form-group">
+              <label class="form-label" for="demo-first-name">First name</label>
+              <input type="text" id="demo-first-name" class="form-input" placeholder="Jane" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="demo-last-name">Last name</label>
+              <input type="text" id="demo-last-name" class="form-input" placeholder="Doe" required>
+            </div>
+          </div>
+          <div class="contact-form__row">
+            <div class="form-group">
+              <label class="form-label" for="demo-email">Work email</label>
+              <input type="email" id="demo-email" class="form-input" placeholder="jane@company.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="demo-company">Company</label>
+              <input type="text" id="demo-company" class="form-input" placeholder="Acme Corp" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="demo-role">Your role</label>
+            <select id="demo-role" class="form-input form-select">
+              <option value="" disabled selected>Select your role</option>
+              <option value="ciso">CISO / Security Leader</option>
+              <option value="engineer">Security Engineer</option>
+              <option value="data">Data Engineer / Architect</option>
+              <option value="compliance">Compliance / GRC</option>
+              <option value="devops">DevOps / Platform</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="demo-message">What are you looking to solve? <span class="form-label__optional">(optional)</span></label>
+            <textarea id="demo-message" class="form-textarea" rows="4" placeholder="Tell us about your data management challenges, the tools you use, or what prompted you to reach out..."></textarea>
+          </div>
+          <div class="contact-form__footer">
+            <button type="submit" class="btn btn--primary btn--lg contact-form__submit">
+              Request your demo
+              <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="contact-form__privacy">By submitting, you agree to our <a href="#">privacy policy</a>. No spam, ever.</p>
+          </div>
+        </form>
+
+        <!-- Trust signals beside form -->
+        <div class="contact-form__trust">
+          <div class="trust-signal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Typically responds within 2 hours</span>
+          </div>
+          <div class="trust-signal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>SOC 2 Type II certified</span>
+          </div>
+          <div class="trust-signal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>Trusted by 2,000+ data teams</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GENERAL INQUIRY FORM ═══ -->
+  <section class="contact-form-section contact-form-section--alt" id="inquiry-form">
+    <div class="container">
+      <div class="contact-form-wrap contact-form-wrap--compact reveal--scale">
+        <div class="contact-form__header">
+          <p class="section__overline">GENERAL INQUIRY</p>
+          <h2 class="contact-form__title">Send us a message</h2>
+        </div>
+
+        <form class="contact-form" id="inquiry-contact-form">
+          <div class="contact-form__row">
+            <div class="form-group">
+              <label class="form-label" for="inquiry-name">Your name</label>
+              <input type="text" id="inquiry-name" class="form-input" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inquiry-email">Email</label>
+              <input type="email" id="inquiry-email" class="form-input" placeholder="jane@company.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inquiry-subject">Subject</label>
+            <select id="inquiry-subject" class="form-input form-select">
+              <option value="" disabled selected>What's this about?</option>
+              <option value="pricing">Pricing question</option>
+              <option value="partnership">Partnership</option>
+              <option value="support">Technical support</option>
+              <option value="press">Press inquiry</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inquiry-message">Message</label>
+            <textarea id="inquiry-message" class="form-textarea" rows="5" placeholder="How can we help?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg contact-form__submit">
+            Send message
+            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT INFO ROW ═══ -->
+  <section class="contact-details">
+    <div class="container">
+      <div class="contact-details__grid reveal--fade">
+
+        <div class="contact-detail">
+          <div class="contact-detail__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h4 class="contact-detail__label">Email</h4>
+          <p class="contact-detail__value">hello@strata.io</p>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h4 class="contact-detail__label">Phone</h4>
+          <p class="contact-detail__value">+1 (555) 123-4567</p>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h4 class="contact-detail__label">Office</h4>
+          <p class="contact-detail__value">548 Market St, San Francisco, CA 94104</p>
+        </div>
+
+        <div class="contact-detail">
+          <h4 class="contact-detail__label">Follow us</h4>
+          <div class="contact-detail__social">
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ SECTION ═══ -->
+  <section class="contact-faq">
+    <div class="container">
+      <div class="contact-faq__layout">
+        <div class="contact-faq__intro reveal">
+          <p class="section__overline">COMMON QUESTIONS</p>
+          <h2 class="contact-faq__title">Before you reach out</h2>
+          <p class="contact-faq__subtitle">Quick answers to the questions we hear most often.</p>
+        </div>
+
+        <div class="contact-faq__list">
+          <details class="faq-item reveal stagger-1">
+            <summary class="faq-item__question">
+              How long does a typical demo take?
+              <svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Most demos run about 30 minutes. We'll tailor the session to your specific data stack and security requirements, so you see exactly how Strata would work in your environment.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal stagger-2">
+            <summary class="faq-item__question">
+              Do I need to prepare anything before the demo?
+              <svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Not at all. Just bring your questions. If you'd like a more tailored session, sharing your current data sources or compliance requirements in the form helps us prepare a more relevant walkthrough.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal stagger-3">
+            <summary class="faq-item__question">
+              Is there a free trial available?
+              <svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Yes. After your demo, you can start a 14-day free trial with full platform access. No credit card required, and our team will help you get set up.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal stagger-4">
+            <summary class="faq-item__question">
+              What if I just have a quick question?
+              <svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Email us directly at hello@strata.io or use the general inquiry form above. Our team typically responds within 2 hours during business hours.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal stagger-5">
+            <summary class="faq-item__question">
+              Do you offer enterprise pricing?
+              <svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Yes. For teams with more than 50 users or custom compliance requirements, we offer tailored enterprise plans. Request a demo and mention your needs — we'll connect you with the right team.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TRUST BAND (replaces CTA) ═══ -->
+  <section class="contact-trust-band">
+    <div class="container">
+      <div class="contact-trust-band__content reveal--fade">
+        <div class="contact-trust-band__logos">
+          <span class="contact-trust-band__label">Trusted by data teams at</span>
+          <div class="contact-trust-band__logo-row">
+            <span class="trust-logo">Stripe</span>
+            <span class="trust-logo">Datadog</span>
+            <span class="trust-logo">Figma</span>
+            <span class="trust-logo">Notion</span>
+            <span class="trust-logo">Linear</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="site-logo footer-logo" style="margin-bottom: var(--sds-space-400);">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="3" rx="1.5"/><rect x="4" y="10.5" width="16" height="3" rx="1.5"/><rect x="4" y="16" width="16" height="3" rx="1.5"/></svg>
+            </div>
+            Strata
+          </a>
+          <p style="font-size: 13px; color: var(--sds-color-warm-gray-500); max-width: 280px; line-height: 1.6;">Enterprise-grade data management platform. Discover, classify, and govern your most sensitive data.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Features</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="use-cases.html">Use Cases</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="resources.html">Resources</a>
+          <a href="#">Careers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strata. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
