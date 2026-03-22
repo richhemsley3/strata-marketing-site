@@ -77,6 +77,10 @@ input, textarea, select {
 }
 
 /* ── Base Typography ───────────────────────────────────────── */
+html {
+  overflow-y: scroll;
+}
+
 body {
   font-family: var(--sds-font-sans);
   font-size: 16px;
@@ -279,36 +283,19 @@ p {
 .site-nav a {
   padding: var(--sds-space-200) var(--sds-space-400);
   font-size: 15px;
-  font-weight: var(--sds-weight-regular);
-  color: var(--sds-color-warm-gray-450);
+  font-weight: var(--sds-weight-semibold);
+  color: var(--sds-color-warm-gray-350);
   border-radius: 20px;
-  transition: color 0.25s ease, padding 0.5s ease, font-size 0.5s ease, font-weight 0.25s ease;
+  transition: color 0.25s ease, padding 0.5s ease, font-size 0.5s ease;
   white-space: nowrap;
 }
 
 .site-nav a:hover {
-  color: var(--mkt-heading-color);
-}
-
-.site-nav a {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Reserve bold-width space to prevent layout shift */
-.site-nav a::after {
-  content: attr(data-text);
-  font-weight: var(--sds-weight-semibold);
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-  pointer-events: none;
+  color: var(--sds-color-warm-gray-600);
 }
 
 .site-nav a.is-active {
   color: var(--mkt-heading-color);
-  font-weight: var(--sds-weight-semibold);
 }
 
 /* Compress nav when scrolled into pill */
