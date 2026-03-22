@@ -290,6 +290,22 @@ p {
   color: var(--mkt-heading-color);
 }
 
+.site-nav a {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Reserve bold-width space to prevent layout shift */
+.site-nav a::after {
+  content: attr(data-text);
+  font-weight: var(--sds-weight-semibold);
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .site-nav a.is-active {
   color: var(--mkt-heading-color);
   font-weight: var(--sds-weight-semibold);
