@@ -50,7 +50,7 @@ input, textarea, select {
   --mkt-type-large-body: 18px;
 
   /* Spacing — generous like Lovart */
-  --mkt-space-section: clamp(60px, 8vw, 100px);
+  --mkt-space-section: clamp(48px, 5vw, 72px);
   --mkt-max-width: 1200px;
 
   /* Colors — Light warm theme, strong contrast */
@@ -78,6 +78,7 @@ input, textarea, select {
 
 /* ── Base Typography ───────────────────────────────────────── */
 html {
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
@@ -88,7 +89,6 @@ body {
   line-height: 1.6;
   color: var(--mkt-body-color);
   background-color: var(--mkt-bg);
-  overflow-x: hidden;
 }
 
 /* Subtle noise texture */

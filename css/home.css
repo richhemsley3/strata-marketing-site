@@ -11,17 +11,19 @@
 
 /* ── Scroll-Pinned Capability Sections ─────────────────────── */
 .cap-section {
-  height: max(120vh, 800px);
+  height: 250vh;
   position: relative;
 }
 
 .cap-section__sticky {
   position: sticky;
-  top: 80px;
+  top: 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: clamp(40px, 4vw, 80px) var(--sds-space-600);
+  justify-content: center;
+  padding: 60px var(--sds-space-600) 0;
+  box-sizing: border-box;
 }
 
 .cap-section__inner {
